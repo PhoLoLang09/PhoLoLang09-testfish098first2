@@ -101,7 +101,7 @@
   }
 
   .price-highlight {
-  background-color: rgba(253, 214, 70);
+  background-color: rgba(253, 214, 70, 0.9);
   color: #0D2541;
   border-radius: 5px;
   font-weight: bold;
@@ -116,7 +116,7 @@
   margin-bottom: 0px;
   margin-top: 60px;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   }
 
   .scroll-to-contact {
@@ -408,37 +408,7 @@
 
 /* Contact Form CSS */
 
-  .contact-form {
-  background: #000;
-  padding: 30px;
-  border-radius: 8px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  margin-top: 0px;
-  position: relative;
-  z-index: 1;
-  }
 
-  .form-control {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #003057;
-  border-radius: 4px;
-  }
-
-  .contact-button {
-  width: 100%;
-  background: #003057;
-  color: #F7F7F7;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1.2em;
-  }
 
 /* Footer CSS */
 
@@ -447,10 +417,11 @@
   color: #F7F7F7;
   padding: 10px 0;
   background: #003057;
-  position: relative;
-  margin-top: -100px;
+  position: absolute;
+  margin-top: 0px;
   clear: both;
   height: 100px;
+  width: 100%;
   }
 
 /* Keytext CSS */
@@ -567,6 +538,132 @@
 
 
 
+
+
+
+
+
+
+#contact-section {
+  text-align: center;
+  padding: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjusted for a fixed gap */
+  margin-bottom: 1rem;
+}
+
+.contact-box {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 400px; /* Fixed width for smaller box appearance */
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-box h3 {
+  margin-top: 0;
+}
+
+.contact-box button {
+  background: #0044cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.or-text {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+#contact-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Make sure padding is included in the width */
+  width: 820px; /* Set width to match two boxes plus the gap */
+  margin: auto;
+}
+
+
+#contact-form input {
+  margin: 0.5rem 0; /* Keep top and bottom margin */
+  width: calc(100% - 4rem); /* Adjust width considering padding of the form */
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#contact-form input[type="submit"] {
+  background: #0044cc;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+  width: auto; /* Automatically adjust width based on content */
+}
+
+@media (max-width: 800px) {
+  .contact-options, #contact-form {
+    flex-direction: column;
+    width: 100%; /* Full width on mobile */
+    align-items: center;
+  }
+  .contact-box, #contact-form input, #contact-form button {
+    width: calc(100% - 0rem); /* Adjust for mobile responsiveness */
+  }
+}
+
+/* Unique classes for the contact section icons */
+.contact-chat-icon {
+  font-family: 'Material Symbols Rounded';
+  display: block;
+  text-align: center;
+  font-size: 48px; /* Adjust size as needed */
+  margin-bottom: 8px; /* Space between icon and text */
+}
+
+.contact-call-icon {
+  font-family: 'Material Symbols Rounded';
+  display: block;
+  text-align: center;
+  font-size: 48px; /* Adjust size as needed */
+  margin-bottom: 8px; /* Space between icon and text */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .trial-section-wrapper {
   display: flex;
   justify-content: center;
@@ -583,7 +680,7 @@
   width: 100%;
   margin: auto;
   box-sizing: border-box;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   margin-top: 10px;
 }
 
@@ -830,37 +927,51 @@
 
 <!--- Contact Form --->
 
-  <div class="contact-form">
-  <form id="contactForm">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Your Name"
-      name="name"
-      required
-    />
-    <input
-      type="email"
-      class="form-control"
-      placeholder="Your Email"
-      name="email"
-      required
-    />
-    <input
-      type="tel"
-      class="form-control"
-      placeholder="Your Phone Number"
-      name="phone"
-      required
-    />
 
-  <button type="submit" class="contact-button">Contact Us</button>
-  
+
+
+
+
+
+<section id="contact-section">
+  <h2>Get Started</h2>
+  <div class="contact-options">
+    <div class="contact-box">
+      <span class="contact-chat-icon">chat</span> <!-- Unique icon class -->
+      <h3>Chat with us</h3>
+      <p>Click here to start chatting with us.</p>
+      <button>Open 24/7</button>
+    </div>
+    <div class="contact-box">
+      <span class="contact-call-icon">call</span> <!-- Unique icon class -->
+      <h3>Give us a call</h3>
+      <p>855-CS-PHILO or 855-277-4456</p>
+      <button>Open 24/7</button>
+    </div>
+  </div>
+  <p class="or-text">OR</p>
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" id="email">
+    <input type="tel" name="phone" placeholder="Your Phone" id="phone">
+    <input type="submit" value="Submit">
   </form>
-  
-  </div>
-  </div>
-  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--- Footer --->
 
@@ -937,35 +1048,8 @@ function rotateWords() {
   }
 }
 
-      document.getElementById("contactForm").onsubmit = function (event) {
-        event.preventDefault();
-        alert("Thank you for your inquiry. We'll be in touch soon!");
-      };
 
       
-// Select all buttons with the 'trial-button' class
-var trialButtons = document.querySelectorAll('.trial-button');
-
-// Iterate over each button and add the click event listener
-trialButtons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent any default button action
-    var contactSection = document.querySelector('.contact-form'); // Ensure this targets your contact form correctly
-    contactSection.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
-  });
-});
-
-
-document.querySelector('.trial-button').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent any default button action
-  var contactSection = document.querySelector('.contact-form'); // Targeting the contact form directly
-  contactSection.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
-});
-
-document.querySelector('.scroll-to-contact').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent any default button action
-  document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
-});
 
 
 </script>
