@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html lang="en" style="height: 100%">
+<head>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.cdnfonts.com/css/pf-din-text-comp-pro-medium" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#56aeff">
+  <meta name="apple-mobile-web-app-title" content="Cable4Less">
+  <meta name="application-name" content="Cable4Less">
+  <meta name="msapplication-TileColor" content="#003057">
+  <meta name="theme-color" content="#F7F7F7">
+                
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Watch Cable for Less</title>
+
+<style>
+
+/* Main CSS */
+
+  body, html {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #0D2541;
+  color: #0D2541;
+  height: 100%;
+  }
+
+  .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  }
+
+  .main-content {
+  min-height: calc(100% - 40px);
+  padding-bottom: 100px;
+  }
+
+/* Header CSS */
+
+  header {
+  text-align: center;
+  background: #F7F7F7;
+  color: white;
+  padding: 20px 0;
+  }
+
+  header img {
+  max-width: 220px;
+  }
+
+/* Announcement Banner CSS */
+
+  .header-message {
+  background-color: #fff7d8;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  border-left: none;
+  border-right: none;
+  }
+
+  .phone-link, .phone-link:link, .phone-link:visited {
+  color: #806500;
+  text-decoration: underline;
+  }
+
+  .phone-link:hover, .phone-link:active {
+  color: #806500;
+  text-decoration: underline;
+  }
+
+  .message-text {
+  letter-spacing: 0.06em;
+  color: #806500;
+  }
+
+/* Headline CSS */
+
+  .headline {
+  text-align: center;
+  font-size: 2em;
+  margin: 0px 0;
+  color: #F7F7F7;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  }
+
+  .price-highlight {
+  background-color: rgba(253, 214, 70);
+  color: #0D2541;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  }
+
+  .unique-pre-header {
+  text-align: center;
+  font-size: 20px;
+  color: #F7F7F7;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  }
+
+  .scroll-to-contact {
+  background-color: #FDD646; /* Deeper blue for better visibility */
+  color: #0D2541;; /* White text for contrast */
+  border: 2px solid #FDD646; /* Brighter blue border */
+  border-radius: 20px;
+  padding: 8px 40px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  }
+
+  .scroll-to-contact:hover {
+  background-color: #EEBF07; /* Vibrant orange for hover */
+  color: #0D2541;; /* Keep text white for readability */
+  border-color: #EEBF07; /* Matching border color */
+  }
+
+  .learn-more-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 24px;
+  color: #0D2541;
+  font-weight: 500;
+  }
+
+/* Counter CSS */
+
+  .counters {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background: transparent;
+  margin-bottom: 20px;
+  }
+
+  .count-1 {
+  background: #21528C;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1.3rem 0;
+  position: relative;
+  }
+
+  .counter {
+  text-align: center;
+  width: 30.5%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  }
+
+  .counter h2, .counter p {
+  color: #F7F7F7;
+  }
+
+  .counter h2 {
+  font-size: 2.3em;
+  margin: 0;
+  background: transparent !important;
+  }
+
+  .counter p {
+  font-size: 1.5em;
+  margin: 0;
+  }
+
+  .ribbon {
+  position: absolute;
+  margin-top: 0px;
+  top: 54px;
+  right: -20px;
+  background-color:#F7F7F7;
+  color: #21528C;
+  padding: 5px 40px;
+  font-size: 0.75em;
+  transform: rotate(40deg);
+  transform-origin: top right;
+  box-shadow: none;
+  border: 0px solid #F7F7F7;
+  z-index: 10;
+  letter-spacing: 0.1rem;
+  opacity: 0.9;
+  font-weight: 500;
+  overflow: hidden;
+  }
+
+  .material-symbols-rounded.dropdown-icon {
+  margin-right: 0px;
+  flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+  .counters {
+  flex-direction: column;
+  }
+
+  .counter {
+  width: auto;
+  }
+
+  .unique-pre-header {
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+  }
+  }
+
+/* Counter Dropdown CSS */
+
+  .dropdown {
+  cursor: pointer;
+  background-color: #F7F7F7;
+  padding: 10px 5px;
+  text-align: center;
+  border-top: 0px solid #0D2541;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -9.1px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 500;
+  }
+
+  .icon {
+  margin-top: -1px;
+  margin-right: 4px;
+  }
+
+  .dropdown img {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 5px;
+  }
+
+  .dropdown-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  border-top: none;
+  background-color: #F7F7F7;
+  font-size: 14px;
+  font-weight: 600px;
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;  
+  }
+
+  .dropdown-content.show {
+  padding-top: 10px;
+  top: -15px;
+  max-height: 1000px;
+  }
+
+  .dropdown-content::after {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+  }
+
+  .dropdown-content-item {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: -10px;
+  padding: 10px 20px;
+  background-color: #F7F7F7;
+  position: relative;
+  cursor: pointer;
+  }
+
+  .dropdown-content-text {
+  flex-grow: 1;
+  display: inline-block;
+  margin-left: 10px;
+  width: calc(100% - (size of the icon + margin));
+  line-height: 19px;
+  }
+
+  .dropdown-content {
+  top: -9.1px;
+  }
+
+  .counter, .dropdown, .dropdown-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
+  }
+
+  .show {
+  display: block;
+  }
+
+  .separator-line {
+  height: 1px;
+  background-color: rgba(13, 37, 65, 0.5);
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 14px;
+  margin-bottom: 4px;
+  }
+
+  .trial-button {
+  background-color: #FDD646;
+  color: #0D2541;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  padding: 7px 0;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  }
+
+  @media (max-width: 210px) {
+    .trial-button {
+    font-size: 9px;
+    }
+  }
+
+  .trial-button:hover {
+  background-color: #EEBF07;
+  }
+
+/* Time To Ditch Text CSS */
+
+@media (max-width: 768px) {
+  .ditch {
+  display: block;
+  text-align: center;
+  }
+}
+
+  .rotating-text-container {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  }
+
+  .rotating-text {
+  color: #21528C;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+  }
+
+  .large-header {
+  text-align: center;
+  font-size: 32px;
+  color: #003057;
+  margin-top: 8px;
+  }
+
+/* Contact Form CSS */
+
+  .contact-form {
+  background: #000;
+  padding: 30px;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-top: 0px;
+  position: relative;
+  z-index: 1;
+  }
+
+  .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #003057;
+  border-radius: 4px;
+  }
+
+  .contact-button {
+  width: 100%;
+  background: #003057;
+  color: #F7F7F7;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  }
+
+/* Footer CSS */
+
+  footer {
+  text-align: center;
+  color: #F7F7F7;
+  padding: 10px 0;
+  background: #003057;
+  position: relative;
+  margin-top: -100px;
+  clear: both;
+  height: 100px;
+  }
+
+/* Keytext CSS */
+
+/* @keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+  } */
+
+  .dynamic-word {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  animation: fadeInOut 4s ease-in-out infinite;
+  }
+
+  .fadeInOut{animation:fadeInOut 4s ease-in-out infinite}
+@keyframes fadeInOut{
+  0%{transform:translate(0px, 25px); opacity: 0;}
+  25%{transform:translate(0px, 0); opacity: 1;}
+  50%{transform:translate(0px, 0); opacity: 1;}
+  75%{transform:translate(0px, 0); opacity: 1;}
+  100%{transform:translate(0px, -25px); opacity: 0;}
+}
+
+  .dynamic-word span {
+  animation: swoopFade 4s ease-in-out infinite;
+  }
+
+  .dynamic-trademark {
+  font-size: smaller;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #0D2541;
+  }
+
+/* Icons CSS */
+
+  .material-symbols-outlined.included-icon {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .material-symbols-rounded.sms-icon {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+  margin-right: 13px;
+  color: #806500;
+  }
+
+  .material-symbols-rounded.dropdown-icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #003057;
+  vertical-align: middle;
+  margin-right: 0px;
+  }
+
+  .material-symbols-outlined.flipped {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+  }
+
+  .trademark {
+  font-size: 0.75em;
+  vertical-align: 0.3em;
+  margin-left: 0.2em;
+  color: rgba(0, 48, 87, 0.9);
+  }
+
+  .material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+  }
+
+  .trial-icon {
+  font-family: 'Material Symbols Rounded';
+  font-weight: 400;
+  font-size: 24px;
+  color: #0D2541;
+  vertical-align: middle;
+  margin-right: 0px;
+  vertical-align: middle;
+  }
+
+  .material-symbols-rounded.flipped {
+  transform: rotate(180deg);
+  }
+
+
+
+  .custom-shape-divider-bottom-1708380672 {
+    position: relative;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1708380672 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 51px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1708380672 .shape-fill {
+    fill: #F7F7F7;
+}
+
+
+
+
+.trial-section-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color: #F7F7F7;
+}
+
+.trial-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.trial-content {
+  text-align: center; /* Ensures text is centered in the content area */
+}
+
+.trial-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 280px;
+}
+
+@media screen and (max-width: 768px) {
+  .trial-section {
+    flex-direction: column;
+    text-align: center; /* Centers content in the section */
+  }
+
+  .rotating-text-container, .large-header {
+    width: 100%; /* Ensures full width */
+    text-align: center; /* Centers text within the container */
+  }
+
+  .trial-content, .trial-image {
+    width: 100%;
+    display: block; /* Stack elements on mobile */
+  }
+
+  .trial-image img {
+    max-width: 80%; /* Adjust the width of the image on mobile */
+    height: auto;
+    margin: 20px auto; /* Adds space at the top and centers the image horizontally */
+  }
+}
+.rotating-text-container, .large-header {
+  background-color: #F7F7F7; /* Set the background color to white */
+}
+
+.icon-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the start of the container */
+  gap: 12px; /* Space between each icon-text item */
+  margin-top: -5px; /* Space below the "Watch Two Days Free" header */
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) { /* Adjust as necessary for your desktop breakpoint */
+  .dropdown-content-item .dropdown-icon {
+    /* Adjustments to align icon's top with the top of the text */
+    margin-top: 2px; /* Adjust value as necessary to align with the top of the text */
+  }
+}
+
+.icon-text-item {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text-group .specific-icon {
+  font-size: 18px; /* Icon size */
+  margin-right: 8px; /* Space between icon and text */
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* You may need to adjust the font-size of the text next to the icons to match the dropdown text style */
+.icon-text-item > span:not(.material-symbols-rounded) {
+  font-size: 15px; /* Text size next to icons, adjust as needed */
+  font-weight: 500;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<!--- Logo --->
+
+  <div class="main-content">
+      <header>
+        <div class="container">
+        <img src="CableForLess.svg" alt="Cable4Less Logo" />
+        </div>
+      </header>
+
+
+
+  <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
+
+  <div>
+    <h1 class="headline">Just <span class="price-highlight">$15.99/mo</span> For Unlimited Entertainment</h1>
+    <div class="button-center">
+    <button class="scroll-to-contact">
+    <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  </div>
+    
+<!--- Counters & Dropdowns --->
+
+<!--- 1 --->
+
+  <div class="counters">
+  <div class="counter">
+    <div class="count-1">
+      <p>TV Channels</p>
+      <h2 id="channels">6150+</h2>
+    </div>
+
+  <div class="dropdown" onclick="toggleDropdown('channels-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
+
+  <div id="channels-dropdown" class="dropdown-content">
+
+    <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<spanclass="trademark">™, ESPN+, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">star</span><span class="dropdown-content-text"><b>Premium Entertainment: </b>SHOWTIME<span class="trademark">&reg;</span> pkg, HBO<span class="trademark">&reg;</span> pkg, Hallmark<span class="trademark">&reg;</span> pkg, PokerGO<span class="trademark">&reg;</span>, BET<span class="trademark">&reg;</span> pkg, STARZ<span class="trademark">&reg;</span> pkg, Cinemax<span class="trademark">&reg;</span> pkg <b>+ MUCH MORE</b></span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">location_on</span><span class="dropdown-content-text"><b>All The Locals: </b>99 ABC, 120 CBS<span class="trademark">&reg;</span>, 135 FOX<span class="trademark">&reg;</span>, 170 NBC<span class="trademark">&reg;</span>, 66 latin local affiliate channels <b>+ MORE</b></span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">public</span><span class="dropdown-content-text"><b>Global Television</b> covering all—U.S., Canadian, Latin, UK, French, German—TV networks & more</b></span></div>
+
+  <button type="button" class="trial-button">
+    <span class="trial-icon">navigate_next</span>
+    Get Free 2-Day Trial
+  </button>
+  
+  </div>
+  </div>
+
+<!--- 2 --->
+
+  <div class="counter">
+  <div class="ribbon">FREE</div>
+    <div class="count-1">
+      <p>Movies</p>
+      <h2 id="movies">20100+</h2>
+    </div>
+
+  <div class="dropdown" onclick="toggleDropdown('movies-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
+
+  <div id="movies-dropdown" class="dropdown-content">
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest 2024 releases</b> from all studios & streaming platforms incl. Netflix<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span>, Disney+, HBO<span class="trademark">&reg;</span> & more</span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">movie</span><span class="dropdown-content-text"><b>Access to 20000+</b> on-demand thrillers, documentaries, comedies, horrors, family entertainment & more</span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select movies—with thousands of titles to choose from, movie night can be every night</span></div>
+
+  <button type="button" class="trial-button">
+    <span class="trial-icon">navigate_next</span>
+    Get Free 2-Day Trial
+  </button>
+
+  </div>
+  </div>
+
+<!--- 3 --->
+
+  <div class="counter">
+    <div class="ribbon">FREE</div>
+    <div class="count-1">
+      <p>Shows</p>
+      <h2 id="tvshows">6500+</h2>
+    </div>
+
+  <div class="dropdown" onclick="toggleDropdown('tvshows-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
+
+  <div id="tvshows-dropdown" class="dropdown-content">
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest episodes</b> from all networks & streaming platforms incl. Paramount+<span class="trademark">&reg;</span>, CBS<span class="trademark">&reg;</span>, Netflix<span class="trademark">&reg;</span>, Hulu<span class="trademark">&reg;</span>, ABC & more</span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">weekend</span><span class="dropdown-content-text"><b>Access to 6500+ </b>on-demand—reality, action, romance, crime, adventure, drama—shows & more</span></div>
+
+    <div class="separator-line"></div>
+
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select shows—ditch the expensive streaming bills and never miss an episode; watch anywhere</span></div>
+
+  <button type="button" class="trial-button">
+    <span class="trial-icon">navigate_next</span>
+    Get Free 2-Day Trial
+  </button>
+
+  </div>
+  </div>
+  </div>
+
+<!--- Free Trial Message --->
+
+<div class="custom-shape-divider-bottom-1708380672">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<div class="trial-section-wrapper">
+  <div class="trial-section">
+    <div class="trial-content">
+      <div class="rotating-text-container">
+        <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
+      </div>
+      <h2 class="large-header">Watch Two Days Free</h2>
+      <!-- Icon-text items with specific class for custom styling -->
+      <div class="icon-text-group">
+        <div class="icon-text-item">
+          <span class="material-symbols-rounded custom-icon specific-icon">close</span>
+          <span>No Sign-Up Required</span>
+        </div>
+        <div class="icon-text-item">
+          <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
+          <span>Watch on Any Device</span>
+        </div>
+      </div>
+    </div>
+    <div class="trial-image">
+      <img src="1.png" alt="Free 2 Day Trial">
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+<!--- Contact Form --->
+
+  <div class="contact-form">
+  <form id="contactForm">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Your Name"
+      name="name"
+      required
+    />
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Your Email"
+      name="email"
+      required
+    />
+    <input
+      type="tel"
+      class="form-control"
+      placeholder="Your Phone Number"
+      name="phone"
+      required
+    />
+
+  <button type="submit" class="contact-button">Contact Us</button>
+  
+  </form>
+  
+  </div>
+  </div>
+  </div>
+
+<!--- Footer --->
+
+  <footer><p>&copy; 2024 Cable4Less. All rights reserved.</p></footer>
+
+<!--- Script --->
+
+<script>
+function rotateWords() {
+  const words = [    
+    "DirecTV<span class='dynamic-trademark'>&reg;</span>",
+    "Xfinity<span class='dynamic-trademark'>&reg;</span>",
+    "Spectrum<span class='dynamic-trademark'>&reg;</span>",
+    "Charter<span class='dynamic-trademark'>&reg;</span>",
+    "COX<span class='dynamic-trademark'>&reg;</span>",
+    "Dish<span class='dynamic-trademark'>&reg;</span>",
+  ];
+  let currentIndex = 0;
+
+  function updateText() {
+    // Wait for the fade-out to complete before updating the text
+    setTimeout(() => {
+      const dynamicWord = document.querySelector(".dynamic-word");
+      if (dynamicWord) {
+        dynamicWord.innerHTML = words[currentIndex];
+        currentIndex = (currentIndex + 1) % words.length;
+      }
+    }, 3400); // Adjust this to match when the text is fully faded out
+  }
+
+  updateText();
+  setInterval(updateText, 4000); // Continue to update at intervals
+}
+      function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          obj.textContent =
+            Math.floor(progress * (end - start) + start) +
+            (progress === 1 ? "+" : "");
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          }
+        };
+        window.requestAnimationFrame(step);
+      }
+
+      function loadCounters() {
+        animateValue(document.getElementById("channels"), 0, 6100, 2000);
+        animateValue(document.getElementById("tvshows"), 0, 6500, 2000);
+        animateValue(document.getElementById("movies"), 0, 20100, 2000);
+      }
+
+      window.onload = function () {
+        loadCounters();
+        rotateWords();
+        autoOpenDropdownOnMobile();
+      };
+
+      function autoOpenDropdownOnMobile() {
+        if (window.innerWidth <= 768) {
+          toggleDropdown("channels-dropdown");
+        }
+      }
+
+      function toggleDropdown(dropdownId) {
+  var dropdownContent = document.getElementById(dropdownId);
+  dropdownContent.classList.toggle("show");
+
+  var icon = dropdownContent.previousElementSibling.querySelector(".material-symbols-rounded");
+  if (icon) {
+    icon.classList.toggle("flipped");
+  }
+}
+
+      document.getElementById("contactForm").onsubmit = function (event) {
+        event.preventDefault();
+        alert("Thank you for your inquiry. We'll be in touch soon!");
+      };
+
+      
+// Select all buttons with the 'trial-button' class
+var trialButtons = document.querySelectorAll('.trial-button');
+
+// Iterate over each button and add the click event listener
+trialButtons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent any default button action
+    var contactSection = document.querySelector('.contact-form'); // Ensure this targets your contact form correctly
+    contactSection.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
+  });
+});
+
+
+document.querySelector('.trial-button').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent any default button action
+  var contactSection = document.querySelector('.contact-form'); // Targeting the contact form directly
+  contactSection.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
+});
+
+document.querySelector('.scroll-to-contact').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent any default button action
+  document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the contact section
+});
+
+
+</script>
+
+</body>
+
+</html>
