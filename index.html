@@ -120,9 +120,9 @@
   }
 
   .scroll-to-contact {
-  background-color: #FDD646; /* Deeper blue for better visibility */
-  color: #0D2541;; /* White text for contrast */
-  border: 2px solid #FDD646; /* Brighter blue border */
+  background-color: #FDD646;
+  color: #0D2541;;
+  border: 2px solid #FDD646;
   border-radius: 20px;
   padding: 8px 40px;
   margin-bottom: 60px;
@@ -138,17 +138,9 @@
   }
 
   .scroll-to-contact:hover {
-  background-color: #EEBF07; /* Vibrant orange for hover */
-  color: #0D2541;; /* Keep text white for readability */
-  border-color: #EEBF07; /* Matching border color */
-  }
-
-  .learn-more-icon {
-  vertical-align: middle;
-  margin-right: 8px;
-  font-size: 24px;
+  background-color: #EEBF07;
   color: #0D2541;
-  font-weight: 500;
+  border-color: #EEBF07;
   }
 
 /* Counter CSS */
@@ -213,11 +205,6 @@
   overflow: hidden;
   }
 
-  .material-symbols-rounded.dropdown-icon {
-  margin-right: 0px;
-  flex-shrink: 0;
-  }
-
   @media (max-width: 768px) {
   .counters {
   flex-direction: column;
@@ -249,18 +236,6 @@
   position: absolute;
   z-index: 100;
   font-weight: 500;
-  }
-
-  .icon {
-  margin-top: -1px;
-  margin-right: 4px;
-  }
-
-  .dropdown img {
-  height: 1em;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 5px;
   }
 
   .dropdown-content {
@@ -366,23 +341,23 @@
   }
 
   @media (max-width: 210px) {
-    .trial-button {
-    font-size: 9px;
-    }
+  .trial-button {
+  font-size: 9px;
+  }
   }
 
   .trial-button:hover {
   background-color: #EEBF07;
   }
 
-/* Time To Ditch Text CSS */
+/* Offer Call CSS */
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .ditch {
   display: block;
   text-align: center;
   }
-}
+  }
 
   .rotating-text-container {
   text-align: center;
@@ -394,7 +369,7 @@
 
   .rotating-text {
   color: #21528C;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.7px;
   font-weight: 500;
   }
@@ -406,9 +381,241 @@
   margin-top: 8px;
   }
 
+  .trial-section-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color: #F7F7F7;
+  }
+
+  .trial-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  }
+
+  .trial-content {
+  text-align: center;
+  }
+
+  .trial-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  }
+
+  @media screen and (max-width: 768px) {
+  .trial-section {
+  flex-direction: column;
+  text-align: center;
+  }
+
+  .rotating-text-container, .large-header {
+  width: 100%;
+  text-align: center;
+  }
+
+  .trial-content, .trial-image {
+  width: 100%;
+  display: block;
+  }
+
+  .trial-image img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px auto;
+  }
+  }
+
+  .rotating-text-container, .large-header {
+  background-color: #F7F7F7;
+  }
+
+  .icon-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -5px;
+  align-items: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+  .dropdown-content-item .dropdown-icon {
+  margin-top: 2px;
+  }
+  }
+
+  .icon-text-item {
+  display: flex;
+  align-items: center;
+  }
+
+  .icon-text-item > span:not(.material-symbols-rounded) {
+  font-size: 15px;
+  font-weight: 500;
+  }
+
 /* Contact Form CSS */
 
+  .custom-shape-divider-bottom-1708380672 {
+  position: relative;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  }
 
+  .custom-shape-divider-bottom-1708380672 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 51px;
+  transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom-1708380672 .shape-fill {
+  fill: #F7F7F7;
+  }
+
+  .dark-box-wrapper-2 {
+  background-color: #F7F7F7;
+  }
+
+  .dark-box-wrapper {
+  background-color: #Fff;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+  }
+
+  #contact-section {
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+
+  .contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 1rem;
+  }
+
+  .contact-box {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 300px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  font-size: 15px;
+  }
+
+  .contact-box h3 {
+  margin-top: 30px;
+  font-size: 15px;
+  }
+
+  #contact-section h3 {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  padding: 10px 0;
+  background-color: #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+  }
+
+  .contact-box button {
+  background: #0044cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+  .or-text {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  }
+
+  #contact-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 640px;
+  margin: auto;
+  box-sizing: border-box;
+  }
+
+  #contact-form input {
+  margin: 0.5rem 0;
+  width: calc(100% - 4rem);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+
+  #contact-form input[type="submit"] {
+  background: #0044cc;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+  width: auto;
+  }
+
+  @media (max-width: 700px) {
+  .dark-box-wrapper {
+  padding: 200;
+  max-width: none;
+  width: 350px;
+  margin: 0 auto;
+  }
+  
+  .contact-options, #contact-form {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  }
+
+  .contact-box, #contact-form input, #contact-form button {
+  width: calc(100% - 0rem);
+  }
+
+  .contact-box {
+  width: 270px;
+  margin: 0 auto;
+  }
+
+  #contact-form {
+  width: 270px;
+  margin: 0 auto;
+  }
+  }
 
 /* Footer CSS */
 
@@ -424,40 +631,6 @@
   width: 100%;
   }
 
-/* Keytext CSS */
-
-/* @keyframes fadeInOut {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-  } */
-
-  .dynamic-word {
-  display: inline-block;
-  width: 120px;
-  text-align: left;
-  animation: fadeInOut 4s ease-in-out infinite;
-  }
-
-  .fadeInOut{animation:fadeInOut 4s ease-in-out infinite}
-@keyframes fadeInOut{
-  0%{transform:translate(0px, 25px); opacity: 0;}
-  25%{transform:translate(0px, 0); opacity: 1;}
-  50%{transform:translate(0px, 0); opacity: 1;}
-  75%{transform:translate(0px, 0); opacity: 1;}
-  100%{transform:translate(0px, -25px); opacity: 0;}
-}
-
-  .dynamic-word span {
-  animation: swoopFade 4s ease-in-out infinite;
-  }
-
-  .dynamic-trademark {
-  font-size: smaller;
-  vertical-align: super;
-  margin-left: 2px;
-  color: #0D2541;
-  }
-
 /* Icons CSS */
 
   .material-symbols-outlined.included-icon {
@@ -465,7 +638,7 @@
   }
 
   .material-symbols-rounded.sms-icon {
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
   vertical-align: middle;
   margin-right: 13px;
   color: #806500;
@@ -484,7 +657,7 @@
   }
 
   .trademark {
-  font-size: 0.75em;
+  font-size: 0.65em;
   vertical-align: 0.3em;
   margin-left: 0.2em;
   color: rgba(0, 48, 87, 0.9);
@@ -512,293 +685,57 @@
   transform: rotate(180deg);
   }
 
-
-
-  .custom-shape-divider-bottom-1708380672 {
-    position: relative;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1708380672 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 51px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1708380672 .shape-fill {
-    fill: #F7F7F7;
-}
-
-
-
-
-
-
-
-
-
-
-.dark-box-wrapper-2 {
-  background-color: #F7F7F7; /* Background color for the margin outside the dark box wrapper */
-}
-
-.dark-box-wrapper {
-  background-color: #Fff; /* Use the current dark background color here */
-  margin: 0 auto; /* Centers the content */
-  max-width: 1000px; /* Or the max width you prefer for your content area */
-  padding: 1rem; /* Padding around the content inside the dark box */
-  box-sizing: border-box; /* Include padding in the width */
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  position: relative;
-}
-
-/* Rest of your existing CSS */
-
-
-#contact-section {
-  text-align: center;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.contact-options {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 1rem;
-}
-
-.contact-box {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 2rem;
-  width: 300px;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
-  font-size: 15px;
-}
-
-.contact-box h3 {
-  margin-top: 30px;
-  font-size: 15px;
-}
-
-.contact-box button {
-  background: #0044cc;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.or-text {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-}
-
-#contact-form {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 640px;
-  margin: auto;
-  box-sizing: border-box;
-}
-
-#contact-form input {
-  margin: 0.5rem 0;
-  width: calc(100% - 4rem);
-  padding: 0.75rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-#contact-form input[type="submit"] {
-  background: #0044cc;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  padding: 1rem;
-  cursor: pointer;
-  display: block;
-  margin: 1rem auto;
-  width: auto;
-}
-
-@media (max-width: 700px) {
-  .dark-box-wrapper {
-    padding: 200; /* Remove padding to allow the box to extend to the edges */
-    max-width: none; /* Allow the box to fill the screen on smaller devices */
-    width: 350px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
-    margin: 0 auto; /* This will center the box if the width is less than 100% */
-  }
-  
-  .contact-options, #contact-form {
-    flex-direction: column;
-    width: 100%; /* Full width on mobile */
-    align-items: center;
+  .material-symbols-rounded.dropdown-icon {
+  margin-right: 0px;
+  flex-shrink: 0;
   }
 
-  .contact-box, #contact-form input, #contact-form button {
-    width: calc(100% - 0rem); /* Adjust width to account for desired padding */
+  .learn-more-icon {
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 24px;
+  color: #0D2541;
+  font-weight: 500;
   }
 
-  .contact-box {
-    width: 270px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
-    margin: 0 auto; /* This will center the box if the width is less than 100% */
-    /* Add any additional properties you need for mobile styling */
+  .material-symbols-rounded.dropdown-icon {
+  margin-right: 0px;
+  flex-shrink: 0;
   }
 
-  #contact-form {
-    width: 270px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
-    margin: 0 auto; /* This will center the box if the width is less than 100% */
-    /* Add any additional properties you need for mobile styling */
+  .icon {
+  margin-top: -1px;
+  margin-right: 4px;
   }
-}
 
-
-.contact-chat-icon {
+  .contact-chat-icon {
   font-family: 'Material Symbols Rounded';
   display: block;
   text-align: center;
   font-size: 48px;
   margin-bottom: 8px;
-}
+  }
 
-.contact-call-icon {
+  .contact-call-icon {
   font-family: 'Material Symbols Rounded';
   display: block;
   text-align: center;
   font-size: 48px;
   margin-bottom: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.trial-section-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  background-color: #F7F7F7;
-}
-
-.trial-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 800px;
-  width: 100%;
-  margin: auto;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.trial-content {
-  text-align: center; /* Ensures text is centered in the content area */
-}
-
-.trial-image img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 300px;
-}
-
-@media screen and (max-width: 768px) {
-  .trial-section {
-    flex-direction: column;
-    text-align: center; /* Centers content in the section */
   }
 
-  .rotating-text-container, .large-header {
-    width: 100%; /* Ensures full width */
-    text-align: center; /* Centers text within the container */
-  }
-
-  .trial-content, .trial-image {
-    width: 100%;
-    display: block; /* Stack elements on mobile */
-  }
-
-  .trial-image img {
-    max-width: 80%; /* Adjust the width of the image on mobile */
-    height: auto;
-    margin: 20px auto; /* Adds space at the top and centers the image horizontally */
-  }
-}
-.rotating-text-container, .large-header {
-  background-color: #F7F7F7; /* Set the background color to white */
-}
-
-.icon-text-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Aligns items to the start of the container */
-  gap: 10px; /* Space between each icon-text item */
-  margin-top: -5px; /* Space below the "Watch Two Days Free" header */
-  align-items: center;
-}
-
-@media screen and (min-width: 1024px) { /* Adjust as necessary for your desktop breakpoint */
-  .dropdown-content-item .dropdown-icon {
-    /* Adjustments to align icon's top with the top of the text */
-    margin-top: 2px; /* Adjust value as necessary to align with the top of the text */
-  }
-}
-
-.icon-text-item {
-  display: flex;
-  align-items: center;
-}
-
-.icon-text-group .specific-icon {
-  font-size: 18px; /* Icon size */
-  margin-right: 8px; /* Space between icon and text */
+  .icon-text-group .specific-icon {
+  font-size: 18px;
+  margin-right: 8px;
   font-variation-settings:
   'FILL' 1,
   'wght' 500,
   'GRAD' 0,
   'opsz' 24
-}
-
-/* You may need to adjust the font-size of the text next to the icons to match the dropdown text style */
-.icon-text-item > span:not(.material-symbols-rounded) {
-  font-size: 15px; /* Text size next to icons, adjust as needed */
-  font-weight: 500;
-}
-
-
-
+  }
 
 </style>
-
 </head>
-
 <body>
 
 <!--- Logo --->
@@ -809,8 +746,6 @@
         <img src="CableForLess.svg" alt="Cable4Less Logo" />
         </div>
       </header>
-
-
 
   <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
 
@@ -836,7 +771,7 @@
 
   <div id="channels-dropdown" class="dropdown-content">
 
-    <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<spanclass="trademark">™, ESPN+, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
+    <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<span class="trademark">&reg;</span>, ESPN+, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
 
     <div class="separator-line"></div>
 
@@ -923,96 +858,77 @@
 
 <!--- Free Trial Message --->
 
-<div class="custom-shape-divider-bottom-1708380672">
-  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-  </svg>
-</div>
+  <div class="custom-shape-divider-bottom-1708380672">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+    </svg>
+  </div>
 
-<div class="trial-section-wrapper">
-  <div class="trial-section">
+  <div class="trial-section-wrapper">
+    <div class="trial-section">
     <div class="trial-content">
       <div class="rotating-text-container">
-        <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
+      <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
       </div>
-      <h2 class="large-header">Watch Two Days Free</h2>
-      <!-- Icon-text items with specific class for custom styling -->
-      <div class="icon-text-group">
-        <div class="icon-text-item">
-          <span class="material-symbols-rounded custom-icon specific-icon">close</span>
-          <span>No Sign-Up Required</span>
-        </div>
-        <div class="icon-text-item">
-          <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
-          <span>Watch on Any Device</span>
-        </div>
-      </div>
+
+  <h2 class="large-header">Watch Two Days Free</h2>
+
+  <div class="icon-text-group">
+    <div class="icon-text-item">
+      <span class="material-symbols-rounded custom-icon specific-icon">close</span>
+      <span>No Sign-Up Required</span>
     </div>
-    <div class="trial-image">
-      <img src="1.png" alt="Free 2 Day Trial">
+
+  <div class="icon-text-item">
+    <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
+      <span>Watch on Any Device</span>
     </div>
-  </div>
-</div>
 
+    </div>
+    </div>
 
-
-
-  
+  <div class="trial-image">
+    <img src="1.png" alt="Free 2 Day Trial">
+    </div>
+    </div>
+    </div>
 
 <!--- Contact Form --->
 
-
-
-
-
-
-<!-- Wrap the entire contact section with a new wrapper -->
-<div class="dark-box-wrapper-2">
-  <!-- Wrap the contact section with the new dark box wrapper -->
-  <div class="dark-box-wrapper">
+  <div class="dark-box-wrapper-2">
+    <div class="dark-box-wrapper">
     <section id="contact-section">
-      <h2>Get Started</h2>
-      <div class="contact-options">
-        <div class="contact-box">
-          <span class="contact-chat-icon">chat</span>
-          <h3>Chat with us</h3>
-          <p>Click here to start chatting with us.</p>
-          <button>Open 24/7</button>
-        </div>
-        <div class="contact-box">
-          <span class="contact-call-icon">call</span>
-          <h3>Give us a call</h3>
-          <p>855-CS-PHILO or 855-277-4456</p>
-          <button>Open 24/7</button>
-        </div>
-      </div>
-      <p class="or-text">OR</p>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" id="email">
-        <input type="tel" name="phone" placeholder="Your Phone" id="phone">
-        <input type="submit" value="Submit">
-      </form>
-    </section>
+      <h3>Get Started</h3>
+
+  <div class="contact-options">
+
+  <div class="contact-box">
+    <span class="contact-chat-icon">chat</span>
+      <h5>Chat with us</h5>
+      <p>Click here to start chatting with us.</p>
+      <button>Open 24/7</button>
+    </div>
+
+  <div class="contact-box">
+    <span class="contact-call-icon">call</span>
+      <h5>Give us a call</h5>
+      <p>855-CS-PHILO or 855-277-4456</p>
+        <button>Open 24/7</button>
+    </div>
+    </div>
+
+  <p class="or-text">OR</p>
+
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" id="email">
+    <input type="tel" name="phone" placeholder="Your Phone" id="phone">
+    <input type="submit" value="Submit">
+    </form>
+
+  </section>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 <!--- Footer --->
 
@@ -1021,7 +937,8 @@
 <!--- Script --->
 
 <script>
-function rotateWords() {
+
+  function rotateWords() {
   const words = [    
     "DirecTV<span class='dynamic-trademark'>&reg;</span>",
     "Xfinity<span class='dynamic-trademark'>&reg;</span>",
@@ -1033,19 +950,18 @@ function rotateWords() {
   let currentIndex = 0;
 
   function updateText() {
-    // Wait for the fade-out to complete before updating the text
     setTimeout(() => {
       const dynamicWord = document.querySelector(".dynamic-word");
       if (dynamicWord) {
         dynamicWord.innerHTML = words[currentIndex];
         currentIndex = (currentIndex + 1) % words.length;
       }
-    }, 3400); // Adjust this to match when the text is fully faded out
+    }, 3400);
   }
 
   updateText();
-  setInterval(updateText, 4000); // Continue to update at intervals
-}
+  setInterval(updateText, 4000);
+  }
       function animateValue(obj, start, end, duration) {
         let startTimestamp = null;
         const step = (timestamp) => {
@@ -1087,14 +1003,8 @@ function rotateWords() {
   if (icon) {
     icon.classList.toggle("flipped");
   }
-}
-
-
-      
-
+  }
 
 </script>
-
 </body>
-
 </html>
