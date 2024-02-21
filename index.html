@@ -544,9 +544,26 @@
 
 
 
+.dark-box-wrapper-2 {
+  background-color: #F7F7F7; /* Background color for the margin outside the dark box wrapper */
+}
+
+.dark-box-wrapper {
+  background-color: #Fff; /* Use the current dark background color here */
+  margin: 0 auto; /* Centers the content */
+  max-width: 1000px; /* Or the max width you prefer for your content area */
+  padding: 1rem; /* Padding around the content inside the dark box */
+  box-sizing: border-box; /* Include padding in the width */
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+}
+
+/* Rest of your existing CSS */
+
+
 #contact-section {
   text-align: center;
-  padding: 2rem;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -554,7 +571,7 @@
 .contact-options {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjusted for a fixed gap */
+  gap: 40px;
   margin-bottom: 1rem;
 }
 
@@ -562,14 +579,15 @@
   background: #f9f9f9;
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 400px; /* Fixed width for smaller box appearance */
+  width: 300px;
   margin-bottom: 1rem;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 .contact-box h3 {
-  margin-top: 0;
+  margin-top: 30px;
+  font-size: 15px;
 }
 
 .contact-box button {
@@ -590,23 +608,21 @@
   background: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box; /* Make sure padding is included in the width */
-  width: 820px; /* Set width to match two boxes plus the gap */
+  width: 640px;
   margin: auto;
+  box-sizing: border-box;
 }
 
-
 #contact-form input {
-  margin: 0.5rem 0; /* Keep top and bottom margin */
-  width: calc(100% - 4rem); /* Adjust width considering padding of the form */
+  margin: 0.5rem 0;
+  width: calc(100% - 4rem);
   padding: 0.75rem;
   border-radius: 4px;
   border: 1px solid #ccc;
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  box-sizing: border-box;
 }
 
 #contact-form input[type="submit"] {
@@ -618,38 +634,56 @@
   cursor: pointer;
   display: block;
   margin: 1rem auto;
-  width: auto; /* Automatically adjust width based on content */
+  width: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
+  .dark-box-wrapper {
+    padding: 200; /* Remove padding to allow the box to extend to the edges */
+    max-width: none; /* Allow the box to fill the screen on smaller devices */
+    width: 350px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
+    margin: 0 auto; /* This will center the box if the width is less than 100% */
+  }
+  
   .contact-options, #contact-form {
     flex-direction: column;
     width: 100%; /* Full width on mobile */
     align-items: center;
   }
+
   .contact-box, #contact-form input, #contact-form button {
-    width: calc(100% - 0rem); /* Adjust for mobile responsiveness */
+    width: calc(100% - 0rem); /* Adjust width to account for desired padding */
+  }
+
+  .contact-box {
+    width: 270px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
+    margin: 0 auto; /* This will center the box if the width is less than 100% */
+    /* Add any additional properties you need for mobile styling */
+  }
+
+  #contact-form {
+    width: 270px; /* This will enforce the width on mobile, or you can use a percentage or different fixed width if needed */
+    margin: 0 auto; /* This will center the box if the width is less than 100% */
+    /* Add any additional properties you need for mobile styling */
   }
 }
 
-/* Unique classes for the contact section icons */
+
 .contact-chat-icon {
   font-family: 'Material Symbols Rounded';
   display: block;
   text-align: center;
-  font-size: 48px; /* Adjust size as needed */
-  margin-bottom: 8px; /* Space between icon and text */
+  font-size: 48px;
+  margin-bottom: 8px;
 }
 
 .contact-call-icon {
   font-family: 'Material Symbols Rounded';
   display: block;
   text-align: center;
-  font-size: 48px; /* Adjust size as needed */
-  margin-bottom: 8px; /* Space between icon and text */
+  font-size: 48px;
+  margin-bottom: 8px;
 }
-
-
 
 
 
@@ -680,7 +714,7 @@
   width: 100%;
   margin: auto;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   margin-top: 10px;
 }
 
@@ -932,31 +966,38 @@
 
 
 
-
-<section id="contact-section">
-  <h2>Get Started</h2>
-  <div class="contact-options">
-    <div class="contact-box">
-      <span class="contact-chat-icon">chat</span> <!-- Unique icon class -->
-      <h3>Chat with us</h3>
-      <p>Click here to start chatting with us.</p>
-      <button>Open 24/7</button>
-    </div>
-    <div class="contact-box">
-      <span class="contact-call-icon">call</span> <!-- Unique icon class -->
-      <h3>Give us a call</h3>
-      <p>855-CS-PHILO or 855-277-4456</p>
-      <button>Open 24/7</button>
-    </div>
+<!-- Wrap the entire contact section with a new wrapper -->
+<div class="dark-box-wrapper-2">
+  <!-- Wrap the contact section with the new dark box wrapper -->
+  <div class="dark-box-wrapper">
+    <section id="contact-section">
+      <h2>Get Started</h2>
+      <div class="contact-options">
+        <div class="contact-box">
+          <span class="contact-chat-icon">chat</span>
+          <h3>Chat with us</h3>
+          <p>Click here to start chatting with us.</p>
+          <button>Open 24/7</button>
+        </div>
+        <div class="contact-box">
+          <span class="contact-call-icon">call</span>
+          <h3>Give us a call</h3>
+          <p>855-CS-PHILO or 855-277-4456</p>
+          <button>Open 24/7</button>
+        </div>
+      </div>
+      <p class="or-text">OR</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" id="email">
+        <input type="tel" name="phone" placeholder="Your Phone" id="phone">
+        <input type="submit" value="Submit">
+      </form>
+    </section>
   </div>
-  <p class="or-text">OR</p>
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" id="email">
-    <input type="tel" name="phone" placeholder="Your Phone" id="phone">
-    <input type="submit" value="Submit">
-  </form>
-</section>
+</div>
+
+
 
 
 
