@@ -251,13 +251,17 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  transition: all .5s ease-in-out;  
+  transition: all .5s ease-in-out;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   }
 
   .dropdown-content.show {
   padding-top: 10px;
   top: -15px;
   max-height: 1000px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   }
 
   .dropdown-content::after {
@@ -489,31 +493,33 @@
 
   .dark-box-wrapper-2 {
   background-color: #F7F7F7;
+  padding-bottom: 40px;
   }
 
   .dark-box-wrapper {
   background-color: #Fff;
   margin: 0 auto;
-  max-width: 800px;
-  padding: 1rem;
+  width: fit-content;
   box-sizing: border-box;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   position: relative;
   overflow: hidden;
+  
   }
 
   #contact-section {
   text-align: center;
   max-width: 100%;
   overflow-x: hidden;
+  padding: 40px;
   }
 
   .contact-options {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
   }
 
   .contact-box {
@@ -521,7 +527,6 @@
   border-radius: 8px;
   padding: 2rem;
   width: 330px;
-  margin-bottom: 1rem;
   box-sizing: border-box;
   font-size: 15px;
   display: flex;
@@ -578,7 +583,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 640px;
   margin: auto;
   box-sizing: border-box;
   }
@@ -606,10 +610,6 @@
 
   @media (max-width: 700px) {
   .dark-box-wrapper {
-  padding: 200;
-  max-width: none;
-  width: 330px;
-  margin: 0 auto;
   }
   
   .contact-options, #contact-form {
@@ -625,6 +625,10 @@
   .contact-box {
   width: 280px;
   margin: 0 auto;
+  }
+
+  .trial-section {
+  width: 330px;
   }
 
   #contact-form {
@@ -656,6 +660,22 @@
   .contact-box p a:hover,
   .contact-box p a:focus {
   color: #000;
+  }
+
+  .header-box {
+  background-color: #007bff;
+  text-align: center;
+  align-content: center;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
   }
 
 /* Footer CSS */
@@ -959,10 +979,11 @@
 
 <!--- Contact Form --->
 
-  <div class="dark-box-wrapper-2">
+
+  <div class="dark-box-wrapper-2">    
     <div class="dark-box-wrapper">
+      <div class="header-box">Get Started</div>
     <section id="contact-section">
-      <h3>Get Started</h3>
 
   <div class="contact-options">
 
