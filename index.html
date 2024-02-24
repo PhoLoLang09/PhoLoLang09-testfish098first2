@@ -231,7 +231,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -9.1px;
+  top: -7px;
   border-radius: 0 0 10px 10px;
   position: absolute;
   z-index: 100;
@@ -251,14 +251,15 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  transition: all .5s ease-in-out;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  top: -17px;
+  transition: all .5s ease-in-out;  
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   }
 
   .dropdown-content.show {
   padding-top: 10px;
-  top: -15px;
+  top: -17px;
   max-height: 1000px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -293,10 +294,6 @@
   margin-left: 10px;
   width: calc(100% - (size of the icon + margin));
   line-height: 19px;
-  }
-
-  .dropdown-content {
-  top: -9.1px;
   }
 
   .counter, .dropdown, .dropdown-content {
@@ -503,6 +500,8 @@
   box-sizing: border-box;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: relative;
   overflow: hidden;
   
@@ -601,19 +600,26 @@
   color: white;
   border: none;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   cursor: pointer;
   display: block;
   margin: 1rem auto;
   width: auto;
+  border-radius: 8px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
   .dark-box-wrapper {
+  }
+
+  #contact-section{
+    padding: 30px;
   }
   
   .contact-options, #contact-form {
   flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
   width: 100%;
   align-items: center;
   }
@@ -628,7 +634,7 @@
   }
 
   .trial-section {
-  width: 330px;
+  width: 70%;
   }
 
   #contact-form {
@@ -653,7 +659,6 @@
   }
 
   .contact-box p a {
-  color: #yourColor;
   text-decoration: none;
   }
 
@@ -760,7 +765,8 @@
   }
 
   .get-started-icon {
-  margin-right: 8px;
+  margin-right: 5px;
+  margin-left: -5px;
   font-size: 24px;
   color: #fff;
   }
