@@ -231,7 +231,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -7px;
+  top: -9.1px;
   border-radius: 0 0 10px 10px;
   position: absolute;
   z-index: 100;
@@ -251,19 +251,13 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: -17px;
   transition: all .5s ease-in-out;  
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;  
   }
 
   .dropdown-content.show {
   padding-top: 10px;
-  top: -17px;
-  margin-bottom: -17px;
+  top: -15px;
   max-height: 1000px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   }
 
   .dropdown-content::after {
@@ -297,6 +291,10 @@
   line-height: 19px;
   }
 
+  .dropdown-content {
+  top: -9.1px;
+  }
+
   .counter, .dropdown, .dropdown-content {
   position: relative;
   z-index: 1;
@@ -321,17 +319,13 @@
 
   .trial-button {
   background-color: #FDD646;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid #FDD646;
   color: #0D2541;
+  border: none;
   border-radius: 0 0 20px 20px;
   padding: 7px 0;
   font-size: 14px;
   font-weight: 500;
   margin-top: 30px;
-  margin-bottom: -5px;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
@@ -495,35 +489,31 @@
 
   .dark-box-wrapper-2 {
   background-color: #F7F7F7;
-  padding-bottom: 40px;
   }
 
   .dark-box-wrapper {
   background-color: #Fff;
   margin: 0 auto;
-  width: fit-content;
+  max-width: 800px;
+  padding: 1rem;
   box-sizing: border-box;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   position: relative;
   overflow: hidden;
-  
   }
 
   #contact-section {
   text-align: center;
   max-width: 100%;
   overflow-x: hidden;
-  padding: 40px;
   }
 
   .contact-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
   }
 
   .contact-box {
@@ -531,6 +521,7 @@
   border-radius: 8px;
   padding: 2rem;
   width: 330px;
+  margin-bottom: 1rem;
   box-sizing: border-box;
   font-size: 15px;
   display: flex;
@@ -587,6 +578,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 640px;
   margin: auto;
   box-sizing: border-box;
   }
@@ -605,26 +597,23 @@
   color: white;
   border: none;
   font-size: 1rem;
-  padding: 0.8rem 1rem;
+  padding: 1rem;
   cursor: pointer;
   display: block;
   margin: 1rem auto;
   width: auto;
-  border-radius: 8px;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
   .dark-box-wrapper {
-  }
-
-  #contact-section{
-    padding: 30px;
+  padding: 200;
+  max-width: none;
+  width: 330px;
+  margin: 0 auto;
   }
   
   .contact-options, #contact-form {
   flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
   width: 100%;
   align-items: center;
   }
@@ -639,7 +628,7 @@
   }
 
   .trial-section {
-  width: 70%;
+  width: 330px;
   }
 
   #contact-form {
@@ -664,6 +653,7 @@
   }
 
   .contact-box p a {
+  color: #yourColor;
   text-decoration: none;
   }
 
@@ -677,15 +667,12 @@
   text-align: center;
   align-content: center;
   padding: 20px 0;
-  width: 100%;
+  width: 800px;
   box-sizing: border-box;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
   }
 
 /* Footer CSS */
@@ -770,8 +757,7 @@
   }
 
   .get-started-icon {
-  margin-right: 5px;
-  margin-left: -5px;
+  margin-right: 8px;
   font-size: 24px;
   color: #fff;
   }
@@ -991,9 +977,9 @@
 <!--- Contact Form --->
 
 
-  <div class="dark-box-wrapper-2">    
+  <div class="dark-box-wrapper-2">
+    <div class="header-box">Get Started</div>
     <div class="dark-box-wrapper">
-      <div class="header-box">Get Started</div>
     <section id="contact-section">
 
   <div class="contact-options">
