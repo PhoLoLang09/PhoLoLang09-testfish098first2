@@ -254,12 +254,13 @@
   top: -17px;
   transition: all .5s ease-in-out;  
   border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-right-radius: 30px;  
   }
 
   .dropdown-content.show {
   padding-top: 10px;
   top: -17px;
+  margin-bottom: -17px;
   max-height: 1000px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -320,13 +321,17 @@
 
   .trial-button {
   background-color: #FDD646;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #FDD646;
   color: #0D2541;
-  border: none;
   border-radius: 0 0 20px 20px;
   padding: 7px 0;
   font-size: 14px;
   font-weight: 500;
   margin-top: 30px;
+  margin-bottom: -5px;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
