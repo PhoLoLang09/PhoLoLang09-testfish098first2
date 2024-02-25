@@ -401,7 +401,6 @@
   justify-content: space-between;
   max-width: 800px;
   width: 100%;
-  margin: auto;
   box-sizing: border-box;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -419,11 +418,6 @@
   }
 
   @media screen and (max-width: 768px) {
-  .trial-section {
-  flex-direction: column;
-  text-align: center;
-  }
-
   .rotating-text-container, .large-header {
   width: 100%;
   text-align: center;
@@ -435,7 +429,6 @@
   }
 
   .trial-image img {
-  max-width: 80%;
   height: auto;
   margin: 20px auto;
   }
@@ -617,6 +610,12 @@
   .dark-box-wrapper {
   }
 
+  .trial-section {
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  }
+
   #contact-section{
     padding: 30px;
   }
@@ -638,14 +637,11 @@
   margin: 0 auto;
   }
 
-  .trial-section {
-  width: 70%;
-  }
-
   #contact-form {
   width: 280px;
   margin: 0 auto;
   }
+
   }
 
   h5 {
