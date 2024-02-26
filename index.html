@@ -521,7 +521,6 @@
 
   .contact-box {
   background: #f7f7f7;
-  border: 1.5px solid #dddddd8a;
   border-radius: 10px;
   padding: 2rem;
   width: 330px;
@@ -570,25 +569,20 @@
   font-size: 15px;
   width: 70%;
   font-weight: 600;
-  border: 1.5px solid #EEBF07;
+  border: 2px dashed #FDD646
   }
 
   .contact-box button:hover {
   background-color: #EEBF07;
   color: #0D2541;
-  border: 1.5px solid #EEBF07;
-  }
-
-  .or-text {
-  font-size: 1.5rem;
-  margin: 2rem 0;
+  border: 2px solid #EEBF07;
   }
 
   #contact-form {
   background: #f7f7f7;
-  border: 1.5px solid #dddddd8a;
-  padding: 2rem;
-  border-radius: 8px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -631,6 +625,11 @@
   #contact-section{
     padding: 30px;
   }
+
+  #contact-form input {
+    margin: 0.1rem 0; /* Reduces the top and bottom margin around each input */
+    padding: 0.5rem; /* Adjust padding if necessary */
+  }
   
   .contact-options, #contact-form {
   flex-direction: column;
@@ -641,7 +640,7 @@
   }
 
   .contact-box, #contact-form input, #contact-form button {
-  width: calc(100% - 0rem);
+  width: 100%;
   }
 
   .contact-box {
@@ -652,13 +651,15 @@
   #contact-form {
   width: 280px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
   }
 
   .contact-box button {
   width: 100%;
   }
 
-}
+  }
 
   h5 {
   font-size: 18px;
@@ -681,7 +682,11 @@
 
   .contact-box p a:hover,
   .contact-box p a:focus {
-  color: #000;
+  color: #21528C;;
+  }
+
+  a[href="sms:4694700813"] {
+  color: #21528C;
   }
 
   .header-box {
@@ -803,7 +808,7 @@
   font-family: 'Material Symbols Rounded';
   display: block;
   text-align: center;
-  font-size: 48px;
+  font-size: 45px;
   margin-bottom: 20px;
   margin-top: 0px;
   font-variation-settings:
@@ -814,10 +819,10 @@
   }
 
   .contact-call-icon {
-  height: 48px; /* Replace with the actual height */
-  width: auto; /* This will keep the image's aspect ratio */
+  height: 45px;
+  width: auto;
   margin-bottom: 32px;
-  display: block; /* This makes sure the margin is applied correctly */
+  display: block;
   }
 
   .icon-text-group .specific-icon {
@@ -1009,7 +1014,7 @@
   <div class="contact-box">
     <span class="contact-chat-icon">sms</span>
       <h5>Text</h5>
-      <p>Text FREE TRIAL to <a href="sms:4694700813">469-470-0813</a> to get started</p>
+      <p>Text FREE TRIAL to <a href="sms:4694700813&amp;body=FREE%20TRIAL">469-470-0813</a> to get started</p>
       <button class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
     </div>
 
