@@ -76,12 +76,12 @@
 
   .phone-link, .phone-link:link, .phone-link:visited {
   color: #806500;
-  text-decoration: underline;
+  text-decoration: none;
   }
 
   .phone-link:hover, .phone-link:active {
   color: #806500;
-  text-decoration: underline;
+  text-decoration: none;
   }
 
   .message-text {
@@ -140,7 +140,6 @@
   .scroll-to-contact:hover {
   background-color: #EEBF07;
   color: #0D2541;
-  border-color: #EEBF07;
   }
 
 /* Counter CSS */
@@ -158,7 +157,8 @@
   background: #21528C;
   border-radius: 10px 10px 0 0;
   width: 100%;
-  padding: 1.3rem 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   position: relative;
   }
 
@@ -178,6 +178,7 @@
   font-size: 2.3em;
   margin: 0;
   background: transparent !important;
+  padding-top: 5px;
   }
 
   .counter p {
@@ -231,8 +232,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -10px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0px 0px;
   position: absolute;
   z-index: 100;
   font-weight: 500;
@@ -251,7 +251,7 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: -20px;
+  top: 0px;
   transition: all .5s ease-in-out;  
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;  
@@ -259,16 +259,12 @@
 
   .dropdown-content.show {
   padding-top: 10px;
-  top: -20px;
-  margin-bottom: -17px;
+  margin-bottom: 0px;
   max-height: 1000px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   }
 
   .dropdown-content::after {
   content: '';
-  opacity: 1;
   position: absolute;
   left: 0;
   right: 0;
@@ -324,14 +320,13 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 2px solid #FDD646;
+  border-bottom: none;
   color: #0D2541;
   border-radius: 0 0 20px 20px;
   padding: 7px 0;
   font-size: 14px;
   font-weight: 500;
   margin-top: 30px;
-  margin-bottom: -5px;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
@@ -569,7 +564,7 @@
   font-size: 15px;
   width: 70%;
   font-weight: 600;
-  border: 2px dashed #FDD646
+  border: 2px solid #FDD646
   }
 
   .contact-box button:hover {
@@ -680,13 +675,12 @@
   text-decoration: none;
   }
 
-  .contact-box p a:hover,
-  .contact-box p a:focus {
-  color: #21528C;;
+  .phone-link, .phone-link:link, .phone-link:visited {
+  color: #21528C;
   }
 
-  a[href="sms:4694700813"] {
-  color: #21528C;
+  .phone-link:hover, .phone-link:active {
+  color: #21518c;
   }
 
   .header-box {
@@ -819,10 +813,17 @@
   }
 
   .contact-call-icon {
-  height: 45px;
-  width: auto;
-  margin-bottom: 32px;
+  font-family: 'Material Symbols Rounded';
   display: block;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24
   }
 
   .icon-text-group .specific-icon {
@@ -1003,40 +1004,36 @@
 
 <!--- Contact Form --->
 
-
-  <div class="dark-box-wrapper-2">    
-    <div class="dark-box-wrapper">
-      <div class="header-box">Get Started</div>
+<div class="dark-box-wrapper-2">    
+  <div class="dark-box-wrapper">
+    <div class="header-box">Get Started</div>
     <section id="contact-section">
-
-  <div class="contact-options">
-
-  <div class="contact-box">
-    <span class="contact-chat-icon">sms</span>
-      <h5>Text</h5>
-      <p>Text FREE TRIAL to <a href="sms:4694700813&amp;body=FREE%20TRIAL">469-470-0813</a> to get started</p>
-      <button class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
-    </div>
-
-  <div class="contact-box">
-    <img src="messenger.png" alt="Call Icon" class="contact-call-icon">
-      <h5>Messenger</h5>
-      <p>Message FREE TRIAL to get started on Facebook<span class="trademark2">&reg;</span></p>
-      <button class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now</button>
-    </div>
-    </div>
-
-
-  <form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" id="email">
-    <input type="tel" name="phone" placeholder="Your Phone" id="phone">
-    <input type="submit" value="Submit">
-    </form>
-
-  </section>
+      <div class="contact-options">
+        <div class="contact-box">
+          <span class="contact-chat-icon">sms</span>
+          <h5>Text</h5>
+          <p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
+          <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
+        </div>
+        <div class="contact-box">
+          <span class="contact-call-icon">send</span>
+          <h5>FB Messenger</h5>
+          <p>Message FREE TRIAL to get started on Facebook<span class="trademark2">&reg;</span></p>
+          <button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
+            <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now
+          </button>
+        </div>
+      </div>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" id="email">
+        <input type="tel" name="phone" placeholder="Your Phone" id="phone">
+        <input type="submit" value="Submit">
+      </form>
+    </section>
   </div>
-  </div>
+</div>
+
 
 <!--- Footer --->
 
@@ -1112,6 +1109,31 @@
     icon.classList.toggle("flipped");
   }
   }
+
+  document.getElementById('textNowButton').addEventListener('click', function() {
+  window.location.href = 'sms:4694700813&body=FREE%20TRIAL';
+});
+
+// JavaScript to scroll to the very bottom of ".custom-shape-divider-bottom-1708380672"
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener for "scroll-to-contact"
+    document.querySelector('.scroll-to-contact').addEventListener('click', function() {
+        scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
+    });
+
+    // Add event listener for "trial-button"
+    document.querySelector('.trial-button').addEventListener('click', function() {
+        scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
+    });
+
+    function scrollToBottomOfElement(selector) {
+        const element = document.querySelector(selector);
+        const bottomPosition = element.offsetTop + element.offsetHeight;
+        window.scrollTo({ top: bottomPosition, behavior: 'smooth' });
+    }
+});
+
+
 
 </script>
 </body>
