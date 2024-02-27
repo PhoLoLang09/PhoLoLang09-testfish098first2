@@ -98,6 +98,8 @@
   color: #F7F7F7;
   margin-bottom: 30px;
   margin-top: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
   }
 
   .price-highlight {
@@ -482,7 +484,7 @@
 
   .dark-box-wrapper-2 {
   background-color: #F7F7F7;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
   }
 
   .dark-box-wrapper {
@@ -492,8 +494,8 @@
   box-sizing: border-box;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   position: relative;
   overflow: hidden;
   
@@ -594,16 +596,21 @@
   }
 
   #contact-form input[type="submit"] {
-  background: #0044cc;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-  display: block;
-  margin: 1rem auto;
-  width: auto;
-  border-radius: 8px;
+    background: #FDD646;
+    color: #0D2541;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 30%;
+    font-weight: 600;
+    border: 2px solid #FDD646
   }
 
   @media (max-width: 800px) {
@@ -699,19 +706,107 @@
   letter-spacing: 0.8px;
   }
 
+  .icon-text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  }
+
+  .specific-icon {
+  font-family: 'Material Symbols Rounded';
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 22px;
+  padding-right: 10px;
+  vertical-align: middle;
+  }
+
+  .icon-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
 /* Footer CSS */
 
-  footer {
+footer {
   text-align: center;
   color: #F7F7F7;
-  padding: 10px 0;
+  padding: 30px 0px;
   background: #003057;
-  position: absolute;
-  margin-top: 0px;
-  clear: both;
-  height: 100px;
+  position: relative;
   width: 100%;
+}
+
+.custom-separator {
+  display: inline-block;
+  height: 20px;
+  width: 1px;
+  background-color: #F7F7F7;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.contact-link, .custom-contact {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-link:visited, .contact-link:hover, .contact-link:active, .custom-contact:visited, .custom-contact:hover, .custom-contact:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.disclaimer-box {
+  text-align: left;
+  border: 1px solid #F7F7F7;
+  padding: 15px;
+  margin: 20px auto;
+  width: 50%;
+  max-width: 80%;
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.disclaimer-box p {
+  color: #E7E7E7;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.disclaimer-box p:first-child {
+  margin-top: 0;
+}
+
+.disclaimer-box p:last-child {
+  margin-bottom: 0;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #F7F7F7;
+  padding-top: 0px;
+}
+
+.custom-contact {
+  font-size: 14px;
+  color: #F7F7F7;
+}
+
+@media screen and (max-width: 768px) {
+  .disclaimer-box {
+    width: 80%;
   }
+
+  .copyright, .custom-contact {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
 
 /* Icons CSS */
 
@@ -1003,7 +1098,7 @@
 
 <!--- Contact Form --->
 
-<div class="dark-box-wrapper-2">    
+  <div class="dark-box-wrapper-2">    
   <div class="dark-box-wrapper">
     <div class="header-box">Get Started</div>
     <section id="contact-section">
@@ -1024,19 +1119,34 @@
         </div>
       </div>
       <form id="contact-form">
+        <div class="icon-text-wrapper">
+          <span class="material-symbols-rounded specific-icon">email</span>
+          <span class="icon-text">Email</span>
+      </div>
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" id="email">
         <input type="tel" name="phone" placeholder="Your Phone" id="phone">
-        <input type="submit" value="Submit">
+        </span><input type="submit" value="Submit">
       </form>
     </section>
   </div>
-</div>
+  </div>
 
 
 <!--- Footer --->
 
-  <footer><p>&copy; 2024 Cable4Less. All rights reserved.</p></footer>
+<footer>
+<p class="copyright">&copy; 2024 Cable4Less. All rights reserved
+<span class="custom-separator"></span>
+<a href="mailto:hello@watchcable4less.net" class="custom-contact">Contact</a>
+</p>
+  <div class="disclaimer-box">
+    <p>All company names, brands, and other trademarks mentioned on this website are the property of their respective trademark holders. These trademarks are used solely for descriptive purposes and to identify the products or services of their respective owners. Our use of these names does not imply any affiliation with, endorsement by, or any association with these companies. Specifically, these companies are not affiliated with watchcable4less.net.</p>
+    <p>The art logo displayed at the top of this website is the exclusive property and trademark of watchcable4less.net. Unauthorized use of this logo is prohibited. This logo identifies watchcable4less.net and its services and should not be used without prior written permission from us.</p>
+    <p>Please be advised that watchcable4less.net is the only official website associated with our brand. Any other websites purporting to represent our brand should be considered unofficial and not endorsed by us.</p>
+  </div>
+</footer>
+
 
 <!--- Script --->
 
