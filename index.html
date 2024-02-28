@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en" style="height: 100%">
+
 <head>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
@@ -17,9 +18,7 @@
   <meta name="application-name" content="Cable4Less">
   <meta name="msapplication-TileColor" content="#003057">
   <meta name="theme-color" content="#F7F7F7">
-                
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Watch Cable for Less</title>
@@ -45,7 +44,6 @@
 
   .main-content {
   min-height: calc(100% - 40px);
-  padding-bottom: 100px;
   }
 
 /* Header CSS */
@@ -98,7 +96,7 @@
   color: #F7F7F7;
   margin-bottom: 30px;
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
   }
 
@@ -596,21 +594,21 @@
   }
 
   #contact-form input[type="submit"] {
-    background: #FDD646;
-    color: #0D2541;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    border-radius: 30px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    width: 30%;
-    font-weight: 600;
-    border: 2px solid #FDD646
+  background: #FDD646;
+  color: #0D2541;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 30%;
+  font-weight: 600;
+  border: 2px solid #FDD646
   }
 
   @media (max-width: 800px) {
@@ -624,12 +622,12 @@
   }
 
   #contact-section{
-    padding: 30px;
+  padding: 30px;
   }
 
   #contact-form input {
-    margin: 0.1rem 0; /* Reduces the top and bottom margin around each input */
-    padding: 0.5rem; /* Adjust padding if necessary */
+  margin: 0.1rem 0;
+  padding: 0.5rem;
   }
   
   .contact-options, #contact-form {
@@ -728,18 +726,49 @@
   margin-bottom: 0;
   }
 
+  #submission-success {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  }
+
+  #submission-success .icon {
+  font-size: 48px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  }
+
+  #submission-success p {
+  font-size: 20px;
+  color: #333;
+  }
+
+  #country_code {
+  background-image: url('path/to/your-dropdown-arrow-image.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  }
+
+  .google-symbols-dropdown-icon {
+  display: inline-block;
+  font-family: 'Material Symbols Rounded';
+  }
+
 /* Footer CSS */
 
-footer {
+  footer {
   text-align: center;
   color: #F7F7F7;
   padding: 40px 0px;
   background: #003057;
   position: relative;
   width: 100%;
-}
+  }
 
-.custom-separator {
+  .custom-separator {
   display: inline-block;
   height: 20px;
   width: 1px;
@@ -748,19 +777,19 @@ footer {
   margin: 0 10px;
   margin-left: 7px;
   margin-right: 7px;
-}
+  }
 
-.contact-link, .custom-contact {
+  .contact-link, .custom-contact {
   text-decoration: none;
   color: inherit;
-}
+  }
 
-.contact-link:visited, .contact-link:hover, .contact-link:active, .custom-contact:visited, .custom-contact:hover, .custom-contact:active {
+  .contact-link:visited, .contact-link:hover, .contact-link:active, .custom-contact:visited, .custom-contact:hover, .custom-contact:active {
   text-decoration: none;
   color: inherit;
-}
+  }
 
-.disclaimer-box {
+  .disclaimer-box {
   text-align: left;
   border: 1px solid #f7f7f790;
   padding: 15px;
@@ -769,46 +798,45 @@ footer {
   max-width: 80%;
   box-sizing: border-box;
   border-radius: 0px;
-}
+  }
 
-.disclaimer-box p {
+  .disclaimer-box p {
   color: #e7e7e790;
   font-size: 11px;
   margin-top: 10px;
   margin-bottom: 0px;
   line-height: 1.3;
-}
+  }
 
-.disclaimer-box p:first-child {
+  .disclaimer-box p:first-child {
   margin-top: 0;
-}
+  }
 
-.disclaimer-box p:last-child {
+  .disclaimer-box p:last-child {
   margin-bottom: 0;
-}
+  }
 
-.copyright {
+  .copyright {
   font-size: 14px;
   color: #F7F7F7;
   padding-top: 0px;
-}
+  }
 
-.custom-contact {
+  .custom-contact {
   font-size: 14px;
   color: #F7F7F7;
-}
+  }
 
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .disclaimer-box {
-    width: 80%;
+  width: 80%;
   }
 
   .copyright, .custom-contact {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   }
-}
-
+  }
 
 /* Icons CSS */
 
@@ -946,19 +974,19 @@ footer {
 <!--- Logo --->
 
   <div class="main-content">
-      <header>
-        <div class="container">
-        <img src="CableForLessLogoNew.svg" alt="Cable4Less Logo" />
-        </div>
-      </header>
+  <header>
+  <div class="container">
+  <img src="CableForLessLogoNew.svg" alt="Cable4Less Logo" />
+  </div>
+  </header>
 
   <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
 
   <div>
-    <h1 class="headline">Just <span class="price-highlight">$15.99/mo</span> For Unlimited Entertainment</h1>
-    <div class="button-center">
-    <button class="scroll-to-contact">
-    <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  <h1 class="headline">Just <span class="price-highlight">$15.99/mo</span> For Unlimited Entertainment</h1>
+  <div class="button-center">
+  <button class="scroll-to-contact">
+  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button>
   </div>
     
 <!--- Counters & Dropdowns --->
@@ -967,32 +995,32 @@ footer {
 
   <div class="counters">
   <div class="counter">
-    <div class="count-1">
-      <p>TV Channels</p>
-      <h2 id="channels">6150+</h2>
-    </div>
+  <div class="count-1">
+  <p>TV Channels</p>
+  <h2 id="channels">6150+</h2>
+  </div>
 
   <div class="dropdown" onclick="toggleDropdown('channels-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
   <div id="channels-dropdown" class="dropdown-content">
 
-    <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<span class="trademark">&reg;</span>, ESPN+<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<span class="trademark">&reg;</span>, ESPN+<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">star</span><span class="dropdown-content-text"><b>Premium Entertainment: </b>SHOWTIME<span class="trademark">&reg;</span> pkg, HBO<span class="trademark">&reg;</span> pkg, Hallmark<span class="trademark">&reg;</span> pkg, PokerGO<span class="trademark">&reg;</span>, BET<span class="trademark">&reg;</span> pkg, STARZ<span class="trademark">&reg;</span> pkg, Cinemax<span class="trademark">&reg;</span> pkg <b>+ MUCH MORE</b></span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">location_on</span><span class="dropdown-content-text"><b>All The Locals: </b>99 ABC<span class="trademark">&reg;</span>, 120 CBS<span class="trademark">&reg;</span>, 135 FOX<span class="trademark">&reg;</span>, 170 NBC<span class="trademark">&reg;</span>, 66 latin local affiliate channels <b>+ MORE</b></span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">public</span><span class="dropdown-content-text"><b>Global Television</b> covering all—U.S., Canadian, Latin, UK, French, German—TV networks & more</b></span></div>
 
   <button type="button" class="trial-button">
-    <span class="trial-icon">navigate_next</span>
-    Get Free 2-Day Trial
+  <span class="trial-icon">navigate_next</span>
+  Get Free 2-Day Trial
   </button>
   
   </div>
@@ -1002,10 +1030,10 @@ footer {
 
   <div class="counter">
   <div class="ribbon">FREE</div>
-    <div class="count-1">
-      <p>Movies</p>
-      <h2 id="movies">20100+</h2>
-    </div>
+  <div class="count-1">
+  <p>Movies</p>
+  <h2 id="movies">20100+</h2>
+  </div>
 
   <div class="dropdown" onclick="toggleDropdown('movies-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1013,17 +1041,17 @@ footer {
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest 2024 releases</b> from all studios & streaming platforms incl. Netflix<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span>, Disney+<span class="trademark">&reg;</span>, HBO<span class="trademark">&reg;</span> & more</span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">movie</span><span class="dropdown-content-text"><b>Access to 20000+</b> on-demand thrillers, documentaries, comedies, horrors, family entertainment & more</span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select movies—with thousands of titles to choose from, movie night can be every night</span></div>
 
   <button type="button" class="trial-button">
-    <span class="trial-icon">navigate_next</span>
-    Get Free 2-Day Trial
+  <span class="trial-icon">navigate_next</span>
+  Get Free 2-Day Trial
   </button>
 
   </div>
@@ -1032,11 +1060,11 @@ footer {
 <!--- 3 --->
 
   <div class="counter">
-    <div class="ribbon">FREE</div>
-    <div class="count-1">
-      <p>Shows</p>
-      <h2 id="tvshows">6500+</h2>
-    </div>
+  <div class="ribbon">FREE</div>
+  <div class="count-1">
+  <p>Shows</p>
+  <h2 id="tvshows">6500+</h2>
+  </div>
 
   <div class="dropdown" onclick="toggleDropdown('tvshows-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1044,17 +1072,17 @@ footer {
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest episodes</b> from all networks & streaming platforms incl. Paramount+<span class="trademark">&reg;</span>, CBS<span class="trademark">&reg;</span>, Netflix<span class="trademark">&reg;</span>, Hulu<span class="trademark">&reg;</span>, ABC<span class="trademark">&reg;</span> & more</span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">weekend</span><span class="dropdown-content-text"><b>Access to 6500+ </b>on-demand—reality, action, romance, crime, adventure, drama—shows & more</span></div>
 
-    <div class="separator-line"></div>
+  <div class="separator-line"></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select shows—ditch the expensive streaming bills and never miss an episode; watch anywhere</span></div>
 
   <button type="button" class="trial-button">
-    <span class="trial-icon">navigate_next</span>
-    Get Free 2-Day Trial
+  <span class="trial-icon">navigate_next</span>
+  Get Free 2-Day Trial
   </button>
 
   </div>
@@ -1064,91 +1092,102 @@ footer {
 <!--- Free Trial Message --->
 
   <div class="custom-shape-divider-bottom-1708380672">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-    <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-    </svg>
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+  <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+  </svg>
   </div>
 
   <div class="trial-section-wrapper">
-    <div class="trial-section">
-    <div class="trial-content">
-      <div class="rotating-text-container">
-      <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
-      </div>
+  <div class="trial-section">
+  <div class="trial-content">
+  <div class="rotating-text-container">
+  <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
+  </div>
 
   <h2 class="large-header">Watch Two Days Free</h2>
 
   <div class="icon-text-group">
-    <div class="icon-text-item">
-      <span class="material-symbols-rounded custom-icon specific-icon">close</span>
-      <span>No Sign-Up Required</span>
-    </div>
+  <div class="icon-text-item">
+  <span class="material-symbols-rounded custom-icon specific-icon">close</span>
+  <span>No Sign-Up Required</span>
+  </div>
 
   <div class="icon-text-item">
-    <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
-      <span>Watch on Any Device</span>
-    </div>
+  <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
+  <span>Watch on Any Device</span>
+  </div>
 
-    </div>
-    </div>
+  </div>
+  </div>
 
   <div class="trial-image">
-    <img src="1.png" alt="Free 2 Day Trial">
-    </div>
-    </div>
-    </div>
+  <img src="1.png" alt="Free 2 Day Trial">
+  </div>
+  </div>
+  </div>
 
 <!--- Contact Form --->
 
   <div class="dark-box-wrapper-2">    
   <div class="dark-box-wrapper">
-    <div class="header-box">Get Started</div>
-    <section id="contact-section">
-      <div class="contact-options">
-        <div class="contact-box">
-          <span class="contact-chat-icon">sms</span>
-          <h5>Text</h5>
-          <p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
-          <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
-        </div>
-        <div class="contact-box">
-          <span class="contact-call-icon">send</span>
-          <h5>FB Messenger</h5>
-          <p>Message FREE TRIAL to get started on Facebook<span class="trademark2">&reg;</span></p>
-          <button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
-            <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now
-          </button>
-        </div>
-      </div>
-      <form id="contact-form">
-        <div class="icon-text-wrapper">
-          <span class="material-symbols-rounded specific-icon">email</span>
-          <span class="icon-text">Email</span>
-      </div>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" id="email">
-        <input type="tel" name="phone" placeholder="Your Phone" id="phone">
-        </span><input type="submit" value="Submit">
-      </form>
-    </section>
+  <div class="header-box">Get Started</div>
+  <section id="contact-section">
+  <div class="contact-options">
+  <div class="contact-box">
+  <span class="contact-chat-icon">sms</span>
+  <h5>Text</h5>
+  <p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
+  <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
+  </div>
+  <div class="contact-box">
+  <span class="contact-call-icon">send</span><h5>FB Messenger</h5>
+  <p>Message FREE TRIAL to get started on Facebook<span class="trademark2">&reg;</span></p>
+  <button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
+  <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now
+  </button>
   </div>
   </div>
-
+  <form id="contact-form">
+  <div class="icon-text-wrapper">
+  <span class="material-symbols-rounded specific-icon">email</span>
+  <h5>Email</h5>
+  <p>We'll reach out to you</p>
+  </div>
+  <input type="text" name="name" placeholder="Preferred Name" required>
+  <input type="email" name="email" placeholder="Email Address" id="email">
+  <div class="phone-input-container">
+  <select name="country_code" id="country_code" class="country-code-selector">
+  <option value="+1" style="background-image:url('path/to/us-flag-icon.png')">US</option>
+  <option value="+1" style="background-image:url('path/to/canada-flag-icon.png')">Canada</option>
+  <option value="+52" style="background-image:url('path/to/mexico-flag-icon.png')">Mexico</option>
+  <option value="+44" style="background-image:url('path/to/uk-flag-icon.png')">UK</option>
+  </select>
+  <input type="tel" name="phone" placeholder="Phone Number" id="phone" class="phone-number-input">
+  </div>
+  <input type="submit" value="Contact Me">
+  </form>
+  </section>
+  </div>
+  </div>
+  
+  <div id="submission-success">
+  <span class="material-symbols-rounded icon">check_circle</span>
+  <p>Thank you for your submission!</p>
+  </div>
 
 <!--- Footer --->
 
-<footer>
-<p class="copyright">&copy; 2024 Cable4Less. All rights reserved
-<span class="custom-separator"></span>
-<a href="mailto:hello@watchcable4less.net" class="custom-contact">Contact</a>
-</p>
+  <footer>
+  <p class="copyright">&copy; 2024 Cable4Less. All rights reserved
+  <span class="custom-separator"></span>
+  <a href="mailto:hello@watchcable4less.net" class="custom-contact">Contact</a>
+  </p>
   <div class="disclaimer-box">
-    <p>All company names, brands, and other trademarks mentioned on this website are the property of their respective trademark holders. These trademarks are used solely for descriptive purposes and to identify the products or services of their respective owners. Our use of these names does not imply any affiliation with, endorsement by, or any association with these companies. Specifically, these companies are not affiliated with watchcable4less.net.</p>
-    <p>The art logo displayed at the top of this website is the exclusive property and trademark of watchcable4less.net. Unauthorized use of this logo is prohibited. This logo identifies watchcable4less.net and its services and should not be used without prior written permission from us.</p>
-    <p>Please be advised that watchcable4less.net is the only official website associated with our brand. Any other websites purporting to represent our brand should be considered unofficial and not endorsed by us.</p>
+  <p>All company names, brands, and other trademarks mentioned on this website are the property of their respective trademark holders. These trademarks are used solely for descriptive purposes and to identify the products or services of their respective owners. Our use of these names does not imply any affiliation with, endorsement by, or any association with these companies. Specifically, these companies are not affiliated with watchcable4less.net.</p>
+  <p>The art logo displayed at the top of this website is the exclusive property and trademark of watchcable4less.net. Unauthorized use of this logo is prohibited. This logo identifies watchcable4less.net and its services and should not be used without prior written permission from us.</p>
+  <p>Please be advised that watchcable4less.net is the only official website associated with our brand. Any other websites purporting to represent our brand should be considered unofficial and not endorsed by us.</p>
   </div>
-</footer>
-
+  </footer>
 
 <!--- Script --->
 
@@ -1156,95 +1195,125 @@ footer {
 
   function rotateWords() {
   const words = [    
-    "DirecTV<span class='dynamic-trademark'>&reg;</span>",
-    "Xfinity<span class='dynamic-trademark'>&reg;</span>",
-    "Spectrum<span class='dynamic-trademark'>&reg;</span>",
-    "Charter<span class='dynamic-trademark'>&reg;</span>",
-    "COX<span class='dynamic-trademark'>&reg;</span>",
-    "Dish<span class='dynamic-trademark'>&reg;</span>",
+  "DirecTV<span class='dynamic-trademark'>&reg;</span>",
+  "Xfinity<span class='dynamic-trademark'>&reg;</span>",
+  "Spectrum<span class='dynamic-trademark'>&reg;</span>",
+  "Charter<span class='dynamic-trademark'>&reg;</span>",
+  "COX<span class='dynamic-trademark'>&reg;</span>",
+  "Dish<span class='dynamic-trademark'>&reg;</span>",
   ];
   let currentIndex = 0;
 
   function updateText() {
-    setTimeout(() => {
-      const dynamicWord = document.querySelector(".dynamic-word");
-      if (dynamicWord) {
-        dynamicWord.innerHTML = words[currentIndex];
-        currentIndex = (currentIndex + 1) % words.length;
-      }
-    }, 3400);
+  setTimeout(() => {
+  const dynamicWord = document.querySelector(".dynamic-word");
+  if (dynamicWord) {
+  dynamicWord.innerHTML = words[currentIndex];
+  currentIndex = (currentIndex + 1) % words.length;
+  }
+  }, 3400);
   }
 
   updateText();
   setInterval(updateText, 4000);
   }
-      function animateValue(obj, start, end, duration) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-          if (!startTimestamp) startTimestamp = timestamp;
-          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          obj.textContent =
-            Math.floor(progress * (end - start) + start) +
-            (progress === 1 ? "+" : "");
-          if (progress < 1) {
-            window.requestAnimationFrame(step);
-          }
-        };
-        window.requestAnimationFrame(step);
-      }
+  function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+  if (!startTimestamp) startTimestamp = timestamp;
+  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+  obj.textContent =
+  Math.floor(progress * (end - start) + start) +
+  (progress === 1 ? "+" : "");
+  if (progress < 1) {
+  window.requestAnimationFrame(step);
+  }
+  };
+  window.requestAnimationFrame(step);
+  }
 
-      function loadCounters() {
-        animateValue(document.getElementById("channels"), 0, 6100, 2000);
-        animateValue(document.getElementById("tvshows"), 0, 6500, 2000);
-        animateValue(document.getElementById("movies"), 0, 20100, 2000);
-      }
+  function loadCounters() {
+  animateValue(document.getElementById("channels"), 0, 6100, 2000);
+  animateValue(document.getElementById("tvshows"), 0, 6500, 2000);
+  animateValue(document.getElementById("movies"), 0, 20100, 2000);
+  }
 
-      window.onload = function () {
-        loadCounters();
-        rotateWords();
-        autoOpenDropdownOnMobile();
-      };
+  window.onload = function () {
+  loadCounters();
+  rotateWords();
+  autoOpenDropdownOnMobile();
+  };
 
-      function autoOpenDropdownOnMobile() {
-        if (window.innerWidth <= 768) {
-          toggleDropdown("channels-dropdown");
-        }
-      }
+  function autoOpenDropdownOnMobile() {
+  if (window.innerWidth <= 768) {
+  toggleDropdown("channels-dropdown");
+  }
+  }
 
-      function toggleDropdown(dropdownId) {
+  function toggleDropdown(dropdownId) {
   var dropdownContent = document.getElementById(dropdownId);
   dropdownContent.classList.toggle("show");
 
   var icon = dropdownContent.previousElementSibling.querySelector(".material-symbols-rounded");
   if (icon) {
-    icon.classList.toggle("flipped");
+  icon.classList.toggle("flipped");
   }
   }
 
   document.getElementById('textNowButton').addEventListener('click', function() {
   window.location.href = 'sms:4694700813&body=FREE%20TRIAL';
-});
+  });
 
-// JavaScript to scroll to the very bottom of ".custom-shape-divider-bottom-1708380672"
-document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener for "scroll-to-contact"
-    document.querySelector('.scroll-to-contact').addEventListener('click', function() {
-        scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.scroll-to-contact').addEventListener('click', function() {
+  scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
+  });
 
-    // Add event listener for "trial-button"
-    document.querySelector('.trial-button').addEventListener('click', function() {
-        scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
-    });
+  document.querySelector('.trial-button').addEventListener('click', function() {
+  scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
+  });
 
-    function scrollToBottomOfElement(selector) {
-        const element = document.querySelector(selector);
-        const bottomPosition = element.offsetTop + element.offsetHeight;
-        window.scrollTo({ top: bottomPosition, behavior: 'smooth' });
-    }
-});
+  function scrollToBottomOfElement(selector) {
+  const element = document.querySelector(selector);
+  const bottomPosition = element.offsetTop + element.offsetHeight;
+  window.scrollTo({ top: bottomPosition, behavior: 'smooth' });
+  }
+  });
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
 
+  this.style.display = 'none';
 
+  var thankYouMessage = document.createElement('div');
+  thankYouMessage.id = 'thank-you-message';
+  thankYouMessage.innerHTML = '<p>Thank you for your submission!</p>';
+  thankYouMessage.style.display = 'block';
+
+  this.parentNode.appendChild(thankYouMessage);
+
+  document.getElementById('submission-success').style.display = 'block';
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+  var phoneInput = document.getElementById('phone');
+  
+  phoneInput.addEventListener('input', function() {
+  var numbers = this.value.replace(/\D/g, '').substring(0,10);
+  var formattedNumber = '';
+
+  if (numbers.length >= 4) {
+  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3);
+  } else {
+  formattedNumber = numbers;
+  }
+
+  if (numbers.length >= 7) {
+  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3,6) + '-' + numbers.substring(6);
+  }
+
+  this.value = formattedNumber;
+  });
+  });
 
 </script>
 </body>
