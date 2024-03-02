@@ -1482,27 +1482,27 @@
   }
 
   window.intlTelInput(input, {
-    utilsScript:
-    "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
-    onlyCountries: ["us", "ca", "mx", "gb"],
-    countrySearch: false,
-    utilsScript: "/intl-tel-input/js/utils.js?1708969428263",
-    initialCountry: "us",
-    geoIpLookup: function (callback) {
-    fetch("https://ipapi.co/json")
-    .then(function (res) {
-    return res.json();
-    })
-    .then(function (data) {
-    callback(data.country_code);
-    })
-    .catch(function () {
-    callback();
-    });
-    },
-    showSelectedDialCode:true,
-    fixDropdownWidth:false,
-    useFullscreenPopup:false,
+  utilsScript:
+  "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
+  onlyCountries: ["us", "ca", "mx", "gb"],
+  countrySearch: false,
+  utilsScript: "/intl-tel-input/js/utils.js?1708969428263",
+  initialCountry: "us",
+  geoIpLookup: function (callback) {
+  fetch("https://ipapi.co/json")
+  .then(function (res) {
+  return res.json();
+  })
+  .then(function (data) {
+  callback(data.country_code);
+  })
+  .catch(function () {
+  callback();
+  });
+  },
+  showSelectedDialCode:true,
+  fixDropdownWidth:false,
+  useFullscreenPopup: false;
   });
   </script>
 
