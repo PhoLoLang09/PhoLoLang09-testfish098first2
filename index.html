@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/css/intlTelInput.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="https://fonts.cdnfonts.com/css/pf-din-text-comp-pro-medium" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -139,18 +141,7 @@
 
   .scroll-to-contact:hover {
   background-color: #EEBF07;
-  border: 2px solid #EEBF07;
   color: #0D2541;
-  }
-
-  .per-month {
-  color: #0D2541;
-  border-radius: inherit;
-  font-weight: 500;
-  padding: 0px;
-  padding-left: 1px;
-  font-size: 22px;
-  vertical-align: 2px;
   }
 
 /* Counter CSS */
@@ -496,10 +487,23 @@
   padding-bottom: 0px;
   }
 
-  .dark-box-wrapper {
+  /* .dark-box-wrapper {
   background-color: #Fff;
   margin: 0 auto;
   width: fit-content;
+  box-sizing: border-box;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  } */
+
+  .dark-box-wrapper {
+  background-color: #Fff;
+  margin: 0 auto;
+  max-width: 780px;
   box-sizing: border-box;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -507,7 +511,6 @@
   border-bottom-right-radius: 0px;
   position: relative;
   overflow: hidden;
-  
   }
 
   #contact-section {
@@ -585,6 +588,16 @@
 
   #contact-form {
   background: #f7f7f7;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  box-sizing: border-box;
+  }
+
+  /* #contact-form {
+  background: #f7f7f7;
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 10px;
@@ -593,18 +606,115 @@
   align-items: center;
   margin: auto;
   box-sizing: border-box;
-  }
+  } */
 
-  #contact-form input {
-  margin: 0.5rem 0;
-  width: calc(100% - 4rem);
+  #contact-form input[type="text"] {
+  margin: 7px 0;
+  margin-top: 0px;
+  width: 100%;
   padding: 0.75rem;
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
   }
 
+  #contact-form input[type="email"] {
+  margin: 7px 0;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+
+  .iti{
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 7px;
+  }
+
+  .iti__country-name{
+  display: none;
+  }
+
+  .iti__country-list .iti__dial-code{
+  margin-left: -2px;
+  padding-bottom: 2px;
+  }
+
+  .iti__country{
+  padding-top: 4px;
+  padding-bottom: 4px;
+  }
+
+  .iti__flag{
+  min-width: 20px;
+  max-height: 10px;
+  }
+
+  /* Styles specific to Chrome */
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* Target Chrome */
+  .iti__selected-dial-code{
+  font-size: 13.5px;
+  margin-bottom: 2px;
+  }
+
+  .iti__tel-input{
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 40px;
+  font-size: 13.5px;
+  }
+  }
+
+  /* Styles specific to Safari */
+  @media not all and (min-resolution:.001dpcm) {
+  .iti__selected-dial-code{
+  font-size: 10px;
+  margin-bottom: 2px;
+  }
+
+  .iti__tel-input{
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  }
+  }
+
   #contact-form input[type="submit"] {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FDD646;
+  color: #0D2541;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 186px;
+  height: 43px;
+  font-weight: 600;
+  border: 2px solid #FDD646
+  }
+
+  #contact-form input[type="submit"]:hover {
+  background-color: #EEBF07;
+  color: #0D2541;
+  border: 2px solid #EEBF07;
+  }
+
+  /* #contact-form input[type="submit"] {
   background: #FDD646;
   color: #0D2541;
   border: none;
@@ -620,10 +730,11 @@
   width: 30%;
   font-weight: 600;
   border: 2px solid #FDD646
-  }
+  } */
 
   @media (max-width: 800px) {
   .dark-box-wrapper {
+  max-width: 340px;
   }
 
   .trial-section {
@@ -636,12 +747,12 @@
   padding: 30px;
   }
 
-  #contact-form input {
+  /* #contact-form input {
   margin: 0.1rem 0;
   padding: 0.5rem;
-  }
-  
-  .contact-options, #contact-form {
+  } */
+
+  .contact-options {
   flex-direction: column;
   gap: 30px;
   margin-bottom: 30px;
@@ -649,9 +760,34 @@
   align-items: center;
   }
 
+  #contact-form{
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: center;  
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+
+  /* .contact-options, #contact-form {
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  align-items: center;
+  } */
+
+  /* .contact-box, #contact-form button {
+  width: 100%;
+  } */
+
   .contact-box, #contact-form input, #contact-form button {
   width: 100%;
   }
+
+  /* .contact-box {
+  margin: 0 auto;
+  } */
 
   .contact-box {
   width: 280px;
@@ -664,11 +800,30 @@
   padding-left: 30px;
   padding-right: 30px;
   }
-
+  
   .contact-box button {
   width: 100%;
   }
 
+  #contact-form input[type="submit"] {
+  width: 216px;
+  height: 43px;
+  }
+  .iti{
+  width: auto;
+  }
+  }
+
+  @media (max-width: 800px) {
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  .iti {
+    margin-top: 0px;
+  }
+
+  .icon-text-wrapper {
+  margin-bottom: 0px;
+  }
   }
 
   h5 {
@@ -717,17 +872,24 @@
 
   .icon-text-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   }
 
   .specific-icon {
   font-family: 'Material Symbols Rounded';
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   font-size: 22px;
-  padding-right: 10px;
+  /* padding-right: 10px; */
   vertical-align: middle;
+  }
+
+  .icon-email{
+  margin-bottom: 5px;
+  align-content: center;
+  padding-right: 1px;
   }
 
   .icon-text {
@@ -963,6 +1125,7 @@
 
   .icon-text-group .specific-icon {
   font-size: 18px;
+  margin-right: 8px;
   font-variation-settings:
   'FILL' 1,
   'wght' 500,
@@ -993,14 +1156,12 @@
   <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
 
   <div>
-  <h1 class="headline">Just <span class="price-highlight">$15.99<span class="per-month">/mo</span></span> For Unlimited Entertainment</h1>
+  <h1 class="headline">Just <span class="price-highlight">$15.99/mo</span> For Unlimited Entertainment</h1>
   <div class="button-center">
   <button class="scroll-to-contact">
-  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial
-  </button>
+  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button>
   </div>
-  </div>
-
+    
 <!--- Counters & Dropdowns --->
 
 <!--- 1 --->
@@ -1160,31 +1321,21 @@
   </div>
   </div>
   <form id="contact-form">
-  <div class="icon-text-wrapper">
-  <span class="material-symbols-rounded specific-icon">email</span>
-  <h5>Email</h5>
-  <p>We'll reach out to you</p>
+  <div class="icon-text-wrapper">  
+  <h5><span class="material-symbols-rounded specific-icon icon-email">email</span> Inquire</h5>
+  <p>We'll reach out to you </p>
   </div>
   <input type="text" name="name" placeholder="Preferred Name" required>
   <input type="email" name="email" placeholder="Email Address" id="email">
-  <div class="phone-input-container">
-  <select name="country_code" id="country_code" class="country-code-selector">
-  <option value="+1" style="background-image:url('path/to/us-flag-icon.png')">US</option>
-  <option value="+1" style="background-image:url('path/to/canada-flag-icon.png')">Canada</option>
-  <option value="+52" style="background-image:url('path/to/mexico-flag-icon.png')">Mexico</option>
-  <option value="+44" style="background-image:url('path/to/uk-flag-icon.png')">UK</option>
-  </select>
-  <input type="tel" name="phone" placeholder="Phone Number" id="phone" class="phone-number-input">
-  </div>
+  <input id="phone" name="phone" type="tel" value="" placeholder="Phone Number"/>
   <input type="submit" value="Contact Me">
-  </form>
-  </section>
-  </div>
-  </div>
-  
+  </form> 
   <div id="submission-success">
   <span class="material-symbols-rounded icon">check_circle</span>
-  <p>Thank you for your submission!</p>
+  <p>Thank you for reaching out to us! We're thrilled to connect with you. Our team will be in touch shortly to arrange your complimentary trial.</p>
+  </div>
+  </section>
+  </div>
   </div>
 
 <!--- Footer --->
@@ -1281,8 +1432,10 @@
   scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
   });
 
-  document.querySelector('.trial-button').addEventListener('click', function() {
+  document.querySelectorAll('.trial-button').forEach(button => {
+  button.addEventListener('click', function() {
   scrollToBottomOfElement('.custom-shape-divider-bottom-1708380672');
+  });
   });
 
   function scrollToBottomOfElement(selector) {
@@ -1295,14 +1448,6 @@
   event.preventDefault();
 
   this.style.display = 'none';
-
-  var thankYouMessage = document.createElement('div');
-  thankYouMessage.id = 'thank-you-message';
-  thankYouMessage.innerHTML = '<p>Thank you for your submission!</p>';
-  thankYouMessage.style.display = 'block';
-
-  this.parentNode.appendChild(thankYouMessage);
-
   document.getElementById('submission-success').style.display = 'block';
   });
 
@@ -1328,5 +1473,39 @@
   });
 
 </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/intlTelInput.min.js"></script>
+  <script>
+  const input = document.querySelector("#phone");
+  function console() {
+  const number = iti.getNumber();
+  console.log(number);
+  }
+
+  window.intlTelInput(input, {
+    utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
+    onlyCountries: ["us", "ca", "mx", "gb"],
+    countrySearch: false,
+    utilsScript: "/intl-tel-input/js/utils.js?1708969428263",
+    initialCountry: "us",
+    geoIpLookup: function (callback) {
+    fetch("https://ipapi.co/json")
+    .then(function (res) {
+    return res.json();
+    })
+    .then(function (data) {
+    callback(data.country_code);
+    })
+    .catch(function () {
+    callback();
+    });
+    },
+    showSelectedDialCode:true,
+    fixDropdownWidth:false,
+    useFullscreenPopup:false,
+  });
+  </script>
+
 </body>
 </html>
