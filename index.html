@@ -1143,6 +1143,29 @@
   color: rgba(0, 48, 87, 0.9);
   }
 
+
+
+
+
+
+  .trial-button {
+  position: relative; /* This makes sure that the pseudo-element is positioned relative to the button */
+  margin-top: 20px;
+  /* other styles remain the same */
+}
+
+  .trial-button::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: -20px; /* Adjust this value based on the height of your rectangle */
+  left: 0;
+  right: 0;
+  height: 20px; /* Height of the rectangle */
+  background-color: #f8f8f8; /* Your desired color for the rectangle */
+  }
+
+
+
 </style>
 </head>
 <body>
