@@ -1197,7 +1197,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV Channnelss/</p>
+  <p>TV Chansnelss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1514,18 +1514,45 @@
   });
   });
 
-  function toggleDropdown(dropdownId) {
+
+
+// This function will be called to toggle the dropdown and apply the width fix.
+function toggleDropdown(dropdownId) {
   var dropdownContent = document.getElementById(dropdownId);
   var dropdown = dropdownContent.previousElementSibling;
 
   // Toggle the 'show' class that controls visibility.
   dropdownContent.classList.toggle('show');
 
-  // Set the width of the dropdown content to match the dropdown button if it's shown.
-  if (dropdownContent.classList.contains('show')) {
-    dropdownContent.style.width = `${dropdown.offsetWidth}px`;
+  // Check if the device is iOS.
+  if (isIOS()) {
+    // Apply the width of the dropdown to match the triggering element if it's shown.
+    if (dropdownContent.classList.contains('show')) {
+      dropdownContent.style.width = `${dropdown.offsetWidth}px`;
+    } else {
+      dropdownContent.style.width = 'auto'; // Reset to default when not shown.
+    }
   }
 }
+
+// Helper function to determine if the current device is iOS.
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+// Immediately invoke this function to apply any necessary styles on page load.
+(function applyIOSFixes() {
+  if (isIOS()) {
+    var dropdowns = document.querySelectorAll('.dropdown-content');
+    for (var i = 0; i < dropdowns.length; i++) {
+      // Reset the width to auto to clear out any inline styles or previous adjustments.
+      dropdowns[i].style.width = 'auto';
+    }
+  }
+})();
+
+
+
 
 
 </script>
