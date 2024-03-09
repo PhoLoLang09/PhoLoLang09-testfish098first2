@@ -234,11 +234,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 0px 0px;
+  border-radius: 0 0 10px 10px;
   position: absolute;
   z-index: 100;
   font-weight: 500;
   }
+
+  .dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Move it up to cover the bottom corners of the dropdown */
+  left: 0;
+  right: 0;
+  height: 10px; /* Height is equal to the border-radius of the dropdown */
+  background-color: #f7f7f7; /* Match the dropdown-content background color */
+  z-index: -1; /* Ensures it doesn't overlap content inside dropdown-content */
+}
+
+.dropdown-content {
+  /* ... existing styles ... */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 
   .dropdown-content {
   padding-left: 10px;
@@ -276,6 +294,8 @@
   z-index: 1;
   pointer-events: none;
   }
+
+  
 
   .dropdown-content-item {
   display: flex;
@@ -1220,6 +1240,65 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+.dropdown.no-radius {
+  border-radius: 0; /* Temporarily remove the border-radius */
+  transition: border-radius 0.5s ease-in-out; /* Smooth transition for the border-radius */
+}
+
+.dropdown {
+  /* ... your existing styles ... */
+  transition: border-radius 0.5s ease-in-out; /* Add transition for border-radius */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Remove border-radius from the dropdown when active */
+.no-border-radius {
+  border-radius: 0;
+  transition: border-radius 0.3s ease; /* Smooth transition */
+}
+
+/* Add border-radius to the dropdown when not active */
+.add-border-radius {
+  border-radius: 0 0 10px 10px 0 0; /* Adjust as necessary */
+  transition: border-radius 0.3s ease; /* Smooth transition */
+}
+
+/* Ensure dropdown has transition for border-radius by default */
+.dropdown {
+  transition: border-radius 0.3s ease; /* Add transition for border-radius */
+  /* ... other styles ... */
+}
+
+
+
+
+
+
+
+
+
+
+  
+
 </style>
 </head>
 <body>
@@ -1249,7 +1328,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV CChannels/</p>
+  <p>TV Channels</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1578,6 +1657,62 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+function toggleDropdown(dropdownId) {
+  var dropdownContent = document.getElementById(dropdownId);
+  var allDropdowns = document.querySelectorAll('.dropdown');
+  var currentDropdown = dropdownContent.previousElementSibling; // The .dropdown element for the current content
+
+  // Closing the current dropdown
+  if (dropdownContent.classList.contains('show')) {
+    // Add border-radius to all dropdown buttons
+    allDropdowns.forEach(function(dropdown) {
+      dropdown.classList.remove('no-border-radius');
+      dropdown.classList.add('add-border-radius');
+    });
+    // Close the dropdown content
+    dropdownContent.classList.remove('show');
+  }
+  // Opening the current dropdown
+  else {
+    // Remove border-radius from the current dropdown button
+    currentDropdown.classList.add('no-border-radius');
+    // Close other dropdowns and restore their border-radius
+    allDropdowns.forEach(function(dropdown) {
+      if (dropdown !== currentDropdown) {
+        dropdown.classList.remove('no-border-radius');
+        dropdown.classList.add('add-border-radius');
+        // Also hide their respective dropdown contents
+        var otherContentId = dropdown.getAttribute('data-related-content');
+        if (otherContentId) {
+          var otherContent = document.getElementById(otherContentId);
+          otherContent.classList.remove('show');
+        }
+      }
+    });
+    // Open the dropdown content
+    dropdownContent.classList.add('show');
+  }
+  
+  // Toggle the icon if there is one (no changes needed here)
+  var icon = currentDropdown.querySelector(".material-symbols-rounded");
+  if (icon) {
+    icon.classList.toggle("flipped");
+  }
+}
+
+// Modify your HTML to include a data attribute for related content for each dropdown button
+// e.g., <div class="dropdown" data-related-content="channels-dropdown" onclick="toggleDropdown('channels-dropdown')">
 
 
 </script>
