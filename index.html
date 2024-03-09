@@ -91,7 +91,7 @@
 
 /* Headline CSS */
 
-  .headline {
+.headline {
   text-align: center;
   font-size: 2em;
   margin: 0px 0;
@@ -141,9 +141,21 @@
 
   .scroll-to-contact:hover {
   background-color: #EEBF07;
-  border: 2px solid #EEBF07;;
+  border: 2px solid #EEBF07;
   color: #0D2541;
   }
+
+  .per-month {
+  color: #0D2541;
+  border-radius: inherit;
+  font-weight: 500;
+  padding: 0px;
+  padding-left: 1px;
+  font-size: 22px;
+  vertical-align: 2px;
+  }
+
+  
 
 /* Counter CSS */
 
@@ -1290,10 +1302,52 @@
 
 
 
+/* Force hardware acceleration */
+.dropdown-content {
+  /* ... your other styles ... */
+  transform: translate3d(0,0,0);
+}
+
+/* Use scaleY for animation instead of max-height */
+.dropdown-content {
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.5s, visibility 0s, opacity 0.5s;
+}
+
+.dropdown-content.show {
+  transform: scaleY(1);
+  height: auto; /* Use a fixed height if auto does not work */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Fix for Safari */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .dropdown-content {
+      transition: transform 0.5s, visibility 0s 0.5s, opacity 0.5s;
+    }
+  }
+}
 
 
 
 
+/* Normal hover state */
+.trial-button:hover {
+  background-color: #EEBF07;
+}
+
+/* Override for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .trial-button:hover {
+    background-color: #FDD646; /* This should be the original background color */
+  }
+}
 
 
 
@@ -1305,7 +1359,7 @@
 
 <!--- Logo --->
 
-  <div class="main-content">
+<div class="main-content">
   <header>
   <div class="container">
   <img src="CableForLessLogoNew.svg" alt="Cable4Less Logo" />
@@ -1315,11 +1369,14 @@
   <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
 
   <div>
-  <h1 class="headline">Just <span class="price-highlight">$15.99/mo</span> For Unlimited Entertainment</h1>
+  <h1 class="headline">Just <span class="price-highlight">$15.99<span class="per-month">/mo</span></span> For Unlimited Entertainment</h1>
   <div class="button-center">
   <button class="scroll-to-contact">
-  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial
+  </button>
   </div>
+  </div>
+
     
 <!--- Counters & Dropdowns --->
 
@@ -1713,6 +1770,61 @@ function toggleDropdown(dropdownId) {
 
 // Modify your HTML to include a data attribute for related content for each dropdown button
 // e.g., <div class="dropdown" data-related-content="channels-dropdown" onclick="toggleDropdown('channels-dropdown')">
+
+
+  function toggleDropdown(dropdownId) {
+  var dropdownContent = document.getElementById(dropdownId);
+  // Close other dropdowns
+  document.querySelectorAll('.dropdown-content.show').forEach(function(content) {
+    if (content.id !== dropdownId) {
+      content.classList.remove('show');
+    }
+  });
+  // Toggle the clicked dropdown
+  dropdownContent.classList.toggle('show');
+}
+
+
+function toggleDropdown(dropdownId) {
+  const dropdownContent = document.getElementById(dropdownId);
+  const allDropdowns = document.querySelectorAll('.dropdown-content');
+  const currentDropdownButton = dropdownContent.previousElementSibling; // The .dropdown element for the current content
+  const allDropdownButtons = document.querySelectorAll('.dropdown');
+  
+  allDropdowns.forEach((content) => {
+    if (content.id !== dropdownId && content.classList.contains('show')) {
+      // Close other open dropdowns
+      content.classList.remove('show');
+      // Reset their icons
+      const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
+      if (icon && icon.classList.contains('flipped')) {
+        icon.classList.remove('flipped');
+      }
+    }
+  });
+
+  // Toggle current dropdown
+  dropdownContent.classList.toggle('show');
+  if (currentDropdownButton) {
+    // Toggle the icon's flipped state
+    const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
+    if (icon) {
+      icon.classList.toggle('flipped');
+    }
+
+    // Adjust border-radius for the current dropdown button
+    if (dropdownContent.classList.contains('show')) {
+      currentDropdownButton.classList.add('no-radius');
+    } else {
+      currentDropdownButton.classList.remove('no-radius');
+      // Re-add the border radius after the dropdown is closed and the animation is complete
+      dropdownContent.addEventListener('transitionend', () => {
+        allDropdownButtons.forEach((button) => button.classList.add('add-border-radius'));
+      }, { once: true });
+    }
+  }
+}
+
 
 
 </script>
