@@ -850,30 +850,6 @@
   text-decoration: none;
   }
 
-
-
-
-  /* iOS Safari specific styles for dropdown alignment */
-@media only screen and (max-device-width: 414px) and (webkit-min-device-pixel-ratio: 2) {
-  .counter .dropdown-content {
-    /* Make the dropdown content take up the full width of its parent */
-    width: 100%;
-    left: 0;
-    right: 0;
-    box-sizing: border-box;
-    /* Override any specified max-height for iOS Safari */
-    max-height: none;
-  }
-  
-  /* Fix for the dropdown button to ensure it sits correctly */
-  .counter .dropdown {
-    position: relative;
-    /* You might not need the next line if there's no specific width set */
-    width: 100%;
-  }
-}
-
-
   .phone-link, .phone-link:link, .phone-link:visited {
   color: #21528C;
   }
@@ -958,6 +934,38 @@
   display: inline-block;
   font-family: 'Material Symbols Rounded';
   }
+
+
+
+
+
+  @media only screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) {
+  .counter {
+    /* Reset any specified width to make sure it's not affecting the child elements */
+    width: auto;
+  }
+
+  .dropdown, .dropdown-content {
+    /* Set both dropdown trigger and content to fill their container */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content {
+    /* Ensure the dropdown content doesn't exceed the width of its parent */
+    max-width: -webkit-fill-available;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Footer CSS */
 
@@ -1221,7 +1229,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TVv Channelss/</p>
+  <p>TVvv Channelsss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
