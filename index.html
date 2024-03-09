@@ -1160,6 +1160,22 @@
 
 
 
+  .dropdown-content {
+  /* ... other styles ... */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; /* Animate only the max-height */
+  /* Remove the transition for all to avoid width animation */
+  /* ... other styles ... */
+}
+
+.dropdown-content.show {
+  /* ... other styles ... */
+  overflow: visible; /* so the content can show */
+  max-height: 1000px; /* Adjusted value for when dropdown is active */
+  /* Keep the transition consistent */
+  transition: max-height 0.5s ease-in-out;
+  /* ... other styles ... */
+}
 
 
 
@@ -1210,7 +1226,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV223 Channelsss/</p>
+  <p>TV Channels/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
