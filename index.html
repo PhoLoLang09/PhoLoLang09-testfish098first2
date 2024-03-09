@@ -938,15 +938,14 @@
 
 
 
-
-  .dropdown, .dropdown-content {
-  width: 100%; /* or another specific value that matches your design */
-  position: relative; /* remove absolute positioning if it is not needed */
+  .dropdown-content {
+  /* existing styles */
+  overflow: hidden; /* creates block formatting context */
 }
 
-/* If you keep absolute positioning, ensure there is a relative positioning context */
-.parent-of-dropdown {
-  position: relative;
+.dropdown-content.show {
+  /* existing styles for when dropdown is shown */
+  overflow: visible; /* reset to show the dropdown */
 }
 
 /* Footer CSS */
@@ -1211,7 +1210,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV22 Channelsss/</p>
+  <p>TV223 Channelsss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
