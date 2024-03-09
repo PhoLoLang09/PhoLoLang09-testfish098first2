@@ -1197,7 +1197,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV Channelss/</p>
+  <p>TV Channnelss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1513,6 +1513,20 @@
   this.value = formattedNumber;
   });
   });
+
+  function toggleDropdown(dropdownId) {
+  var dropdownContent = document.getElementById(dropdownId);
+  var dropdown = dropdownContent.previousElementSibling;
+
+  // Toggle the 'show' class that controls visibility.
+  dropdownContent.classList.toggle('show');
+
+  // Set the width of the dropdown content to match the dropdown button if it's shown.
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.style.width = `${dropdown.offsetWidth}px`;
+  }
+}
+
 
 </script>
 
