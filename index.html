@@ -1199,21 +1199,6 @@
   transition: transform 0.5s ease, max-height 0s, overflow 0s; /* Apply transition to transform */
 }
 
-.dropdown-content {
-  /* existing styles */
-  visibility: hidden; /* Initially hidden */
-  opacity: 0; /* Fully transparent */
-  max-height: 0; /* Ensure it takes no space */
-  overflow: hidden; /* Hide overflow */
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear; /* Transition for visibility and opacity */
-}
-
-.dropdown-content.show {
-  visibility: visible; /* Make visible when active */
-  opacity: 1; /* Fully opaque */
-  max-height: 1000px; /* Maximum content height */
-  transition-delay: 0s; /* Apply transition immediately */
-}
 
 
 
@@ -1264,7 +1249,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV CChannels//</p>
+  <p>TV CChannels/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1592,7 +1577,6 @@
     dropdownContent.classList.add('show');
   }
 }
-
 
 
 
