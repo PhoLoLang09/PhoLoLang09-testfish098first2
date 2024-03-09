@@ -939,32 +939,13 @@
 
 
 
-  @media only screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) {
-  .counter {
-    /* Reset any specified width to make sure it's not affecting the child elements */
-    width: auto;
-  }
-
+  /* Target iOS devices */
+@media only screen and (max-device-width: 414px) and (-webkit-min-device-pixel-ratio: 2) {
   .dropdown, .dropdown-content {
-    /* Set both dropdown trigger and content to fill their container */
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .dropdown-content {
-    /* Ensure the dropdown content doesn't exceed the width of its parent */
-    max-width: -webkit-fill-available;
+    /* Add a left border for debugging */
+    border-left: 1px solid red;
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* Footer CSS */
@@ -1229,7 +1210,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TVvv Channelsss/</p>
+  <p>TVc2 Channelsss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
