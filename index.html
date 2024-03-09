@@ -1177,6 +1177,29 @@
   /* ... other styles ... */
 }
 
+.dropdown-content {
+  /* existing styles */
+  overflow: hidden; /* maintains layout but hides overflow */
+  transform-origin: top; /* sets the origin of transformation */
+  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s; /* Apply transition to transform */
+  transform: scaleY(1); /* Default scale */
+}
+
+.dropdown-content.show {
+  /* existing styles for when dropdown is shown */
+  overflow: visible; /* shows the dropdown content when active */
+  max-height: 1000px; /* example max-height or use a suitable value */
+  transition: max-height 0.5s ease, overflow 0s; /* Apply transition to max-height */
+  transform: scaleY(1); /* Scale to normal size when active */
+}
+
+.dropdown-content.closing {
+  /* Styles to apply when dropdown is closing */
+  transform: scaleY(0); /* Collapse the dropdown */
+  transition: transform 0.5s ease, max-height 0s, overflow 0s; /* Apply transition to transform */
+}
+
+
 
 
   .trial-button {
@@ -1226,7 +1249,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV Channels/</p>
+  <p>TV CChannels/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1542,6 +1565,19 @@
   this.value = formattedNumber;
   });
   });
+
+  function toggleDropdown(dropdownId) {
+  var dropdownContent = document.getElementById(dropdownId);
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.classList.add('closing');
+    setTimeout(() => {
+      dropdownContent.classList.remove('show', 'closing');
+    }, 500); // The timeout duration should match the CSS transition duration
+  } else {
+    dropdownContent.classList.add('show');
+  }
+}
+
 
 </script>
 
