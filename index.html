@@ -141,6 +141,7 @@
 
   .scroll-to-contact:hover {
   background-color: #EEBF07;
+  border: 2px solid #EEBF07;;
   color: #0D2541;
   }
 
@@ -255,6 +256,9 @@
   transition: all .5s ease-in-out;  
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;  
+  width: 100%; /* This makes sure that dropdown content takes full width of the parent */
+  box-sizing: border-box; /* Include padding in width */
+  left: 0; /* Align to the left edge of the parent container */
   }
 
   .dropdown-content.show {
@@ -1195,7 +1199,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV Channels</p>
+  <p>TV Channels/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
