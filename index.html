@@ -850,6 +850,30 @@
   text-decoration: none;
   }
 
+
+
+
+  /* iOS Safari specific styles for dropdown alignment */
+@media only screen and (max-device-width: 414px) and (webkit-min-device-pixel-ratio: 2) {
+  .counter .dropdown-content {
+    /* Make the dropdown content take up the full width of its parent */
+    width: 100%;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    /* Override any specified max-height for iOS Safari */
+    max-height: none;
+  }
+  
+  /* Fix for the dropdown button to ensure it sits correctly */
+  .counter .dropdown {
+    position: relative;
+    /* You might not need the next line if there's no specific width set */
+    width: 100%;
+  }
+}
+
+
   .phone-link, .phone-link:link, .phone-link:visited {
   color: #21528C;
   }
@@ -1197,7 +1221,7 @@
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>TV Chansnelss/</p>
+  <p>TVv Channelss/</p>
   <h2 id="channels">6150+</h2>
   </div>
 
@@ -1513,47 +1537,6 @@
   this.value = formattedNumber;
   });
   });
-
-
-
-// This function will be called to toggle the dropdown and apply the width fix.
-function toggleDropdown(dropdownId) {
-  var dropdownContent = document.getElementById(dropdownId);
-  var dropdown = dropdownContent.previousElementSibling;
-
-  // Toggle the 'show' class that controls visibility.
-  dropdownContent.classList.toggle('show');
-
-  // Check if the device is iOS.
-  if (isIOS()) {
-    // Apply the width of the dropdown to match the triggering element if it's shown.
-    if (dropdownContent.classList.contains('show')) {
-      dropdownContent.style.width = `${dropdown.offsetWidth}px`;
-    } else {
-      dropdownContent.style.width = 'auto'; // Reset to default when not shown.
-    }
-  }
-}
-
-// Helper function to determine if the current device is iOS.
-function isIOS() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-}
-
-// Immediately invoke this function to apply any necessary styles on page load.
-(function applyIOSFixes() {
-  if (isIOS()) {
-    var dropdowns = document.querySelectorAll('.dropdown-content');
-    for (var i = 0; i < dropdowns.length; i++) {
-      // Reset the width to auto to clear out any inline styles or previous adjustments.
-      dropdowns[i].style.width = 'auto';
-    }
-  }
-})();
-
-
-
-
 
 </script>
 
