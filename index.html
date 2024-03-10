@@ -61,37 +61,9 @@
   max-width: 220px;
   }
 
-/* Announcement Banner CSS */
-
-  .header-message {
-  background-color: #fff7d8;
-  padding: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  border-left: none;
-  border-right: none;
-  }
-
-  .phone-link, .phone-link:link, .phone-link:visited {
-  color: #806500;
-  text-decoration: none;
-  }
-
-  .phone-link:hover, .phone-link:active {
-  color: #806500;
-  text-decoration: none;
-  }
-
-  .message-text {
-  letter-spacing: 0.06em;
-  color: #806500;
-  }
-
 /* Headline CSS */
 
-.headline {
+  .headline {
   text-align: center;
   font-size: 2em;
   margin: 0px 0;
@@ -155,9 +127,7 @@
   vertical-align: 2px;
   }
 
-  
-
-/* Counter CSS */
+/* Counters CSS */
 
   .counters {
   width: 80%;
@@ -255,20 +225,18 @@
   .dropdown-content::before {
   content: '';
   position: absolute;
-  top: -10px; /* Move it up to cover the bottom corners of the dropdown */
+  top: -10px;
   left: 0;
   right: 0;
-  height: 10px; /* Height is equal to the border-radius of the dropdown */
-  background-color: #f7f7f7; /* Match the dropdown-content background color */
-  z-index: -1; /* Ensures it doesn't overlap content inside dropdown-content */
-}
+  height: 10px;
+  background-color: #f7f7f7;
+  z-index: -1;
+  }
 
-.dropdown-content {
-  /* ... existing styles ... */
+  .dropdown-content {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
+  }
 
   .dropdown-content {
   padding-left: 10px;
@@ -296,6 +264,102 @@
   max-height: 1000px;
   }
 
+  .dropdown-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  }
+
+  .dropdown-content.show {
+  overflow: visible;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out;
+  }
+
+  .dropdown-content {
+  overflow: hidden;
+  transform-origin: top;
+  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s;
+  transform: scaleY(1);
+  }
+
+  .dropdown-content.show {
+  overflow: visible;
+  max-height: 1000px;
+  transition: max-height 0.5s ease, overflow 0s;
+  transform: scaleY(1);
+  }
+
+  .dropdown-content.closing {
+  transform: scaleY(0);
+  transition: transform 0.5s ease, max-height 0s, overflow 0s;
+  }
+
+  .trial-button {
+  position: relative;
+  margin-top: 20px;
+  }
+
+  .trial-button::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-color: #f8f8f8;
+  }
+
+  .dropdown.no-radius {
+  border-radius: 0;
+  transition: border-radius 0.5s ease-in-out;
+  }
+
+  .dropdown {
+  transition: border-radius 0.5s ease-in-out;
+  }
+
+  .no-border-radius {
+  border-radius: 0;
+  transition: border-radius 0.3s ease;
+  }
+
+  .add-border-radius {
+  border-radius: 0 0 10px 10px ;
+  transition: border-radius 0.3s ease;
+  }
+
+  .dropdown {
+  transition: border-radius 0.3s ease;
+  }
+
+  .dropdown-content {
+  transform: translate3d(0,0,0);
+  }
+
+  .dropdown-content {
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.5s, visibility 0s, opacity 0.5s;
+  }
+
+  .dropdown-content.show {
+  transform: scaleY(1);
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+  }
+
+  @media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+  .dropdown-content {
+  transition: transform 0.5s, visibility 0s 0.5s, opacity 0.5s;
+  }
+  }
+  }
+
   .dropdown-content::after {
   content: '';
   position: absolute;
@@ -306,8 +370,6 @@
   z-index: 1;
   pointer-events: none;
   }
-
-  
 
   .dropdown-content-item {
   display: flex;
@@ -351,8 +413,8 @@
   }
 
   .separator-line-container {
-  background-color: #F7F7F7; /* This sets the background color */
-  padding: 4px 0; /* Adjust the padding to your needs */
+  background-color: #F7F7F7;
+  padding: 4px 0;
   }
 
   .trial-button {
@@ -525,19 +587,6 @@
   padding-bottom: 0px;
   }
 
-  /* .dark-box-wrapper {
-  background-color: #Fff;
-  margin: 0 auto;
-  width: fit-content;
-  box-sizing: border-box;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  } */
-
   .dark-box-wrapper {
   background-color: #Fff;
   margin: 0 auto;
@@ -634,18 +683,6 @@
   box-sizing: border-box;
   }
 
-  /* #contact-form {
-  background: #f7f7f7;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  box-sizing: border-box;
-  } */
-
   #contact-form input[type="text"] {
   margin: 7px 0;
   margin-top: 0px;
@@ -690,9 +727,7 @@
   max-height: 10px;
   }
 
-  /* Styles specific to Chrome */
   @media screen and (-webkit-min-device-pixel-ratio:0) {
-  /* Target Chrome */
   .iti__selected-dial-code{
   font-size: 13.5px;
   margin-bottom: 2px;
@@ -707,7 +742,6 @@
   }
   }
 
-  /* Styles specific to Safari */
   @media not all and (min-resolution:.001dpcm) {
   .iti__selected-dial-code{
   font-size: 10px;
@@ -752,24 +786,6 @@
   border: 2px solid #EEBF07;
   }
 
-  /* #contact-form input[type="submit"] {
-  background: #FDD646;
-  color: #0D2541;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  border-radius: 30px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  width: 30%;
-  font-weight: 600;
-  border: 2px solid #FDD646
-  } */
-
   @media (max-width: 800px) {
   .dark-box-wrapper {
   max-width: 340px;
@@ -784,11 +800,6 @@
   #contact-section{
   padding: 30px;
   }
-
-  /* #contact-form input {
-  margin: 0.1rem 0;
-  padding: 0.5rem;
-  } */
 
   .contact-options {
   flex-direction: column;
@@ -807,25 +818,9 @@
   padding-right: 30px;
   }
 
-  /* .contact-options, #contact-form {
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
-  width: 100%;
-  align-items: center;
-  } */
-
-  /* .contact-box, #contact-form button {
-  width: 100%;
-  } */
-
   .contact-box, #contact-form input, #contact-form button {
   width: 100%;
   }
-
-  /* .contact-box {
-  margin: 0 auto;
-  } */
 
   .contact-box {
   width: 280px;
@@ -847,6 +842,7 @@
   width: 216px;
   height: 43px;
   }
+
   .iti{
   width: auto;
   }
@@ -856,7 +852,7 @@
   #contact-form input[type="text"],
   #contact-form input[type="email"],
   .iti {
-    margin-top: 0px;
+  margin-top: 0px;
   }
 
   .icon-text-wrapper {
@@ -920,7 +916,6 @@
   font-family: 'Material Symbols Rounded';
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   font-size: 22px;
-  /* padding-right: 10px; */
   vertical-align: middle;
   }
 
@@ -968,17 +963,13 @@
   font-family: 'Material Symbols Rounded';
   }
 
-
-
   .dropdown-content {
-  /* existing styles */
-  overflow: hidden; /* creates block formatting context */
-}
+  overflow: hidden;
+  }
 
-.dropdown-content.show {
-  /* existing styles for when dropdown is shown */
-  overflow: visible; /* reset to show the dropdown */
-}
+  .dropdown-content.show {
+  overflow: visible;
+  }
 
 /* Footer CSS */
 
@@ -1190,155 +1181,6 @@
   color: rgba(0, 48, 87, 0.9);
   }
 
-
-
-  .dropdown-content {
-  /* ... other styles ... */
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out; /* Animate only the max-height */
-  /* Remove the transition for all to avoid width animation */
-  /* ... other styles ... */
-}
-
-.dropdown-content.show {
-  /* ... other styles ... */
-  overflow: visible; /* so the content can show */
-  max-height: 1000px; /* Adjusted value for when dropdown is active */
-  /* Keep the transition consistent */
-  transition: max-height 0.5s ease-in-out;
-  /* ... other styles ... */
-}
-
-.dropdown-content {
-  /* existing styles */
-  overflow: hidden; /* maintains layout but hides overflow */
-  transform-origin: top; /* sets the origin of transformation */
-  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s; /* Apply transition to transform */
-  transform: scaleY(1); /* Default scale */
-}
-
-.dropdown-content.show {
-  /* existing styles for when dropdown is shown */
-  overflow: visible; /* shows the dropdown content when active */
-  max-height: 1000px; /* example max-height or use a suitable value */
-  transition: max-height 0.5s ease, overflow 0s; /* Apply transition to max-height */
-  transform: scaleY(1); /* Scale to normal size when active */
-}
-
-.dropdown-content.closing {
-  /* Styles to apply when dropdown is closing */
-  transform: scaleY(0); /* Collapse the dropdown */
-  transition: transform 0.5s ease, max-height 0s, overflow 0s; /* Apply transition to transform */
-}
-
-
-
-
-  .trial-button {
-  position: relative; /* This makes sure that the pseudo-element is positioned relative to the button */
-  margin-top: 20px;
-  /* other styles remain the same */
-}
-
-  .trial-button::before {
-  content: ""; /* Required for pseudo-elements */
-  position: absolute;
-  top: -20px; /* Adjust this value based on the height of your rectangle */
-  left: 0;
-  right: 0;
-  height: 20px; /* Height of the rectangle */
-  background-color: #f8f8f8; /* Your desired color for the rectangle */
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-.dropdown.no-radius {
-  border-radius: 0; /* Temporarily remove the border-radius */
-  transition: border-radius 0.5s ease-in-out; /* Smooth transition for the border-radius */
-}
-
-.dropdown {
-  /* ... your existing styles ... */
-  transition: border-radius 0.5s ease-in-out; /* Add transition for border-radius */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Remove border-radius from the dropdown when active */
-.no-border-radius {
-  border-radius: 0;
-  transition: border-radius 0.3s ease; /* Smooth transition */
-}
-
-/* Add border-radius to the dropdown when not active */
-.add-border-radius {
-  border-radius: 0 0 10px 10px 0 0; /* Adjust as necessary */
-  transition: border-radius 0.3s ease; /* Smooth transition */
-}
-
-/* Ensure dropdown has transition for border-radius by default */
-.dropdown {
-  transition: border-radius 0.3s ease; /* Add transition for border-radius */
-  /* ... other styles ... */
-}
-
-
-
-/* Force hardware acceleration */
-.dropdown-content {
-  /* ... your other styles ... */
-  transform: translate3d(0,0,0);
-}
-
-/* Use scaleY for animation instead of max-height */
-.dropdown-content {
-  transform: scaleY(0);
-  transform-origin: top;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: transform 0.5s, visibility 0s, opacity 0.5s;
-}
-
-.dropdown-content.show {
-  transform: scaleY(1);
-  height: auto; /* Use a fixed height if auto does not work */
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Fix for Safari */
-@media not all and (min-resolution:.001dpcm) { 
-  @supports (-webkit-appearance:none) {
-    .dropdown-content {
-      transition: transform 0.5s, visibility 0s 0.5s, opacity 0.5s;
-    }
-  }
-}
-
-
-
-
-  
-
 </style>
 </head>
 <body>
@@ -1362,8 +1204,7 @@
   </button>
   </div>
   </div>
-
-    
+   
 <!--- Counters & Dropdowns --->
 
 <!--- 1 --->
@@ -1381,28 +1222,19 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket<span class="trademark">&reg;</span>, PPV events incl. UFC<span class="trademark">&reg;</span> & WWE<span class="trademark">&reg;</span>, NBA League Pass<span class="trademark">&reg;</span>, Bally Sports<span class="trademark">&reg;</span>, ESPN+<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span> <b>+ MUCH MORE</b></span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">star</span><span class="dropdown-content-text"><b>Premium Entertainment: </b>SHOWTIME<span class="trademark">&reg;</span> pkg, HBO<span class="trademark">&reg;</span> pkg, Hallmark<span class="trademark">&reg;</span> pkg, PokerGO<span class="trademark">&reg;</span>, BET<span class="trademark">&reg;</span> pkg, STARZ<span class="trademark">&reg;</span> pkg, Cinemax<span class="trademark">&reg;</span> pkg <b>+ MUCH MORE</b></span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">location_on</span><span class="dropdown-content-text"><b>All The Locals: </b>99 ABC<span class="trademark">&reg;</span>, 120 CBS<span class="trademark">&reg;</span>, 135 FOX<span class="trademark">&reg;</span>, 170 NBC<span class="trademark">&reg;</span>, 66 latin local affiliate channels <b>+ MORE</b></span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">public</span><span class="dropdown-content-text"><b>Global Television</b> covering all—U.S., Canadian, Latin, UK, French, German—TV networks & more</b></span></div>
 
-  <button type="button" class="trial-button">
-  <span class="trial-icon">navigate_next</span>
-  Get Free 2-Day Trial
-  </button>
+  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
   
   </div>
   </div>
@@ -1422,22 +1254,15 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest 2024 releases</b> from all studios & streaming platforms incl. Netflix<span class="trademark">&reg;</span>, Prime Video<span class="trademark">&reg;</span>, Disney+<span class="trademark">&reg;</span>, HBO<span class="trademark">&reg;</span> & more</span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">movie</span><span class="dropdown-content-text"><b>Access to 20000+</b> on-demand thrillers, documentaries, comedies, horrors, family entertainment & more</span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select movies—with thousands of titles to choose from, movie night can be every night</span></div>
 
-  <button type="button" class="trial-button">
-  <span class="trial-icon">navigate_next</span>
-  Get Free 2-Day Trial
-  </button>
+  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
   </div>
   </div>
@@ -1457,22 +1282,15 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">new_releases</span><span class="dropdown-content-text"><b>Latest episodes</b> from all networks & streaming platforms incl. Paramount+<span class="trademark">&reg;</span>, CBS<span class="trademark">&reg;</span>, Netflix<span class="trademark">&reg;</span>, Hulu<span class="trademark">&reg;</span>, ABC<span class="trademark">&reg;</span> & more</span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">weekend</span><span class="dropdown-content-text"><b>Access to 6500+ </b>on-demand—reality, action, romance, crime, adventure, drama—shows & more</span></div>
 
-  <div class="separator-line-container">
-  <div class="separator-line"></div>
-  </div>
+  <div class="separator-line-container"><div class="separator-line"></div></div>
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>Watch 4K</b>-select shows—ditch the expensive streaming bills and never miss an episode; watch anywhere</span></div>
 
-  <button type="button" class="trial-button">
-  <span class="trial-icon">navigate_next</span>
-  Get Free 2-Day Trial
-  </button>
+  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
   </div>
   </div>
@@ -1629,16 +1447,6 @@
   }
   }
 
-  function toggleDropdown(dropdownId) {
-  var dropdownContent = document.getElementById(dropdownId);
-  dropdownContent.classList.toggle("show");
-
-  var icon = dropdownContent.previousElementSibling.querySelector(".material-symbols-rounded");
-  if (icon) {
-  icon.classList.toggle("flipped");
-  }
-  }
-
   document.getElementById('textNowButton').addEventListener('click', function() {
   window.location.href = 'sms:4694700813&body=FREE%20TRIAL';
   });
@@ -1688,130 +1496,48 @@
   });
   });
 
+  // function toggleDropdown(dropdownId) {
+  //   var dropdownContent = document.getElementById(dropdownId);
+  //     document.querySelectorAll('.dropdown-content.show').forEach(function(content) {
+  //       if (content.id !== dropdownId) {
+  //         content.classList.remove('show');
+  //         const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
+  //         if (icon && icon.classList.contains('flipped')) {
+  //           icon.classList.remove('flipped');
+  //         }
+  //       }
+  //     });
+  //   dropdownContent.classList.toggle('show');
+  //   const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
+  //     if (icon) {
+  //       icon.classList.toggle('flipped');
+  //     }
+  // }
+
   function toggleDropdown(dropdownId) {
-  var dropdownContent = document.getElementById(dropdownId);
-  if (dropdownContent.classList.contains('show')) {
-    dropdownContent.classList.add('closing');
-    setTimeout(() => {
-      dropdownContent.classList.remove('show', 'closing');
-    }, 500); // The timeout duration should match the CSS transition duration
-  } else {
-    dropdownContent.classList.add('show');
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-function toggleDropdown(dropdownId) {
-  var dropdownContent = document.getElementById(dropdownId);
-  var allDropdowns = document.querySelectorAll('.dropdown');
-  var currentDropdown = dropdownContent.previousElementSibling; // The .dropdown element for the current content
-
-  // Closing the current dropdown
-  if (dropdownContent.classList.contains('show')) {
-    // Add border-radius to all dropdown buttons
-    allDropdowns.forEach(function(dropdown) {
-      dropdown.classList.remove('no-border-radius');
-      dropdown.classList.add('add-border-radius');
-    });
-    // Close the dropdown content
-    dropdownContent.classList.remove('show');
-  }
-  // Opening the current dropdown
-  else {
-    // Remove border-radius from the current dropdown button
-    currentDropdown.classList.add('no-border-radius');
-    // Close other dropdowns and restore their border-radius
-    allDropdowns.forEach(function(dropdown) {
-      if (dropdown !== currentDropdown) {
-        dropdown.classList.remove('no-border-radius');
-        dropdown.classList.add('add-border-radius');
-        // Also hide their respective dropdown contents
-        var otherContentId = dropdown.getAttribute('data-related-content');
-        if (otherContentId) {
-          var otherContent = document.getElementById(otherContentId);
-          otherContent.classList.remove('show');
+    const dropdownContent = document.getElementById(dropdownId);
+    const allDropdowns = document.querySelectorAll('.dropdown-content');
+    const currentDropdownButton = dropdownContent.previousElementSibling;
+    const allDropdownButtons = document.querySelectorAll('.dropdown');
+    
+    allDropdowns.forEach((content) => {
+      if (content.id !== dropdownId && content.classList.contains('show')) {
+        content.classList.remove('show');
+        const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
+        if (icon && icon.classList.contains('flipped')) {
+          icon.classList.remove('flipped');
         }
       }
     });
-    // Open the dropdown content
-    dropdownContent.classList.add('show');
-  }
-  
-  // Toggle the icon if there is one (no changes needed here)
-  var icon = currentDropdown.querySelector(".material-symbols-rounded");
-  if (icon) {
-    icon.classList.toggle("flipped");
-  }
-}
 
-// Modify your HTML to include a data attribute for related content for each dropdown button
-// e.g., <div class="dropdown" data-related-content="channels-dropdown" onclick="toggleDropdown('channels-dropdown')">
-
-
-  function toggleDropdown(dropdownId) {
-  var dropdownContent = document.getElementById(dropdownId);
-  // Close other dropdowns
-  document.querySelectorAll('.dropdown-content.show').forEach(function(content) {
-    if (content.id !== dropdownId) {
-      content.classList.remove('show');
-    }
-  });
-  // Toggle the clicked dropdown
-  dropdownContent.classList.toggle('show');
-}
-
-
-function toggleDropdown(dropdownId) {
-  const dropdownContent = document.getElementById(dropdownId);
-  const allDropdowns = document.querySelectorAll('.dropdown-content');
-  const currentDropdownButton = dropdownContent.previousElementSibling; // The .dropdown element for the current content
-  const allDropdownButtons = document.querySelectorAll('.dropdown');
-  
-  allDropdowns.forEach((content) => {
-    if (content.id !== dropdownId && content.classList.contains('show')) {
-      // Close other open dropdowns
-      content.classList.remove('show');
-      // Reset their icons
-      const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
-      if (icon && icon.classList.contains('flipped')) {
-        icon.classList.remove('flipped');
-      }
-    }
-  });
-
-  // Toggle current dropdown
-  dropdownContent.classList.toggle('show');
-  if (currentDropdownButton) {
-    // Toggle the icon's flipped state
-    const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
-    if (icon) {
-      icon.classList.toggle('flipped');
-    }
-
-    // Adjust border-radius for the current dropdown button
-    if (dropdownContent.classList.contains('show')) {
-      currentDropdownButton.classList.add('no-radius');
-    } else {
-      currentDropdownButton.classList.remove('no-radius');
-      // Re-add the border radius after the dropdown is closed and the animation is complete
-      dropdownContent.addEventListener('transitionend', () => {
-        allDropdownButtons.forEach((button) => button.classList.add('add-border-radius'));
-      }, { once: true });
+    dropdownContent.classList.toggle('show');
+    if (currentDropdownButton) {
+      const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
+      if (icon) {
+        icon.classList.toggle('flipped');
+      }      
     }
   }
-}
-
-
 
 </script>
 
@@ -1824,29 +1550,30 @@ function toggleDropdown(dropdownId) {
   }
 
   window.intlTelInput(input, {
-    utilsScript:
-    "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
-    onlyCountries: ["us", "ca", "mx", "gb"],
-    countrySearch: false,
-    utilsScript: "/intl-tel-input/js/utils.js?1708969428263",
-    initialCountry: "us",
-    geoIpLookup: function (callback) {
-    fetch("https://ipapi.co/json")
-    .then(function (res) {
-    return res.json();
-    })
-    .then(function (data) {
-    callback(data.country_code);
-    })
-    .catch(function () {
-    callback();
-    });
-    },
-    showSelectedDialCode:true,
-    fixDropdownWidth:false,
-    useFullscreenPopup:false,
+  utilsScript:
+  "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/js/utils.js",
+  onlyCountries: ["us", "ca", "mx", "gb"],
+  countrySearch: false,
+  utilsScript: "/intl-tel-input/js/utils.js?1708969428263",
+  initialCountry: "us",
+  geoIpLookup: function (callback) {
+  fetch("https://ipapi.co/json")
+  .then(function (res) {
+  return res.json();
+  })
+  .then(function (data) {
+  callback(data.country_code);
+  })
+  .catch(function () {
+  callback();
   });
-  </script>
+  },
+  showSelectedDialCode:true,
+  fixDropdownWidth:false,
+  useFullscreenPopup:false,
+  });
+
+</script>
 
 </body>
 </html>
