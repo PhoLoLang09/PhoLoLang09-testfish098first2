@@ -71,7 +71,7 @@
   margin-bottom: 30px;
   margin-top: 20px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 1;
   }
 
@@ -83,7 +83,7 @@
   margin-bottom: 0px;
   margin-top: 60px;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   }
 
   .scroll-to-contact {
@@ -129,6 +129,13 @@
   background-position: center calc(100% + 10px);
   line-height: 1.2;
   }
+
+  @media (max-width: 768px) {
+  .unique-pre-header {
+    /* keep the other styles, but add or modify letter-spacing */
+    letter-spacing: 5px; /* Enforce 2px letter spacing on small screens */
+  }
+}
 
   .price-amount {
   font-size: 40px;
@@ -1248,7 +1255,7 @@
   </div>
   </header>
 
-  <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
+  <div class="pre-header unique-pre-header">Cut the cord & <b>Save g</b></div>
 
   <div>
     <h1 class="headline">
