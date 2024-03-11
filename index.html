@@ -72,7 +72,7 @@
   margin-top: 20px;
   font-weight: 600;
   letter-spacing: 1px;
-  line-height: 0.9;
+  line-height: 1;
   }
 
   .unique-pre-header {
@@ -1224,6 +1224,14 @@
   line-height: 1.2;
   }
 
+  @media (max-width: 768px) {
+  .unique-pre-header {
+    /* keep the other styles, but add or modify letter-spacing */
+    letter-spacing: 2px; /* Enforce 2px letter spacing on small screens */
+  }
+}
+
+
   .price-amount {
     /* Independent font size for "$15.99" */
     font-size: 40px; /* Adjust the size as needed */
@@ -1249,7 +1257,7 @@
   </div>
   </header>
 
-  <div class="pre-header unique-pre-header">Cut the cord & <b>Save Bigg</b></div>
+  <div class="pre-header unique-pre-header">Cut the cord & <b>Save Big</b></div>
 
   <div>
     <h1 class="headline">
