@@ -1028,27 +1028,31 @@
   display: none;
   text-align: center;
   margin-top: 0px;
-}
+  }
 
-#submission-success .icon {
-  font-size: 40px;
+  #submission-success .icon {
+  font-size: 45px;
   color: #4CAF50;
-  margin-bottom: 5px;
-}
+  margin-bottom: 0px;
+  }
 
-#submission-success p, #submission-success p.new-line {
-  font-size: 20px;
+  #submission-success p, #submission-success {
+  font-size: 18px;
   color: #0D2541;
   font-weight: 500;
   font-family: Inter;
-  line-height: 25px;
-}
+  line-height: 22px;
+  margin-top: 15px;
+  }
 
-/* Specific bottom margin for the new paragraph */
-#submission-success p.new-line {
-  margin-bottom: 20px; /* Adjust this value as needed */
-}
-
+  #submission-success p.new-line {
+  margin-bottom: 0px;
+  color: #0D2541;
+  font-weight: 600;
+  font-family: Inter;
+  font-size: 20px;
+  margin-top: 7.5px;
+  }
 
   #country_code {
   background-image: url('path/to/your-dropdown-arrow-image.png');
@@ -1517,11 +1521,10 @@
   </form> 
 
   <div id="submission-success">
-    <span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span>
-    <p class="new-line">Your submission has been received!</p>
-    <p>Thank you for reaching out to us! Our team will be in touch shortly to arrange your complimentary trial.</p>
+  <span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span>
+  <p class="new-line">Inquiry Sent</p>
+  <p>Thank you for reaching out to us! Our team will be in touch shortly to arrange your complimentary trial.</p>
   </div>
-  
 
   </section>
   </div>
