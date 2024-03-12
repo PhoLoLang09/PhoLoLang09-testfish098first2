@@ -146,6 +146,16 @@
   display: inline;
   }
 
+  .price-container {
+  background-size: contain;
+  background-position: bottom;
+  line-height: normal;
+  }
+
+  .price-amount, .per-month {
+  vertical-align: baseline;
+  }
+
 /* Counters CSS */
 
   .counters {
@@ -618,7 +628,36 @@
   border-bottom-right-radius: 0px;
   position: relative;
   overflow: hidden;
-  }
+}
+
+.dark-box-wrapper:before,
+.dark-box-wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: green; /* Change this to your preferred border color */
+}
+
+.dark-box-wrapper:before {
+  left: 0;
+}
+
+.dark-box-wrapper:after {
+  right: 0;
+}
+
+.header-box {
+  /* existing styles */
+  position: relative;
+  z-index: 1; /* this will ensure that the header box covers the top ends of the pseudo-element borders */
+}
+
+.contact-box {
+  border: 2px solid green; /* or any specific color you prefer */
+}
+
 
   #contact-section {
   text-align: center;
@@ -1033,7 +1072,7 @@
   text-align: center;
   color: #F7F7F7;
   padding: 40px 0px;
-  background: #003057;
+  background: #0D2541;
   position: relative;
   width: 100%;
   }
