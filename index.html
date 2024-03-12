@@ -1028,21 +1028,27 @@
   display: none;
   text-align: center;
   margin-top: 0px;
-  }
+}
 
-  #submission-success .icon {
+#submission-success .icon {
   font-size: 40px;
   color: #4CAF50;
   margin-bottom: 5px;
-  }
+}
 
-  #submission-success p {
+#submission-success p, #submission-success p.new-line {
   font-size: 20px;
   color: #0D2541;
   font-weight: 500;
   font-family: Inter;
   line-height: 25px;
-  }
+}
+
+/* Specific bottom margin for the new paragraph */
+#submission-success p.new-line {
+  margin-bottom: 20px; /* Adjust this value as needed */
+}
+
 
   #country_code {
   background-image: url('path/to/your-dropdown-arrow-image.png');
@@ -1068,7 +1074,6 @@
 
   #contact-form button {
   margin-top: 25px;
-  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   background: #FDD646;
@@ -1502,7 +1507,7 @@
   </div>
   <form id="contact-form">
   <div class="icon-text-wrapper">  
-  <h5><span class="material-symbols-rounded specific-icon icon-email">email</span>Inquire</h5>
+  <h5>Inquire</h5>
   <p>We'll reach out to you!</p>
   </div>
   <input type="text" name="name" placeholder="Preferred Name" required>
@@ -1512,9 +1517,11 @@
   </form> 
 
   <div id="submission-success">
-  <span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span>
-  <p>Thank you for reaching out to us! Our team will be in touch shortly to arrange your complimentary trial.</p>
+    <span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span>
+    <p class="new-line">Your submission has been received!</p>
+    <p>Thank you for reaching out to us! Our team will be in touch shortly to arrange your complimentary trial.</p>
   </div>
+  
 
   </section>
   </div>
