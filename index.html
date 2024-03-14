@@ -172,7 +172,7 @@
 /* Counters CSS */
 
   .counters {
-  width: 80%;
+  /* width: 80%; */
   display: flex;
   justify-content: space-around;
   margin: auto;
@@ -239,11 +239,11 @@
   font-family: inter;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 849px) {
   .counters {
   flex-direction: column;
   }
-
+  
   .counter {
   width: auto;
   }
@@ -252,7 +252,43 @@
   font-size: 19px;
   letter-spacing: 0.5px;
   }
+}
+
+@media (max-width: 849px) {
+  .counters {
+  flex-direction: column;
   }
+
+  .counters {
+    width: 65%;
+  }
+}
+
+@media (max-width: 550px) {
+  .counters {
+  flex-direction: column;
+  }
+
+  .counters {
+    width: 80%;
+  }
+}
+
+
+
+  /* Media query for screen widths between 800px and 1100px */
+@media screen and (min-width: 850px) {
+  .counters {
+    width: 95%;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .counters {
+    width: 80%;
+  }
+}
 
 /* Counter Dropdown CSS */
 
