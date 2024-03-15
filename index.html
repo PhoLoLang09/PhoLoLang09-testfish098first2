@@ -78,7 +78,7 @@
   margin-top: 20px;
   font-weight: 600;
   letter-spacing: 1px !important;
-  line-height: 1.2;
+  line-height: 1.3;
   font-family: Inter;
   font-weight: 700;
   }
@@ -1371,51 +1371,51 @@
 
 
 
-  .your-class .slider-item {
-  margin: 0 15px; /* This adds space to the left and right of each item */
-  display: flex; /* This will help center the content */
-  justify-content: center; /* This centers horizontally in the flex container */
-  align-items: center; /* This centers vertically in the flex container */
+/* Container of the slick slider */
+.slider-box {
+  box-sizing: border-box;
+  width: calc(100% - 20px); /* Adjust the subtraction if .counters has different horizontal padding */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.your-class .slider-item img {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: auto; /* Maintain original image width if smaller than container */
-  height: auto; /* Maintain original image height if smaller than container */
-  max-width: 100%; /* Ensure it doesn't stretch beyond the container width */
-  max-height: 100%; /* Ensure it doesn't stretch beyond the container height */
+/* Slick list and track centering */
+.your-class .slick-list {
+  padding: 0 !important;
 }
 
-.your-class .slider-item img {
-  -webkit-transform: translate3d(0,0,0); /* Ensures hardware acceleration in Webkit browsers */
-  transform: translate3d(0,0,0); /* Ensures hardware acceleration in other browsers */
-  -webkit-font-smoothing: antialiased; /* Improves rendering of SVG fonts in Safari */
-  shape-rendering: crispEdges; /* Specific attribute for SVGs to enhance the quality */
+.your-class .slick-track {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
+/* Slider items and image sizing */
 .your-class .slider-item {
-  width: 80px; /* Set the width of the slide item */
-  height: 80px; /* Set the height of the slide item */
-  margin: 0 5px; /* This adds 10px margin to the left and right, making a 20px space between items */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally in the flex container */
-  align-items: center; /* Center vertically in the flex container */
-  box-sizing: border-box; /* Make sure padding and borders are included in the width and height */
+  width: 80px; /* Width of the slide item */
+  height: 80px; /* Height of the slide item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .your-class .slider-item img {
-  width: 100%; /* Make the image fill the container */
-  height: 100%; /* Make the image fill the container */
-  object-fit: contain; /* Ensure that the image's aspect ratio is preserved */
+  width: 100%; /* Image will fill the slide item container */
+  height: 100%; /* Image height will also fill the slide item container */
+  object-fit: contain;
 }
 
+/* Responsive adjustments as before */
+@media screen and (min-width: 850px) {
+  .slider-box {
+    width: calc(95% - 20px); /* Adjust the subtraction if needed based on .counters padding */
+  }
+}
 
-
-
-
-
-
+@media screen and (min-width: 1100px) {
+  .slider-box {
+    width: calc(80% - 20px); /* Adjust the subtraction if needed based on .counters padding */
+  }
+}
 
 
 
@@ -1454,7 +1454,7 @@
   </h1>
 
 
-
+  <div class="slider-box">
   <div class="your-class">
     <div class="slider-item"><img src="Channel_Icon_ACCN-ESPN.png" alt="Logo"/></div>
     <div class="slider-item"><img src="Channel_Icon_BIGNetwork.png" alt="Logo"/></div>
@@ -1471,6 +1471,7 @@
     <div class="slider-item"><img src="Channel_Icon_ACCN-ESPN.png" alt="Logo"/></div>
     <div class="slider-item"><img src="Channel_Icon_BIGNetwork.png" alt="Logo"/></div>
     <div class="slider-item"><img src="Channel_Icon_MLB.png" alt="Logo"/></div>
+  </div>
   </div>
 
 
