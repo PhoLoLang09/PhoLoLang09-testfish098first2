@@ -1372,13 +1372,12 @@
 
 
 
-  .logo-slider {
+/* Remove padding from .logo-slider to prevent extra space on the sides */
+.logo-slider {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  padding-left: 1vw;
-  padding-right: 1vw;
 }
 
 .logo-slide-track {
@@ -1391,27 +1390,29 @@
   100% { transform: translateX(calc(-64px * 17)); } /* Move by the width of one set */
 }
 
+/* Adjusted .logo CSS */
 .logo {
-  flex: 0 0 6vw; /* flex-grow, flex-shrink, flex-basis - prevent the logos from growing or shrinking */
-  width: 6vw; /* vw units make the size viewport-relative */
-  height: 6vw; /* Same as width to maintain aspect ratio */
-  min-width: 50px; /* Prevents the logo from getting too small */
-  min-height: 50px; /* Same as min-width to maintain aspect ratio */
-  border-radius: 50%; /* Circle shape */
+  flex: 0 0 6vw;
+  width: 6vw;
+  height: 6vw;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
   background: white;
-  margin-right: 1vw; /* Relative spacing between logos */
+  margin-right: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Media query adjustments */
 @media (max-width: 768px) {
   .logo {
     flex: 0 0 12vw;
-    width: 12vw; /* Larger percentage for smaller screens */
-    height: 12vw; /* Same as width to maintain aspect ratio */
-    margin-right: 2vw; /* Increase spacing for smaller screens */
+    width: 12vw;
+    height: 12vw;
+    margin-right: 2vw;
   }
 }
 
@@ -1828,59 +1829,50 @@
 
   document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".logo-slide-track");
-  const logos = document.querySelectorAll(".logo");
+  
+  // Clone the logos to fill the slider
   const cloneLogos = () => {
+    const logos = slider.querySelectorAll(".logo"); // Re-query to include clones
     logos.forEach(logo => {
       const clone = logo.cloneNode(true);
       slider.appendChild(clone);
     });
   };
 
-  const resetAnimation = () => {
-    slider.style.transition = 'none';
-    slider.style.transform = 'translateX(0)';
-    // Force a reflow to apply the reset instantly
-    slider.offsetHeight; 
-    slider.style.transition = 'transform 60s linear';
-    slider.style.transform = `translateX(${calculateTranslateX()})`;
-  };
-
+  // Calculate the transform distance based on logo widths
   const calculateTranslateX = () => {
-    // Calculate the width of a single set of logos (including margins)
-    const logoWidth = logos[0].offsetWidth + parseInt(window.getComputedStyle(logos[0]).marginRight);
+    const logos = slider.querySelectorAll(".logo"); // Re-query to include clones
+    const logoWidth = logos[0].offsetWidth; // Assuming margin is part of width
     return `-${logoWidth * logos.length}px`;
   };
 
-  // Initially clone the logos to fill the slider
+  // Initially clone the logos
   cloneLogos();
-
-  // Set up the initial transform based on the calculated width
+  
+  // Set the initial transform based on the total width of logos
   slider.style.transform = `translateX(${calculateTranslateX()})`;
 
-  // Listen for the end of the transition
+  // Function to reset the animation seamlessly
+  const resetAnimation = () => {
+    // Remove the transition and reset the transform
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateX(0)';
+    
+    // Force a reflow to apply the reset instantly
+    slider.offsetHeight; // This line is important as it forces the browser to reflow
+    
+    // Reapply the transition and start the animation again
+    setTimeout(() => {
+      slider.style.transition = 'transform 60s linear';
+      slider.style.transform = `translateX(${calculateTranslateX()})`;
+    }, 10); // Short timeout to ensure the transition is reapplied after reflow
+  };
+
+  // Listen for the end of the transition to reset the animation
   slider.addEventListener('transitionend', resetAnimation);
 });
 
-// Function to clone the logos to fill the slider sufficiently
-function cloneLogosForContinuousSlider() {
-  const slider = document.querySelector('.logo-slide-track');
-  const logos = slider.querySelectorAll('.logo');
-  const sliderWidth = slider.offsetWidth;
-  const totalLogosWidth = logos.length * logos[0].offsetWidth;
-  
-  // Calculate how many clones we need to fill at least twice the slider width
-  const clonesNeeded = Math.ceil(sliderWidth / totalLogosWidth) * 2;
 
-  for (let i = 0; i < clonesNeeded; i++) {
-    logos.forEach(logo => {
-      const clone = logo.cloneNode(true);
-      slider.appendChild(clone);
-    });
-  }
-}
-
-// Call the function to clone logos when the DOM is fully loaded
-window.addEventListener('DOMContentLoaded', cloneLogosForContinuousSlider);
 
 
 
