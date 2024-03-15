@@ -1373,10 +1373,12 @@
 
 
   .logo-slider {
-  width: 100%; /* Set to the width of the 'counters' section if necessary */
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .logo-slide-track {
@@ -1384,25 +1386,36 @@
   animation: slide linear infinite 60s; /* Adjust time for speed */
 }
 
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-64px * 17)); } /* Move by the width of one set */
+}
+
 .logo {
-  width: 64px; /* Fixed width */
-  height: 64px; /* Fixed height */
+  flex: 0 0 6vw; /* flex-grow, flex-shrink, flex-basis - prevent the logos from growing or shrinking */
+  width: 6vw; /* vw units make the size viewport-relative */
+  height: 6vw; /* Same as width to maintain aspect ratio */
+  min-width: 50px; /* Prevents the logo from getting too small */
+  min-height: 50px; /* Same as min-width to maintain aspect ratio */
   border-radius: 50%; /* Circle shape */
   background: white;
-  margin-right: 10px; /* Spacing between logos */
+  margin-right: 1vw; /* Relative spacing between logos */
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-64px * 17)); /* Move by the width of one set */
+@media (max-width: 768px) {
+  .logo {
+    flex: 0 0 12vw;
+    width: 12vw; /* Larger percentage for smaller screens */
+    height: 12vw; /* Same as width to maintain aspect ratio */
+    margin-right: 2vw; /* Increase spacing for smaller screens */
   }
 }
+
+
 
 
 
