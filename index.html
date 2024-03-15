@@ -111,7 +111,7 @@
   font-family: Inter;
   letter-spacing: 0.5px !important;
   text-transform: uppercase;
-  box-shadow: 0 5px #caab38; /* Adjust the color and size as needed */
+  box-shadow: 0 5px #caab38; /* Strong shadow without blur for clarity */
 }
 
 .scroll-to-contact:hover {
@@ -120,7 +120,6 @@
   box-shadow: 0 5px #be9906; /* Adjust the color and size as needed */
   color: #0D2541;
 }
-
 
   .scroll-to-contact:hover {
   background-color: #EEBF07;
@@ -1363,6 +1362,70 @@
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
 
+
+
+
+
+
+
+
+
+
+
+  .logo-slider {
+  width: 100%; /* Set to the width of the 'counters' section if necessary */
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logo-slide-track {
+  display: flex;
+  animation: slide linear infinite 60s; /* Adjust time for speed */
+}
+
+.logo {
+  width: 64px; /* Fixed width */
+  height: 64px; /* Fixed height */
+  border-radius: 50%; /* Circle shape */
+  background: white;
+  margin-right: 10px; /* Spacing between logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-64px * 17)); /* Move by the width of one set */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -1390,6 +1453,41 @@
   </div>
 
 <!--- Counters & Dropdowns --->
+
+
+
+
+
+
+<div class="logo-slider">
+  <div class="logo-slide-track">
+    <!-- Start of 15 logos -->
+    <div class="logo"><img src="path_to_logo/espn_deportes.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn2.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+    <div class="logo"><img src="path_to_logo/espn.png" alt="ESPN"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 <!--- 1 --->
 
@@ -1709,6 +1807,82 @@
   }      
   }
   }
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".logo-slide-track");
+  const logos = document.querySelectorAll(".logo");
+  const cloneLogos = () => {
+    logos.forEach(logo => {
+      const clone = logo.cloneNode(true);
+      slider.appendChild(clone);
+    });
+  };
+
+  const resetAnimation = () => {
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateX(0)';
+    // Force a reflow to apply the reset instantly
+    slider.offsetHeight; 
+    slider.style.transition = 'transform 60s linear';
+    slider.style.transform = `translateX(${calculateTranslateX()})`;
+  };
+
+  const calculateTranslateX = () => {
+    // Calculate the width of a single set of logos (including margins)
+    const logoWidth = logos[0].offsetWidth + parseInt(window.getComputedStyle(logos[0]).marginRight);
+    return `-${logoWidth * logos.length}px`;
+  };
+
+  // Initially clone the logos to fill the slider
+  cloneLogos();
+
+  // Set up the initial transform based on the calculated width
+  slider.style.transform = `translateX(${calculateTranslateX()})`;
+
+  // Listen for the end of the transition
+  slider.addEventListener('transitionend', resetAnimation);
+});
+
+// Function to clone the logos to fill the slider sufficiently
+function cloneLogosForContinuousSlider() {
+  const slider = document.querySelector('.logo-slide-track');
+  const logos = slider.querySelectorAll('.logo');
+  const sliderWidth = slider.offsetWidth;
+  const totalLogosWidth = logos.length * logos[0].offsetWidth;
+  
+  // Calculate how many clones we need to fill at least twice the slider width
+  const clonesNeeded = Math.ceil(sliderWidth / totalLogosWidth) * 2;
+
+  for (let i = 0; i < clonesNeeded; i++) {
+    logos.forEach(logo => {
+      const clone = logo.cloneNode(true);
+      slider.appendChild(clone);
+    });
+  }
+}
+
+// Call the function to clone logos when the DOM is fully loaded
+window.addEventListener('DOMContentLoaded', cloneLogosForContinuousSlider);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 
