@@ -118,12 +118,6 @@
   margin-top: 30px;
   }
 
-  .scroll-to-contact:hover {
-  background-image: linear-gradient(to bottom, #caab38, #c99a24);
-  color: #0D2541;
-}
-
-
   .per-month {
   color: #FFF;
   border-radius: inherit;
@@ -176,46 +170,78 @@
   }
 
 /* Slider CSS */
-
+@media (max-width: 849px) {
   .slider-box {
+    width: 65%; /* Matches the counters width at this breakpoint */
+    margin: 0 auto; /* Centers the slider */
+    box-sizing: border-box; /* Keeps the box model consistent */
+  }
+}
+
+@media (max-width: 550px) {
+  .slider-box {
+    width: 80%; /* Matches the counters width at this breakpoint */
+    margin: 0 auto; /* Centers the slider */
+    box-sizing: border-box; /* Keeps the box model consistent */
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .slider-box {
+    width: 98%; /* Matches the counters width at this breakpoint */
+    margin: 0 auto; /* Centers the slider */
+    box-sizing: border-box; /* Keeps the box model consistent */
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .slider-box {
+    width: 80%; /* Matches the counters width at this breakpoint */
+    margin: 0 auto; /* Centers the slider */
+    box-sizing: border-box; /* Keeps the box model consistent */
+  }
+}
+
+/* Retaining existing CSS for the slider */
+.slider-box {
   box-sizing: border-box;
   margin: 0 auto;
-  }
+}
 
-  .your-class .slick-list {
+.your-class .slick-list {
   padding: 0 !important;
-  }
+}
 
-  .your-class .slick-track {
+.your-class .slick-track {
   margin-left: auto !important;
   margin-right: auto !important;
-  }
+}
 
-  .your-class .slider-item {
+.your-class .slider-item {
   width: 80px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   margin: 0 5px;
-  }
+}
 
-  .your-class .slider-item img {
+.your-class .slider-item img {
   width: auto;
   max-width: 100%;
   height: auto;
   max-height: 100%;
   opacity: 0.9;
-  }
+}
 
-  .slick-slider {
+.slick-slider {
   visibility: hidden;
-  }
+}
 
-  .slick-slider.slick-initialized {
+.slick-slider.slick-initialized {
   visibility: visible;
-  }
+}
+
 
 /* Counters CSS */
 
@@ -322,7 +348,7 @@
 
   @media screen and (min-width: 850px) {
   .counters {
-  width: 95%;
+  width: 98%;
   }
   }
 
@@ -590,10 +616,6 @@
   font-family: inter;
   font-weight: 700;
   }
-  }
-
-  .trial-button:hover {
-    background-image: linear-gradient(to top, #FDD646, #FBC02D);
   }
 
 /* Offer Call CSS */
