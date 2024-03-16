@@ -170,46 +170,17 @@
   }
 
 /* Slider CSS */
-@media (max-width: 849px) {
-  .slider-box {
-    width: 65%; /* Matches the counters width at this breakpoint */
-    margin: 0 auto; /* Centers the slider */
-    box-sizing: border-box; /* Keeps the box model consistent */
-  }
-}
 
-@media (max-width: 550px) {
-  .slider-box {
-    width: 80%; /* Matches the counters width at this breakpoint */
-    margin: 0 auto; /* Centers the slider */
-    box-sizing: border-box; /* Keeps the box model consistent */
-  }
-}
 
-@media screen and (min-width: 850px) {
-  .slider-box {
-    width: 98%; /* Matches the counters width at this breakpoint */
-    margin: 0 auto; /* Centers the slider */
-    box-sizing: border-box; /* Keeps the box model consistent */
-  }
-}
-
-@media screen and (min-width: 1150px) {
-  .slider-box {
-    width: 80%; /* Matches the counters width at this breakpoint */
-    margin: 0 auto; /* Centers the slider */
-    box-sizing: border-box; /* Keeps the box model consistent */
-  }
-}
-
-/* Retaining existing CSS for the slider */
+/* Styling for slick slider components */
 .slider-box {
-  box-sizing: border-box;
-  margin: 0 auto;
+  margin: 40px auto; /* Added padding of 10px to the top and bottom */
+  box-sizing: border-box; /* Includes padding and border in the element's total width */
 }
 
 .your-class .slick-list {
   padding: 0 !important;
+  overflow: visible; /* Ensures that items do not get cut off */
 }
 
 .your-class .slick-track {
@@ -217,13 +188,16 @@
   margin-right: auto !important;
 }
 
+/* Ensure slider items are fully visible and aligned properly */
 .your-class .slider-item {
-  width: 80px;
+  min-width: 80px; /* Minimum width to prevent items from being too small */
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 5px;
+  margin: 0 5px; /* Adjust space between items if needed */
+  flex-shrink: 0; /* Prevents the items from shrinking */
+  box-sizing: border-box; /* Ensures padding and borders are included in the width */
 }
 
 .your-class .slider-item img {
@@ -234,6 +208,7 @@
   opacity: 0.9;
 }
 
+/* Adjust the visibility of the slider */
 .slick-slider {
   visibility: hidden;
 }
@@ -241,6 +216,9 @@
 .slick-slider.slick-initialized {
   visibility: visible;
 }
+
+
+
 
 
 /* Counters CSS */
