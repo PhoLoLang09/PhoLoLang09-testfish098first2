@@ -116,6 +116,11 @@
   box-shadow: 0px 5px #be9906;
   }
 
+  .scroll-to-contact:hover {
+  background-image: linear-gradient(to bottom, #FDD646, #FBC02D);
+  box-shadow: 0px 5px #928e7b;
+  }
+
   .per-month {
   color: #FFF;
   border-radius: inherit;
@@ -171,7 +176,7 @@
 
   .slider-box {
   box-sizing: border-box;
-  margin: 40px auto;
+  margin: 35px auto;
   }
 
   .your-class .slick-list {
@@ -574,6 +579,10 @@
   letter-spacing: 0.5px !important;
   box-shadow: 0px 5px #be9906;
   text-transform: uppercase;
+  }
+
+  .trial-button:hover {
+  background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
   }
 
   @media (max-width: 210px) {
@@ -1763,20 +1772,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script type="text/javascript">
-  $(window).on('load', function() {
+$(window).on('load', function() {
   $('.your-class').slick({
-  slidesToShow: 10,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1500,
-  dots: false,
-  arrows: false,
-  centerMode: true,
-  infinite: true,
-  centerPadding: '0px',
-  variableWidth: true,
+    slidesToShow: 10,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2300,
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    infinite: true,
+    centerPadding: '0px',
+    variableWidth: true,
+    draggable: false, // Disable mouse dragging
+    swipe: false, // Disable swipe
+    swipeToSlide: false, // Disable swipe to slide
+    touchMove: false, // Disable touch move
+    accessibility: false, // Disable tab navigation and arrow key navigation
+    pauseOnHover: false // This will prevent pausing on mouse hover
   });
-  });
+});
+
 
 </script>
 </script>
