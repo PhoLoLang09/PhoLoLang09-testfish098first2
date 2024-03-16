@@ -1406,24 +1406,6 @@
   max-height: 100%;
 }
 
-/* Responsive width settings matching .counters breakpoints */
-@media screen and (min-width: 850px) {
-  .slider-box {
-    width: 95%; /* Adjust as needed */
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .slider-box {
-    width: 65%; /* Adjust as needed */
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .slider-box {
-    width: 80%; /* Adjust as needed */
-  }
-}
 
 
 
@@ -1463,7 +1445,7 @@
 
   <div>
   <h1 class="headline">
-  Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows
+  Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Showsss
   </h1>
 
 
@@ -1837,59 +1819,51 @@
       setTimeout(function(){
         $('.your-class').slick({
           slidesToShow: 10,
-          slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 2000,
           dots: false,
           arrows: false,
-          centerMode: true,
           infinite: true,
-          centerPadding: '0px',
           variableWidth: true,
+          centerMode: true,
           responsive: [
     {
       breakpoint: 1024,
       settings: {
-          slidesToShow: 10,
-          slidesToScroll: 1,
+        slidesToShow: 10,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 2000,
           dots: false,
           arrows: false,
-          centerMode: true,
           infinite: true,
-          centerPadding: '0px',
           variableWidth: true,
+          centerMode: true,
       }
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 10,
-          slidesToScroll: 1,
+          slidesToShow: 10,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 2000,
           dots: false,
           arrows: false,
-          centerMode: true,
           infinite: true,
-          centerPadding: '0px',
           variableWidth: true,
+          centerMode: true,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 10,
-          slidesToScroll: 1,
+          slidesToShow: 10,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 2000,
           dots: false,
           arrows: false,
-          centerMode: true,
           infinite: true,
-          centerPadding: '0px',
           variableWidth: true,
+          centerMode: true,
       }
     }
   ]
