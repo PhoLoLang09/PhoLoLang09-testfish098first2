@@ -63,7 +63,7 @@
   }
 
   header img {
-  max-width: 200px;
+  max-width: 205px;
   }
 
 /* Headline CSS */
@@ -330,30 +330,26 @@
 
 /* Counter Dropdown CSS */
 
-.navy-background {
+  .navy-background {
   position: relative;
-  background-color: #0D2541; /* Dark color for the expanded dropdowns */
-}
+  background-color: #0D2541;
+  }
 
-.navy-background::before {
+  .navy-background::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px; /* Adjust this value to where you want the gradient to end */
+  height: 300px;
   background: linear-gradient(to bottom, rgb(19, 70, 129) 0%, #0D2541 100%);
   z-index: 0;
-}
+  }
 
-/* Ensure other content is above the gradient */
-.headline, .unique-pre-header, .slider-box, .scroll-to-contact, .counters {
+  .headline, .unique-pre-header, .slider-box, .scroll-to-contact, .counters {
   position: relative;
   z-index: 1;
-}
-
-
-
+  }
 
   .visual-separator {
   height: 45px;
