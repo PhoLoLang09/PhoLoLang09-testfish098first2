@@ -1406,6 +1406,25 @@
   max-height: 100%;
 }
 
+/* Responsive width settings matching .counters breakpoints */
+@media screen and (min-width: 850px) {
+  .slider-box {
+    width: 95%; /* Adjust as needed */
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .slider-box {
+    width: 65%; /* Adjust as needed */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .slider-box {
+    width: 80%; /* Adjust as needed */
+  }
+}
+
 
 
 
@@ -1807,40 +1826,6 @@
 
 
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.autoplay').slick({
-      autoplay: true, // Enable autoplay
-      autoplaySpeed: 2000, // Set autoplay speed in milliseconds
-      slidesToShow: 10,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1024, // Tablet breakpoint
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false
-          }
-        },
-        {
-          breakpoint: 600, // Mobile landscape breakpoint
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480, // Mobile portrait breakpoint
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-  });
 </script>
 
 
