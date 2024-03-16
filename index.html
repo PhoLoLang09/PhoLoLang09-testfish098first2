@@ -1396,6 +1396,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  margin: 0 5px;
 }
 
 .your-class .slider-item img {
@@ -1805,9 +1806,6 @@
 
 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -1850,44 +1848,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js" integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
+<script type="text/javascript">
+  $(document).ready(function(){
   $('.your-class').slick({
   slidesToShow: 10, // Adjust this number to the number of slides you want to show
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 1000,
   dots: false,
   arrows: false,
   centerMode: true,
   infinite: true,
   centerPadding: '0px', // Adjust this to manage the padding within the slider
   variableWidth: true,
-      responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 11, // Adjust if you want fewer circles on medium screens
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2, // Only show 2 circles on small screens
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 4, // Only show 1 circle on extra small screens
-          slidesToScroll: 1
-        }
-      }
-    ]
   });
 });
 
