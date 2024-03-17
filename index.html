@@ -1440,7 +1440,7 @@
 
   <div>
   <h1 class="headline">
-  Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shsows
+  Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows
   </h1>
 
   <div class="slider-box">
@@ -1657,38 +1657,6 @@
 <!--- Script --->
 
 <script>
-
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-  const button = document.querySelector('.scroll-to-contact');
-  let isTouched = false; // Track if the button was touched
-
-  button.addEventListener('click', function() {
-    if (!isTouched) {
-      // Apply the hover effect
-      button.style.backgroundImage = 'linear-gradient(to bottom, #FBC02D, #FDD646)';
-      button.style.boxShadow = '0px 5px #be9906';
-      isTouched = true;
-    } else {
-      // Revert to the original style
-      button.style.backgroundImage = 'linear-gradient(to bottom, #FDD646, #FBC02D)';
-      button.style.boxShadow = '0px 5px #be9906';
-      isTouched = false;
-    }
-  });
-
-  // Optional: revert style on scroll or other actions
-  document.addEventListener('scroll', function() {
-    if (isTouched) {
-      button.style.backgroundImage = 'linear-gradient(to bottom, #FDD646, #FBC02D)';
-      button.style.boxShadow = '0px 5px #be9906';
-      isTouched = false;
-    }
-  });
-});
-</script>
-
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
