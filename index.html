@@ -194,7 +194,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  margin: 0px 11px;
+  margin: 0px 7px;
   }
 
   .your-class .slider-item img {
@@ -347,7 +347,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(19, 70, 129) 0%, #fff 100%);
+  background: linear-gradient(to bottom, rgb(19, 70, 129) 0%, #0D2541 100%);
   z-index: 0;
   }
 
@@ -1797,46 +1797,31 @@
   }
   }
 
-
   function updateGradientHeight() {
   var button = document.querySelector('.scroll-to-contact');
   if (button) {
-    // Gets the top position of the button relative to the viewport
-    var buttonTop = button.getBoundingClientRect().top;
+  var buttonTop = button.getBoundingClientRect().top;
 
-    // Since buttonTop is relative to the viewport, add the current scroll position to get the value relative to the document
-    buttonTop += window.pageYOffset;
+  buttonTop += window.pageYOffset;
 
-    // Subtract 20 pixels from the final calculation to adjust the ending point of the gradient
-    var gradientHeight = buttonTop - 74; // Subtract 20 pixels from the calculated height
+  var gradientHeight = buttonTop - 74;
 
-    // Ensure the gradient style element exists
-    var gradientStyle = document.getElementById('gradient-dynamic-style');
-    if (!gradientStyle) {
-      gradientStyle = document.createElement('style');
-      gradientStyle.id = 'gradient-dynamic-style';
-      document.head.appendChild(gradientStyle);
-    }
-
-    // Set the height of the gradient to reach exactly 20 pixels above the top of the button
-    gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
+  var gradientStyle = document.getElementById('gradient-dynamic-style');
+  if (!gradientStyle) {
+  gradientStyle = document.createElement('style');
+  gradientStyle.id = 'gradient-dynamic-style';
+  document.head.appendChild(gradientStyle);
   }
-}
 
-// Initialize the gradient height after the window loads and all styles are recalculated
-window.addEventListener('load', function() {
-  // A slight delay to ensure final styles are applied, which may be necessary for accurate positioning
+  gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
+  }
+  }
+
+  window.addEventListener('load', function() {
   setTimeout(updateGradientHeight, 0);
-});
+  });
 
-// Update the gradient height on window resize
-window.addEventListener('resize', updateGradientHeight);
-
-
-
-
-
-
+  window.addEventListener('resize', updateGradientHeight);
 
 </script>
 
@@ -1845,7 +1830,7 @@ window.addEventListener('resize', updateGradientHeight);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script type="text/javascript">
-$(window).on('load', function() {
+  $(window).on('load', function() {
   $('.your-class').slick({
     slidesToShow: 10,
     slidesToScroll: 1,
@@ -1864,8 +1849,7 @@ $(window).on('load', function() {
     accessibility: false,
     pauseOnHover: false
   });
-});
-
+  });
 
 </script>
 </script>
