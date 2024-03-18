@@ -148,7 +148,7 @@
 
   @media (max-width: 768px) {
   .unique-pre-header {
-  letter-spacing: 3px !important;
+  letter-spacing: 2px !important;
   }
   }
 
@@ -292,6 +292,11 @@
   
   .counter {
   width: auto;
+  }
+
+  .unique-pre-header {
+  font-size: 19px;
+  letter-spacing: 0.5px;
   }
   }
 
@@ -748,7 +753,7 @@
 
   .dark-box-wrapper-2 {
   background-color: #F7F7F7;
-  padding-bottom: 0px;
+  padding: 0 20px;
   }
 
   .dark-box-wrapper {
@@ -846,6 +851,12 @@
   font-family: inter;
   }
 
+  @media (max-width: 700px) {
+    .contact-box button {
+      width: 100%;
+    }
+  }
+
   .contact-box button:hover {
   background-color: #EEBF07;
   color: #0D2541;
@@ -922,9 +933,9 @@
   border: 2px solid #EEBF07;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
   .dark-box-wrapper {
-  max-width: 340px;
+  max-width: 85%;
   }
 
   .trial-section {
@@ -959,12 +970,12 @@
   }
 
   .contact-box {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   }
 
   #contact-form {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
@@ -1148,7 +1159,7 @@
   font-family: inter;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
   #contact-form button {
   width: 100%;
   }
@@ -1468,12 +1479,12 @@
   <div class="slider-item"><img src="C4L-Icon-18.png" alt="CBS Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-19.png" alt="Discovery Channel Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-20.png" alt="Golf TV Logo"/></div>
-  <div class="slider-item"><img src="C4L-Icon-26.png" alt="ACC Network Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-21.png" alt="FOX News Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-22.png" alt="USA Network"/></div>
   <div class="slider-item"><img src="C4L-Icon-23.png" alt="FS1 Logo"/></div>
-  <div class="slider-item"><img src="C4L-Icon-25.png" alt="Reelz Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-24.png" alt="MSNBC Logo"/></div>
+  <div class="slider-item"><img src="C4L-Icon-25.png" alt="Reelz Logo"/></div>
+  <div class="slider-item"><img src="C4L-Icon-26.png" alt="ACC Network Logo"/></div>
   </div>
   </div>
 
@@ -1492,14 +1503,14 @@
   <div class="counter">
   <div class="count-1">
   <p>Channels</p>
-  <h2>1130+</h2>
+  <h2 id="channels">1130+</h2>
   </div>
 
   <div class="dropdown" onclick="toggleDropdown('channels-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
   <div id="channels-dropdown" class="dropdown-content">
 
-  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Network, PPV events incl. UFC, NBA TV, FOX Sports 1, MLB Network, ESPN, Bally Sports <b>+ 210 Additional Sports Networks</b></span></div>
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket, PPV events incl. UFC, NBA League Pass, Bally Sports, ESPN+, Prime Video <b>+ 210 Additional Sports Networks</b></span></div>
 
   <div class="separator-line-container"><div class="separator-line"></div></div>
 
@@ -1523,7 +1534,7 @@
   <div class="counter">
   <div class="count-1">
   <p>Movies</p>
-  <h2>20100+</h2>
+  <h2 id="movies">20100+</h2>
   </div>
 
   <div class="dropdown" onclick="toggleDropdown('movies-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
@@ -1550,7 +1561,7 @@
   <div class="counter">
   <div class="count-1">
   <p>Shows</p>
-  <h2>6500+</h2>
+  <h2 id="tvshows">6500+</h2>
   </div>
 
   <div class="dropdown" onclick="toggleDropdown('tvshows-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
@@ -1577,7 +1588,7 @@
 
 <!--- Free Trial Message --->
 
-  <div class="custom-shape-divider-bottom-1708380672">
+<div class="custom-shape-divider-bottom-1708380672">
   <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
   <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
   </svg>
@@ -1728,7 +1739,7 @@
   };
 
   function autoOpenDropdownOnMobile() {
-  if (window.innerWidth <= 849) {
+  if (window.innerWidth <= 768) {
   toggleDropdown("channels-dropdown");
   }
   }
