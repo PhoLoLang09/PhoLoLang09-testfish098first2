@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="en" style="height: 100%">
+  <html lang="en" style="height: 100%">
 
 <head>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.3/build/css/intlTelInput.css"/>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="https://fonts.cdnfonts.com/css/pf-din-text-comp-pro-medium" rel="stylesheet">
@@ -20,13 +20,13 @@
   <meta name="application-name" content="Cable4Less">
   <meta name="msapplication-TileColor" content="#003057">
   <meta name="theme-color" content="#Fff">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <title>Watch Cable for Less</title>
@@ -54,14 +54,33 @@
   min-height: calc(100% - 40px);
   }
 
+/* Hero Section CSS */
+
+  .navy-background {
+  position: relative;
+  background-color: #0D2541;
+  }
+
+  .navy-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(19, 70, 129) 0%, #0D2541 100%);
+  z-index: 0;
+  }
+
+  .headline, .unique-pre-header, .slider-box, .scroll-to-contact, .counters {
+  position: relative;
+  z-index: 1;
+  }
+
 /* Header CSS */
 
   header {
   text-align: center;
   padding: 35px 0;
-  }
-
-  header {
   position: relative;
   z-index: 2;
   }
@@ -71,6 +90,18 @@
   }
 
 /* Headline CSS */
+
+  .unique-pre-header {
+  text-align: center;
+  font-size: 18px;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: Inter;
+  }
 
   .headline {
   text-align: center;
@@ -83,18 +114,41 @@
   line-height: 1.3;
   font-family: Inter;
   font-weight: 700;
+  padding-left: 16px;
+  padding-right: 16px;
   }
 
-  .unique-pre-header {
-  text-align: center;
-  font-size: 18px;
-  color: #FFF;
-  text-transform: uppercase;
-  margin-bottom: 0px;
-  padding-top: 20px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  .price-container {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1418 125" fill="%23FDD646"><path d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: 100% 40px;
+  padding-bottom: 13px;
+  display: inline-block;
+  background-position: center calc(100% + 10px);
   font-family: Inter;
+  background-size: contain;
+  background-position: bottom;
+  line-height: normal;
+  }
+
+  .price-amount {
+  font-size: 35px;
+  display: inline;
+  font-family: inter;
+  vertical-align: baseline;
+  }
+
+  .per-month {
+  color: #FFF;
+  border-radius: inherit;
+  font-weight: 600;
+  padding: 0px;
+  padding-left: 1px;
+  font-size: 20px;
+  vertical-align: 2px;
+  font-family: Inter;
+  display: inline;
+  vertical-align: baseline;
   }
 
   .scroll-to-contact {
@@ -124,62 +178,25 @@
   box-shadow: 0px 5px #be9906
   }
 
-  .per-month {
-  color: #FFF;
-  border-radius: inherit;
-  font-weight: 500;
-  padding: 0px;
-  padding-left: 1px;
-  font-size: 22px;
-  vertical-align: 2px;
-  font-family: Inter;
-  }
-
-  .price-container {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1418 125" fill="%23FDD646"><path d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"></path></svg>');
-  background-repeat: no-repeat;
-  background-size: 100% 40px;
-  padding-bottom: 13px;
-  display: inline-block;
-  background-position: center calc(100% + 10px);
-  line-height: 1.3;
-  font-family: Inter;
-  }
-
   @media (max-width: 768px) {
   .unique-pre-header {
   letter-spacing: 2px !important;
   }
   }
 
-  .price-amount {
-  font-size: 35px;
-  display: inline;
-  font-family: inter;
-  }
-
-  .per-month {
-  font-size: 20px;
-  display: inline;
-  font-family: inter;
-  font-weight: 600;
-  }
-
-  .price-container {
-  background-size: contain;
-  background-position: bottom;
-  line-height: normal;
-  }
-
-  .price-amount, .per-month {
-  vertical-align: baseline;
-  }
-
 /* Slider CSS */
+
+  .slick-slider.slick-initialized {
+  visibility: visible;
+  }
 
   .slider-box {
   box-sizing: border-box;
   margin: 35px auto;
+  }
+
+  .slick-slider {
+  visibility: hidden;
   }
 
   .your-class .slick-list {
@@ -209,14 +226,6 @@
   opacity: 0.9;
   }
 
-  .slick-slider {
-  visibility: hidden;
-  }
-
-  .slick-slider.slick-initialized {
-  visibility: visible;
-  }
-
 /* Counters CSS */
 
   .counters {
@@ -240,10 +249,10 @@
   width: 30.5%;
   position: relative;
   margin-bottom: 30px;
-  }
-
-  .counter h2, .counter p {
-  color: #FFF;
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
   }
 
   .counter h2 {
@@ -254,6 +263,7 @@
   font-weight: 700;
   letter-spacing: 1px !important;
   font-family: inter;
+  color: #FFF;
   }
 
   .counter p {
@@ -262,27 +272,7 @@
   font-weight: 400;
   letter-spacing: 1px !important;
   font-family: inter;
-  }
-
-  .ribbon {
-  position: absolute;
-  margin-top: 0px;
-  top: 54px;
-  right: -20px;
-  background-color:#FFF;
-  color: #21528C;
-  padding: 5px 40px;
-  font-size: 0.75em;
-  transform: rotate(40deg);
-  transform-origin: top right;
-  box-shadow: none;
-  border: 0px solid #FFF;
-  z-index: 10;
-  letter-spacing: 0.1rem;
-  opacity: 0.9;
-  font-weight: 500;
-  overflow: hidden;
-  font-family: inter;
+  color: #FFF;
   }
 
   @media (max-width: 849px) {
@@ -296,7 +286,7 @@
 
   .unique-pre-header {
   font-size: 19px;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   }
   }
 
@@ -340,33 +330,6 @@
 
 /* Counter Dropdown CSS */
 
-  .navy-background {
-  position: relative;
-  background-color: #0D2541;
-  }
-
-  .navy-background::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(19, 70, 129) 0%, #0D2541 100%);
-  z-index: 0;
-  }
-
-  .headline, .unique-pre-header, .slider-box, .scroll-to-contact, .counters {
-  position: relative;
-  z-index: 1;
-  }
-
-  .visual-separator {
-  height: 45px;
-  width: 100%;
-  background-color: transparent;
-  clear: both;
-  }
-
   .dropdown {
   cursor: pointer;
   background-color: #FFF;
@@ -384,6 +347,10 @@
   font-size: 16px;
   letter-spacing: 0.5px !important;
   box-shadow: 0px 4px #c6c6c6;
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
   }
 
   .dropdown-content::before {
@@ -395,11 +362,6 @@
   height: 10px;
   background-color: #fff;
   z-index: -1;
-  }
-
-  .dropdown-content {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   }
 
   .dropdown-content {
@@ -420,119 +382,34 @@
   border-bottom-right-radius: 30px;  
   width: 100%;
   background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: top;
+  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s;
+  transform: scaleY(1);
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
   }
 
   .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
-  }
-
-  .dropdown-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  }
-
-  .dropdown-content.show {
   overflow: visible;
-  max-height: 1000px;
-  transition: max-height 0.5s ease-in-out;
-  }
-
-  .dropdown-content {
-  overflow: hidden;
-  transform-origin: top;
-  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s;
-  transform: scaleY(1);
-  }
-
-  .dropdown-content.show {
-  overflow: visible;
-  max-height: 1000px;
-  transition: max-height 0.5s ease, overflow 0s;
-  transform: scaleY(1);
-  }
-
-  .dropdown-content.closing {
-  transform: scaleY(0);
-  transition: transform 0.5s ease, max-height 0s, overflow 0s;
-  }
-
-  .trial-button {
-  position: relative;
-  margin-top: 25px;
-  }
-
-  .trial-button::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background-color: #FFF;
-  }
-
-  .dropdown.no-radius {
-  border-radius: 0;
-  transition: border-radius 0.5s ease-in-out;
-  }
-
-  .dropdown {
-  transition: border-radius 0.5s ease-in-out;
-  }
-
-  .no-border-radius {
-  border-radius: 0;
-  transition: border-radius 0.3s ease;
-  }
-
-  .add-border-radius {
-  border-radius: 0 0 10px 10px ;
-  transition: border-radius 0.3s ease;
-  }
-
-  .dropdown {
-  transition: border-radius 0.3s ease;
-  }
-
-  .dropdown-content {
-  transform: translate3d(0,0,0);
-  }
-
-  .dropdown-content {
-  transform: scaleY(0);
-  transform-origin: top;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: transform 0.5s, visibility 0s, opacity 0.5s;
-  }
-
-  .dropdown-content.show {
+  transition: height .3s ease-in-out;
   transform: scaleY(1);
   height: auto;
   visibility: visible;
   opacity: 1;
   }
 
-  @media not all and (min-resolution:.001dpcm) { 
-  @supports (-webkit-appearance:none) {
-  .dropdown-content {
-  transition: transform 0.5s, visibility 0s 0.5s, opacity 0.5s;
-  }
-  }
-  }
-
-  .dropdown-content::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px;
-  z-index: 1;
-  pointer-events: none;
+  .show {
+  display: block;
   }
 
   .dropdown-content-item {
@@ -558,15 +435,20 @@
   letter-spacing: 0.5px !important;
   }
 
-  .counter, .dropdown, .dropdown-content {
-  position: relative;
+  .dropdown-content::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
   z-index: 1;
-  padding-left: 0px;
-  padding-right: 0px;
+  pointer-events: none;
   }
 
-  .show {
-  display: block;
+  .separator-line-container {
+  background-color: #FFF;
+  padding: 4px 0;
   }
 
   .separator-line {
@@ -580,9 +462,14 @@
   margin-bottom: 4px;
   }
 
-  .separator-line-container {
+  .trial-button::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
   background-color: #FFF;
-  padding: 4px 0;
   }
 
   .trial-button {
@@ -615,6 +502,7 @@
   letter-spacing: 0.5px !important;
   box-shadow: 0px 5px #be9906;
   text-transform: uppercase;
+  margin-top: 25px;
   }
 
   .trial-button:hover {
@@ -629,48 +517,15 @@
   }
   }
 
+  @media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+  .dropdown-content {
+  transition: height 0.3s;
+  }
+  }
+  }
+
 /* Offer Call CSS */
-
-  @media (max-width: 768px) {
-  .ditch {
-  display: block;
-  text-align: center;
-  }
-  }
-
-  @media (max-width: 800px) {
-  div.trial-section-wrapper div.trial-section {
-  margin-top: 50px;
-  }
-  }
-
-  .rotating-text-container {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  }
-
-  .rotating-text {
-  color: #21528C;
-  font-size: 19px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  font-family: inter;
-  }
-
-  .large-header {
-  text-align: center;
-  font-size: 30px;
-  color: #003057;
-  margin-top: 8px;
-  font-family: inter;
-  letter-spacing: 1px !important;
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  }
 
   .trial-section-wrapper {
   display: flex;
@@ -695,11 +550,80 @@
   text-align: center;
   }
 
+  .rotating-text-container {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  background-color: #F7F7F7;
+  }
+
+  .rotating-text {
+  color: #21528C;
+  font-size: 19px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: inter;
+  }
+
+  .large-header {
+  text-align: center;
+  font-size: 30px;
+  color: #003057;
+  margin-top: 8px;
+  font-family: inter;
+  letter-spacing: 1px !important;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #F7F7F7;
+  }
+
   .trial-image img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 300px;
+  }
+
+  .icon-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -5px;
+  align-items: center;
+  }
+
+  .icon-text-item {
+  display: flex;
+  align-items: center;
+  }
+
+  .icon-text-item > span:not(.material-symbols-rounded) {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px !important;
+  }
+
+  @media (max-width: 768px) {
+  .ditch {
+  display: block;
+  text-align: center;
+  }
+  }
+
+  @media (max-width: 800px) {
+  div.trial-section-wrapper div.trial-section {
+  margin-top: 50px;
+  }
+  }
+
+  @media screen and (min-width: 1024px) {
+  .dropdown-content-item .dropdown-icon {
+  margin-top: 2px;
+  }
   }
 
   @media screen and (max-width: 768px) {
@@ -718,48 +642,12 @@
   margin: 20px auto;
   }
   }
-
-  .rotating-text-container, .large-header {
-  background-color: #F7F7F7;
-  }
-
-  .icon-text-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: -5px;
-  align-items: center;
-  }
-
-  @media screen and (min-width: 1024px) {
-  .dropdown-content-item .dropdown-icon {
-  margin-top: 2px;
-  }
-  }
-
-  .icon-text-item {
-  display: flex;
-  align-items: center;
-  }
-
-  .icon-text-item > span:not(.material-symbols-rounded) {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px !important;
-  }
-
+  
 /* Contact Form CSS */
 
   .dark-box-wrapper-2 {
   background-color: #F7F7F7;
-  padding: 0 30px;
-  }
-
-  @media (max-width: 600px) {
-  .dark-box-wrapper-2 {
-  padding: 0 8px;
-  }
+  padding: 0 20px;
   }
 
   .dark-box-wrapper {
@@ -784,8 +672,54 @@
   }
 
   .header-box {
+  background: linear-gradient(to bottom right, #21528C, #193A73);
+  text-align: center;
+  align-content: center;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: inter;
   position: relative;
   z-index: 1;
+  }
+
+  h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: inter;
+  letter-spacing: 0.5px !important;
+  }
+
+  .contact-box p {
+  font-size: 15px; 
+  font-weight: 500;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  line-height: 1.3;
+  font-family: inter;
+  letter-spacing: 0.5px !important;
+  }
+
+  .contact-box p a {
+  text-decoration: none;
+  }
+
+  .phone-link, .phone-link:link, .phone-link:visited {
+  color: #21528C;
+  }
+
+  .phone-link:hover, .phone-link:active {
+  color: #21518c;
   }
 
   #contact-section {
@@ -793,13 +727,6 @@
   max-width: 100%;
   overflow-x: hidden;
   padding: 40px;
-  }
-
-  .contact-options {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 40px;
   }
 
   .contact-box {
@@ -816,25 +743,11 @@
   margin-top: 0px;
   }
 
-  .contact-box h3 {
-  margin-top: 30px;
-  font-size: 15px;
-  }
-
-  #contact-section h3 {
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px 0;
-  background-color: #007bff;
-  width: calc(100% - 0px);
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  .contact-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
   }
 
   .contact-box button {
@@ -857,12 +770,6 @@
   font-family: inter;
   }
 
-  @media (max-width: 700px) {
-    .contact-box button {
-      width: 100%;
-    }
-  }
-
   .contact-box button:hover {
   background-color: #EEBF07;
   color: #0D2541;
@@ -877,6 +784,25 @@
   flex-direction: column;
   gap: 0px;
   box-sizing: border-box;
+  }
+
+  .icon-text-wrapper p {
+  font-size: 15px;
+  font-family: Inter;
+  letter-spacing: 0.5px !important;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  }
+
+  input::placeholder {
+  font-family: 'Inter';
+  letter-spacing: 0.5px !important;
+  }
+
+  input {
+  font-family: 'Inter';
+  letter-spacing: 0.5px !important;
   }
 
   #contact-form input[type="text"] {
@@ -910,33 +836,57 @@
   font-size: 12px;
   }
 
-  #contact-form input[type="submit"] {
-  margin-top: 25px;
-  margin-bottom: 20px;
+  #contact-form button {
   margin-left: auto;
+  margin-top: 10px;
   margin-right: auto;
   background: #FDD646;
   color: #0D2541;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  border: 2px solid #FDD646;
+  Padding: 8px 0;
   border-radius: 30px;
-  align-items: center;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  width: 186px;
+  width: 35%;
   height: 43px;
-  font-weight: 600;
-  border: 2px solid #FDD646
+  font-weight: 700;
+  letter-spacing: 0.5px !important;
+  font-family: inter;
   }
 
   #contact-form input[type="submit"]:hover {
   background-color: #EEBF07;
   color: #0D2541;
   border: 2px solid #EEBF07;
+  }
+
+  #submission-success {
+  display: none;
+  text-align: center;
+  margin-top: 0px;
+  }
+
+  #submission-success p, #submission-success {
+  font-size: 18px;
+  color: #0D2541;
+  font-weight: 500;
+  font-family: Inter;
+  line-height: 1.3;
+  margin-top: 16px;
+  letter-spacing: 0.5px !important;
+  }
+
+  #submission-success p.new-line {
+  margin-bottom: 0px;
+  color: #0D2541;
+  font-weight: 600;
+  font-family: Inter;
+  font-size: 18px;
+  margin-top: 8px;
+  letter-spacing: 0.5px !important;
   }
 
   @media (max-width: 600px) {
@@ -1008,132 +958,6 @@
   .iti {
   margin-top: 0px;
   }
-
-  .icon-text-wrapper {
-  margin-bottom: 0px;
-  }
-  }
-
-  h5 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: inter;
-  letter-spacing: 0.5px !important;
-  }
-
-  .contact-box p {
-  font-size: 15px; 
-  font-weight: 500;
-  margin-bottom: 25px;
-  margin-top: 15px;
-  line-height: 1.3;
-  font-family: inter;
-  letter-spacing: 0.5px !important;
-  }
-
-  .contact-box p a {
-  text-decoration: none;
-  }
-
-  .phone-link, .phone-link:link, .phone-link:visited {
-  color: #21528C;
-  }
-
-  .phone-link:hover, .phone-link:active {
-  color: #21518c;
-  }
-
-  .header-box {
-  background: linear-gradient(to bottom right, #21528C, #193A73);
-  text-align: center;
-  align-content: center;
-  padding: 20px 0;
-  width: 100%;
-  box-sizing: border-box;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  font-family: inter;
-  }
-
-  .icon-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  }
-
-  .specific-icon {
-  font-family: 'Material Symbols Rounded';
-  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  font-size: 22px;
-  vertical-align: middle;
-  }
-
-  .icon-email{
-  margin-bottom: 5px;
-  align-content: center;
-  padding-right: 0px;
-  }
-
-  .icon-text {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 0;
-  }
-
-  #submission-success {
-  display: none;
-  text-align: center;
-  margin-top: 0px;
-  }
-
-  #submission-success .icon {
-  font-size: 40px;
-  color: #4CAF50;
-  margin-bottom: 0px;
-  }
-
-  #submission-success p, #submission-success {
-  font-size: 18px;
-  color: #0D2541;
-  font-weight: 500;
-  font-family: Inter;
-  line-height: 1.3;
-  margin-top: 16px;
-  letter-spacing: 0.5px !important;
-  }
-
-  #submission-success p.new-line {
-  margin-bottom: 0px;
-  color: #0D2541;
-  font-weight: 600;
-  font-family: Inter;
-  font-size: 18px;
-  margin-top: 8px;
-  letter-spacing: 0.5px !important;
-  }
-
-  #country_code {
-  background-image: url('path/to/your-dropdown-arrow-image.png');
-  background-repeat: no-repeat;
-  background-position: right;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  }
-
-  .google-symbols-dropdown-icon {
-  display: inline-block;
-  font-family: 'Material Symbols Rounded';
   }
 
   .dropdown-content {
@@ -1142,27 +966,6 @@
 
   .dropdown-content.show {
   overflow: visible;
-  }
-
-  #contact-form button {
-  margin-left: auto;
-  margin-top: 10px;
-  margin-right: auto;
-  background: #FDD646;
-  color: #0D2541;
-  border: 2px solid #FDD646;
-  Padding: 8px 0;
-  border-radius: 30px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  width: 35%;
-  height: 43px;
-  font-weight: 700;
-  letter-spacing: 0.5px !important;
-  font-family: inter;
   }
 
   @media (max-width: 600px) {
@@ -1177,9 +980,11 @@
   border: 2px solid #EEBF07;
   }
 
-  .material-symbols-rounded {
-  margin-right: 7px;
-  }  
+  @media (max-width: 700px) {
+  .contact-box button {
+  width: 100%;
+  }
+  }
 
 /* Footer CSS */
 
@@ -1201,6 +1006,20 @@
   margin: 0 10px;
   margin-left: 5px;
   margin-right: 5px;
+  }
+
+  .copyright {
+  font-size: 14px;
+  color: #FFF;
+  padding-top: 0px;
+  font-family: inter;
+  font-weight: 400;
+  letter-spacing: 0.5px !important;
+  }
+
+  .custom-contact {
+  font-size: 14px;
+  color: #FFF;
   }
 
   .contact-link, .custom-contact {
@@ -1235,45 +1054,12 @@
   letter-spacing: 0.5px !important;
   }
 
-  .icon-text-wrapper p {
-  font-size: 15px;
-  font-family: Inter;
-  letter-spacing: 0.5px !important;
-  font-weight: 500;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  }
-
-  input::placeholder {
-  font-family: 'Inter';
-  letter-spacing: 0.5px !important;
-  }
-
-  input {
-  font-family: 'Inter';
-  letter-spacing: 0.5px !important;
-  }
-
   .disclaimer-box p:first-child {
   margin-top: 0;
   }
 
   .disclaimer-box p:last-child {
   margin-bottom: 0;
-  }
-
-  .copyright {
-  font-size: 14px;
-  color: #FFF;
-  padding-top: 0px;
-  font-family: inter;
-  font-weight: 400;
-  letter-spacing: 0.5px !important;
-  }
-
-  .custom-contact {
-  font-size: 14px;
-  color: #FFF;
   }
 
   @media screen and (max-width: 768px) {
@@ -1310,13 +1096,6 @@
   .material-symbols-outlined.flipped {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
-  }
-
-  .trademark {
-  font-size: 0.65em;
-  vertical-align: 0.3em;
-  margin-left: 0.2em;
-  color: rgba(0, 48, 87, 0.9);
   }
 
   .material-symbols-sharp {
@@ -1405,11 +1184,35 @@
   'opsz' 24
   }
 
-  .trademark2 {
-  font-size: 0.65em;
-  vertical-align: 0.3em;
-  margin-left: 0.1em;
-  color: rgba(0, 48, 87, 0.9);
+  .specific-icon {
+  font-family: 'Material Symbols Rounded';
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 22px;
+  vertical-align: middle;
+  }
+
+  .icon-email{
+  margin-bottom: 5px;
+  align-content: center;
+  padding-right: 0px;
+  }
+
+  .icon-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
+  #submission-success .icon {
+  font-size: 40px;
+  color: #4CAF50;
+  margin-bottom: 0px;
+  }
+
+  .google-symbols-dropdown-icon {
+  display: inline-block;
+  font-family: 'Material Symbols Rounded';
   }
 
   #submission-success .icon-rounded-fill {
@@ -1442,26 +1245,17 @@
 </head>
 <body>
 
-<!--- Logo --->
+<!--- Header HTML --->
 
-<div class="main-content navy-background">
+  <div class="main-content navy-background">
 
+  <div class="main-content"><header><div class="container"><img src="C4L-Logo.svg" alt="Cable4Less Logo"/></div></header>
 
-  <div class="main-content">
-  <header>
-  <div class="container">
-  <img src="C4L-Logo.svg" alt="Cable4Less Logo" />
-  </div>
-  </header>
-
-<!--- Header Message --->
+<!--- Hero Message HTML --->
 
   <div class="pre-header unique-pre-header">Cut the cord & Save Big</div>
 
-  <div>
-  <h1 class="headline">
-  Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows
-  </h1>
+  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
 
   <div class="slider-box">
   <div class="your-class">
@@ -1488,35 +1282,28 @@
   <div class="slider-item"><img src="C4L-Icon-21.png" alt="FOX News Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-22.png" alt="USA Network"/></div>
   <div class="slider-item"><img src="C4L-Icon-23.png" alt="FS1 Logo"/></div>
-  <div class="slider-item"><img src="C4L-Icon-24.png" alt="MSNBC Logo"/></div>
-  <div class="slider-item"><img src="C4L-Icon-25.png" alt="Reelz Logo"/></div>
   <div class="slider-item"><img src="C4L-Icon-26.png" alt="ACC Network Logo"/></div>
-  </div>
-  </div>
+  <div class="slider-item"><img src="C4L-Icon-25.png" alt="Reelz Logo"/></div>
+  <div class="slider-item"><img src="C4L-Icon-24.png" alt="MSNBC Logo"/></div>
 
-  <div class="button-center">
-  <button class="scroll-to-contact">
-  <span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial
-  </button>
-  </div>
-  </div>  
+  </div></div>
 
-<!--- Counters & Dropdowns --->
+  <div class="button-center"><button class="scroll-to-contact"><span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button></div></div>  
+
+<!--- Counters & Dropdowns HTML --->
 
 <!--- 1 --->
 
   <div class="counters">
   <div class="counter">
   <div class="count-1">
-  <p>Channels</p>
-  <h2 id="channels">1130+</h2>
-  </div>
+  <p>Channels</p><h2>1130+</h2></div>
 
   <div class="dropdown" onclick="toggleDropdown('channels-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
   <div id="channels-dropdown" class="dropdown-content">
 
-  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Sunday Ticket, PPV events incl. UFC, NBA League Pass, Bally Sports, ESPN+, Prime Video <b>+ 210 Additional Sports Networks</b></span></div>
+  <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">sports_football</span><span class="dropdown-content-text"><b>Endless Sports: </b>NFL Network, PPV events incl. UFC, NBA TV, ESPN, FOX Sports 1, MLB Network, Bally Sports <b>+ 210 Additional Sports Networks</b></span></div>
 
   <div class="separator-line-container"><div class="separator-line"></div></div>
 
@@ -1532,16 +1319,13 @@
 
   <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
   
-  </div>
-  </div>
+  </div></div>
 
 <!--- 2 --->
 
   <div class="counter">
   <div class="count-1">
-  <p>Movies</p>
-  <h2 id="movies">20100+</h2>
-  </div>
+  <p>Movies</p><h2>20100+</h2></div>
 
   <div class="dropdown" onclick="toggleDropdown('movies-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1559,16 +1343,13 @@
 
   <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
-  </div>
-  </div>
+  </div></div>
 
 <!--- 3 --->
 
   <div class="counter">
   <div class="count-1">
-  <p>Shows</p>
-  <h2 id="tvshows">6500+</h2>
-  </div>
+  <p>Shows</p><h2>6500+</h2></div>
 
   <div class="dropdown" onclick="toggleDropdown('tvshows-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1586,108 +1367,70 @@
 
   <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
-  </div>
-  </div>
-  </div>
+  </div></div></div></div>
 
-  </div>
+<!--- Call To Action HTML --->
 
-<!--- Free Trial Message --->
-
-<div class="custom-shape-divider-bottom-1708380672">
-  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-  <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
-  </svg>
-  </div>
+  <div class="custom-shape-divider-bottom-1708380672"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path></svg></div>
 
   <div class="trial-section-wrapper">
   <div class="trial-section">
   <div class="trial-content">
-  <div class="rotating-text-container">
-  <div id="rotatingText" class="rotating-text">Get More. Save More.</div>
-  </div>
+  <div class="rotating-text-container"><div id="rotatingText" class="rotating-text">Get More. Save More.</div></div>
 
   <h2 class="large-header">Watch Two Days Free</h2>
 
   <div class="icon-text-group">
   <div class="icon-text-item">
-  <span class="material-symbols-rounded custom-icon specific-icon">close</span>
-  <span>No Sign-Up Required</span>
-  </div>
+  <span class="material-symbols-rounded custom-icon specific-icon">close</span><span>No Sign-Up Required</span></div>
 
   <div class="icon-text-item">
-  <span class="material-symbols-rounded custom-icon specific-icon">devices</span>
-  <span>Watch on Any Device</span>
-  </div>
+  <span class="material-symbols-rounded custom-icon specific-icon">devices</span><span>Watch on Any Device</span></div>
 
-  </div>
-  </div>
+  </div></div>
 
-  <div class="trial-image">
-  <img src="C4L-TVIMG.png" alt="Free 2 Day Trial">
-  </div>
-  </div>
-  </div>
+  <div class="trial-image"><img src="C4L-TVIMG.png" alt="Free 2 Day Trial"></div></div></div>
 
 <!--- Contact Form --->
 
-  <div class="dark-box-wrapper-2">    
-  <div class="dark-box-wrapper">
+  <div class="dark-box-wrapper-2"><div class="dark-box-wrapper">
+
   <div class="header-box">Get Started</div>
-  <section id="contact-section">
-  <div class="contact-options">
+
+  <section id="contact-section"><div class="contact-options">
+
   <div class="contact-box">
-  <span class="contact-chat-icon">sms</span>
-  <h5>Text</h5>
-  <p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
-  <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button>
-  </div>
+  <span class="contact-chat-icon">sms</span><h5>Text</h5><p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
+  <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button></div>
+
   <div class="contact-box">
-  <span class="contact-call-icon">send</span><h5>FB Messenger</h5>
-  <p>Message FREE TRIAL to get started on Facebook<span class="trademark2">&reg;</span></p>
-  <button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
-  <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now
-  </button>
-  </div>
-  </div>
+  <span class="contact-call-icon">send</span><h5>FB Messenger</h5><p>Message FREE TRIAL to get started on Facebook</span></p><button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
+  <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now</button></div></div>
+
   <form id="contact-form">
   <div class="icon-text-wrapper">  
-  <h5>Inquire</h5>
-  <p>We'll reach out to you!</p>
-  </div>
-  <input type="text" name="name" placeholder="Preferred Name" required>
-  <input type="email" name="email" placeholder="Email Address" id="email">
-  <input id="phone" name="phone" type="tel" value="" placeholder="Phone Number"/>
-  <button type="submit" id="contactButton"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Contact Me</button>
-  </form> 
+  <h5>Inquire</h5><p>We'll reach out to you!</p></div>
+  <input type="text" name="name" placeholder="Preferred Name" required><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" value="" placeholder="Phone Number"/>
+  <button type="submit" id="contactButton"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Contact Me</button></form> 
 
-  <div id="submission-success">
-  <span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span>
-  <p class="new-line">Inquiry Sent</p>
-  <p>Our team will be in touch shortly to arrange your complimentary trial.</p>
-  </div>
+  <div id="submission-success"><span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span><p class="new-line">Inquiry Sent</p><p>Our team will be in touch shortly to arrange your complimentary trial.</p></div>
 
-  </section>
-  </div>
-  </div>
+  </section></div></div>
 
 <!--- Footer --->
 
   <footer>
-  <p class="copyright">&copy; 2024 Cable4Less. All rights reserved
-  <span class="custom-separator"></span>
-  <a href="mailto:hello@watchcable4less.net" class="custom-contact">Contact</a>
-  </p>
+  <p class="copyright">&copy; 2024 Cable4Less. All rights reserved<span class="custom-separator"></span><a href="mailto:hello@watchcable4less.net" class="custom-contact">Contact</a></p>
+
   <div class="disclaimer-box">
   <p>All company names, brands, and other trademarks mentioned on this website are the property of their respective trademark holders. These trademarks are used solely for descriptive purposes and to identify the products or services of their respective owners. Our use of these names does not imply any affiliation with, endorsement by, or any association with these companies. Specifically, these companies are not affiliated with watchcable4less.net.</p>
   <p>The art logo displayed at the top of this website is the exclusive property and trademark of watchcable4less.net. Unauthorized use of this logo is prohibited. This logo identifies watchcable4less.net and its services and should not be used without prior written permission from us.</p>
-  <p>Please be advised that watchcable4less.net is the only official website associated with our brand. Any other websites purporting to represent our brand should be considered unofficial and not endorsed by us.</p>
-  </div>
+  <p>Please be advised that watchcable4less.net is the only official website associated with our brand. Any other websites purporting to represent our brand should be considered unofficial and not endorsed by us.</p></div>
   </footer>
 
 <!--- Script --->
 
-<script>
+  <script>
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -1824,36 +1567,31 @@
   }
   }
 
-
   function updateGradientHeight() {
   var button = document.querySelector('.scroll-to-contact');
   if (button) {
-    var buttonRect = button.getBoundingClientRect();
-    var buttonTop = buttonRect.top + window.pageYOffset; // Top of the button from the top of the document
-    var gradientHeight = buttonTop + button.offsetHeight; // Extend to the bottom of the button
+  var buttonRect = button.getBoundingClientRect();
+  var buttonTop = buttonRect.top + window.pageYOffset;
+  var gradientHeight = buttonTop + button.offsetHeight;
 
-    var gradientStyle = document.getElementById('gradient-dynamic-style');
-    if (!gradientStyle) {
-      gradientStyle = document.createElement('style');
-      gradientStyle.id = 'gradient-dynamic-style';
-      document.head.appendChild(gradientStyle);
-    }
-
-    gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
+  var gradientStyle = document.getElementById('gradient-dynamic-style');
+  if (!gradientStyle) {
+  gradientStyle = document.createElement('style');
+  gradientStyle.id = 'gradient-dynamic-style';
+  document.head.appendChild(gradientStyle);
   }
-}
 
-// Call this function after the window loads and all styles are recalculated
-window.addEventListener('load', function() {
-  setTimeout(updateGradientHeight, 100); // Using a timeout to ensure all content has loaded
-});
+  var gradientHeight = buttonTop + button.offsetHeight + 5;
 
-// Also update the gradient height on window resize
-window.addEventListener('resize', updateGradientHeight);
+  gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
+  }
+  }
 
+  window.addEventListener('load', function() {
+  setTimeout(updateGradientHeight, 100);
+  });
 
-
-
+  window.addEventListener('resize', updateGradientHeight);
 
 </script>
 
@@ -1864,27 +1602,26 @@ window.addEventListener('resize', updateGradientHeight);
   <script type="text/javascript">
   $(window).on('load', function() {
   $('.your-class').slick({
-    slidesToShow: 10,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    dots: false,
-    arrows: false,
-    centerMode: true,
-    infinite: true,
-    centerPadding: '0px',
-    variableWidth: true,
-    draggable: false,
-    swipe: false,
-    swipeToSlide: false,
-    touchMove: false,
-    accessibility: false,
-    pauseOnHover: false
+  slidesToShow: 10,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1400,
+  dots: false,
+  arrows: false,
+  centerMode: true,
+  infinite: true,
+  centerPadding: '0px',
+  variableWidth: true,
+  draggable: false,
+  swipe: false,
+  swipeToSlide: false,
+  touchMove: false,
+  accessibility: false,
+  pauseOnHover: false
   });
   });
 
-</script>
-</script>
+</script></script>
 
 </body>
 </html>
