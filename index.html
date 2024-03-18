@@ -59,7 +59,11 @@
   header {
   text-align: center;
   padding: 35px 0;
-  background-color: #134681;
+  }
+
+  header {
+  position: relative;
+  z-index: 2;
   }
 
   header img {
@@ -1428,6 +1432,8 @@
 
 <!--- Logo --->
 
+<div class="main-content navy-background">
+
 
   <div class="main-content">
   <header>
@@ -1435,8 +1441,6 @@
   <img src="C4L-Logo.svg" alt="Cable4Less Logo" />
   </div>
   </header>
-
-  <div class="main-content navy-background">
 
 <!--- Header Message --->
 
@@ -1808,31 +1812,36 @@
   }
   }
 
+
   function updateGradientHeight() {
   var button = document.querySelector('.scroll-to-contact');
   if (button) {
-  var buttonTop = button.getBoundingClientRect().top;
+    var buttonRect = button.getBoundingClientRect();
+    var buttonTop = buttonRect.top + window.pageYOffset; // Top of the button from the top of the document
+    var gradientHeight = buttonTop + button.offsetHeight; // Extend to the bottom of the button
 
-  buttonTop += window.pageYOffset;
+    var gradientStyle = document.getElementById('gradient-dynamic-style');
+    if (!gradientStyle) {
+      gradientStyle = document.createElement('style');
+      gradientStyle.id = 'gradient-dynamic-style';
+      document.head.appendChild(gradientStyle);
+    }
 
-  var gradientHeight = buttonTop - 74;
-
-  var gradientStyle = document.getElementById('gradient-dynamic-style');
-  if (!gradientStyle) {
-  gradientStyle = document.createElement('style');
-  gradientStyle.id = 'gradient-dynamic-style';
-  document.head.appendChild(gradientStyle);
+    gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
   }
+}
 
-  gradientStyle.innerHTML = '.navy-background::before { height: ' + gradientHeight + 'px; }';
-  }
-  }
+// Call this function after the window loads and all styles are recalculated
+window.addEventListener('load', function() {
+  setTimeout(updateGradientHeight, 100); // Using a timeout to ensure all content has loaded
+});
 
-  window.addEventListener('load', function() {
-  setTimeout(updateGradientHeight, 0);
-  });
+// Also update the gradient height on window resize
+window.addEventListener('resize', updateGradientHeight);
 
-  window.addEventListener('resize', updateGradientHeight);
+
+
+
 
 </script>
 
