@@ -794,8 +794,10 @@
   flex-direction: column;
   gap: 0px;
   box-sizing: border-box;
-  border: 2px solid #d2d6dc;
-  box-shadow: 0px 1.9px #d2d6dc;
+  border-top: 2px solid #d2d6dc;
+  border-left: 2px solid #d2d6dc;
+  border-right: 2px solid #d2d6dc;
+  border-bottom: 4px solid #d2d6dc;
   }
 
   .icon-text-wrapper p {
@@ -1212,8 +1214,8 @@
   }
 
   #submission-success .icon {
-  font-size: 40px;
-  color: #4CAF50;
+  font-size: 32px;
+  color: #21528C;
   margin-bottom: 0px;
   }
 
@@ -1246,6 +1248,49 @@
 
   .custom-shape-divider-bottom-1708380672 .shape-fill {
   fill: #FFF;
+  }
+
+/* Error Form CSS */
+
+  .input-error {
+  display: none;
+  font-size: 12px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #D8000C;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inter;
+  font-weight: 500;
+  letter-spacing: 0.5px !important;
+  text-align: center;
+  }
+
+  .input-error:first-of-type {
+  margin-top: 15px;
+  }
+
+  .input-error:last-of-type {
+  margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+  .input-error {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+
+  .input-error:first-of-type {
+  margin-top: 15px;
+  }
+
+  .input-error:last-of-type {
+  margin-bottom: 0px;
+  }
   }
 
 </style>
@@ -1407,7 +1452,7 @@
   <section id="contact-section"><div class="contact-options">
 
   <div class="contact-box">
-  <span class="contact-chat-icon">sms</span><h5>Text</h5><p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link"><b>469-470-0813</b></a> to get started</p>
+  <span class="contact-chat-icon">sms</span><h5>Text</h5><p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
   <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button></div>
 
   <div class="contact-box">
@@ -1417,10 +1462,16 @@
   <form id="contact-form">
   <div class="icon-text-wrapper">  
   <h5>Inquire</h5><p>We'll reach out to you</p></div>
-  <input type="text" name="name" placeholder="Preferred Name" required><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" value="" placeholder="Phone Number"/>
-  <button type="submit" id="contactButton"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Contact Me</button></form> 
+  <input type="text" name="name" placeholder="Preferred Name" id="name"><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" placeholder="Phone Number"/>
+    <!-- Placeholders for the error messages -->
+    <span id="name-error" class="input-error"></span>
+    <span id="email-error" class="input-error"></span>
+    <span id="phone-error" class="input-error"></span>
+  <button type="submit" id="contactButton"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Contact Me</button>
+  </form>
+  
 
-  <div id="submission-success"><span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span><p class="new-line">Inquiry Sent</p><p>Our team will be in touch shortly to arrange your complimentary trial.</p></div>
+  <div id="submission-success"><span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span><p class="new-line">Inquiry Sent</p><p>Our team will be in touch shortly to arrange your complimentary trial</p></div>
 
   </section></div></div>
 
@@ -1521,33 +1572,136 @@
   window.scrollTo({ top: bottomPosition, behavior: 'smooth' });
   }
   });
+
+function showError(input, condition, message, errorId) {
+  let errorSpan = document.getElementById(errorId);
+  if (condition) {
+    if (!errorSpan) {
+      // Error container was moved above the submit button in the HTML
+      // Now, creating an error message also includes an icon
+      errorSpan = document.createElement('div');
+      errorSpan.id = errorId;
+      errorSpan.className = 'input-error';
+      errorSpan.innerHTML = '<span class="material-symbols-rounded error-icon">error</span>' + message;
+      const formErrorsContainer = document.getElementById('form-errors');
+      formErrorsContainer.appendChild(errorSpan);
+    }
+    errorSpan.style.display = 'flex';
+    input.classList.add('input-invalid');
+  } else if (errorSpan) {
+    errorSpan.style.display = 'none';
+    input.classList.remove('input-invalid');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
   document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
-
-  this.style.display = 'none';
-  document.getElementById('submission-success').style.display = 'block';
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-  var phoneInput = document.getElementById('phone');
+  this.dataset.submitted = 'true'; // Mark the form as attempted to submit
   
-  phoneInput.addEventListener('input', function() {
-  var numbers = this.value.replace(/\D/g, '').substring(0,10);
-  var formattedNumber = '';
+  var nameValid = validateName();
+  var contactValid = validateContact(true); // Enforce validation including phone length check
 
-  if (numbers.length >= 4) {
-  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3);
-  } else {
-  formattedNumber = numbers;
+  if (nameValid && contactValid) {
+      console.log('Form is valid and ready to be submitted');
+      // Your form submission logic here (e.g., AJAX call)
+      this.style.display = 'none';
+      document.getElementById('submission-success').style.display = 'block';
   }
+});
 
-  if (numbers.length >= 7) {
-  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3,6) + '-' + numbers.substring(6);
+document.querySelectorAll('#contact-form input').forEach(input => {
+  input.addEventListener('input', function() {
+      if (this.id === 'phone') {
+          // Phone formatting logic
+          var numbers = this.value.replace(/\D/g, '').substring(0,10); // Allow a maximum of 10 digits
+          var formattedNumber = '';
+          
+          if (numbers.length >= 4 && numbers.length < 7) {
+              formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3);
+          } else if (numbers.length >= 7) {
+              formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3,6) + '-' + numbers.substring(6,10);
+          } else {
+              formattedNumber = numbers;
+          }
+          this.value = formattedNumber;
+
+          // Contact validation logic without enforcing phone length check
+          validateContact(false);
+      } else if (this.id === 'email') {
+          validateContact(false);
+      } else if (this.id === 'name') {
+          validateName();
+      }
+  });
+});
+
+function validateName() {
+  const nameInput = document.getElementById('name');
+  const error = !nameInput.value.trim();
+  showError(nameInput, error, 'Missing Preferred Name', 'name-error');
+  return !error;
+}
+
+function validateContact(enforcePhoneLength) {
+  const formSubmitted = document.getElementById('contact-form').dataset.submitted === 'true';
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const phoneNumber = phoneInput.value.replace(/\D/g, '');
+  const emailError = !emailInput.value.trim() && phoneNumber.length === 0;
+  const phoneError = phoneNumber.length > 0 && phoneNumber.length < 10 && (formSubmitted && enforcePhoneLength);
+
+  showError(emailInput, emailError, 'Missing Email Address or Phone Number', 'email-error');
+  showError(phoneInput, phoneError, 'Incomplete Phone Number or leave it empty', 'phone-error');
+  
+  return !(emailError || phoneError);
+}
+
+function showError(input, condition, message, errorId) {
+  let errorSpan = document.getElementById(errorId);
+  if (condition) {
+      if (!errorSpan) {
+          errorSpan = document.createElement('span');
+          errorSpan.id = errorId;
+          errorSpan.className = 'input-error';
+          input.parentNode.insertBefore(errorSpan, input.nextSibling);
+      }
+      errorSpan.textContent = message;
+      input.classList.add('input-invalid');
+      errorSpan.style.display = 'block';
+  } else if (errorSpan) {
+      errorSpan.style.display = 'none';
+      input.classList.remove('input-invalid');
   }
+}
 
-  this.value = formattedNumber;
-  });
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   function toggleDropdown(dropdownId) {
   const dropdownContent = document.getElementById(dropdownId);
