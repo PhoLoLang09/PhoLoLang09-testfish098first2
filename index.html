@@ -544,10 +544,12 @@
   box-sizing: border-box;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding: 0 10px;
   }
 
   .trial-content {
   text-align: center;
+  width: 50%;
   }
 
   .rotating-text-container {
@@ -574,10 +576,10 @@
   font-family: inter;
   letter-spacing: 1px !important;
   font-weight: 700;
+  background-color: #F7F7F7;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  background-color: #F7F7F7;
+  display: inline-block;
   }
 
   .trial-image img {
@@ -626,10 +628,18 @@
   }
   }
 
-  @media screen and (max-width: 768px) {
-  .rotating-text-container, .large-header {
+  @media screen and (max-width: 778px) {
+  .rotating-text{
   width: 100%;
   text-align: center;
+  font-size: 15px;
+  }
+
+  .large-header{
+    width: 100%;
+  text-align: center;
+  transform-origin: top center;
+  font-size: 25px;
   }
 
   .trial-content, .trial-image {
@@ -637,9 +647,31 @@
   display: block;
   }
 
+  .trial-image {
+    padding: 20px 10px;
+  }
+
   .trial-image img {
   height: auto;
-  margin: 20px auto;
+  }
+  }
+
+  @media (max-width: 600px) {
+    .rotating-text{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  }
+
+  .large-header{
+    width: 100%;
+  text-align: center;
+  transform-origin: top center;
+  font-size: 30px;
+  }
+
+  .trial-image img {
+  height: 250px;
   }
   }
   
@@ -738,8 +770,7 @@
   .contact-box {
   background: #fff;
   border-radius: 10px;
-  padding: 2rem;
-  width: 330px;
+  padding: 1.8rem;
   box-sizing: border-box;
   font-size: 15px;
   display: flex;
@@ -788,7 +819,7 @@
 
   #contact-form {
   background: #fff;
-  padding: 30px;
+  padding: 1.8rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -922,7 +953,7 @@
   .contact-options {
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 100%;
   align-items: center;
   }
@@ -1280,8 +1311,8 @@
 
   @media (max-width: 600px) {
   .input-error {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   }
 
   .input-error:first-of-type {
@@ -1289,7 +1320,7 @@
   }
 
   .input-error:last-of-type {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   }
   }
 
