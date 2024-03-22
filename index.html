@@ -884,8 +884,7 @@
   #contact-form button {
   margin-left: auto;
   margin-top: 10px;
-  margin-right: auto;
-  background-image: linear-gradient(to bottom, #FDD646, #FBC02D);
+  margin-right: auto;  
   color: #0D2541;
   Padding: 10px 0;
   border-radius: 10px 10px 9px 9px;
@@ -898,15 +897,14 @@
   height: 43px;
   font-weight: 700;
   letter-spacing: 0.5px !important;
-  font-family: inter;
-  box-shadow: 0px 4px #be9906;
+  font-family: inter;  
   text-transform: uppercase;
   border: none;
   }
 
-  #contact-form button:hover {
-  background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
-  box-shadow: 0px 4px #be9906
+  .contact-btn{
+    background-image: linear-gradient(to bottom, #FDD646, #FBC02D);
+    box-shadow: 0px 4px #be9906;
   }
 
   #submission-success {
@@ -1324,6 +1322,11 @@
   }
   }
 
+  .btn-hover.hovered{
+    background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
+    box-shadow: 0px 5px #be9906;
+  }
+
 </style>
 </head>
 <body>
@@ -1371,7 +1374,7 @@
 
   </div></div>
 
-  <div class="button-center"><button class="scroll-to-contact"><span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button></div></div>  
+  <div class="button-center"><button class="scroll-to-contact btn-hover"><span class="material-symbols-rounded learn-more-icon">navigate_next</span>Get Free 2-Day Trial</button></div></div>  
 
 <!--- Counters & Dropdowns HTML --->
 
@@ -1400,7 +1403,7 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">public</span><span class="dropdown-content-text"><b>Global Television</b> with access to all networks from the U.S., Canada, Mexico, & more</span></div>
 
-  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  <button type="button" class="trial-button btn-hover"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
   
   </div></div>
 
@@ -1424,7 +1427,7 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">4k</span><span class="dropdown-content-text"><b>370+ 4K Movies</b> included—with hundreds of top hits to choose from, movie night can be every night</span></div>
 
-  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  <button type="button" class="trial-button btn-hover"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
   </div></div>
 
@@ -1448,7 +1451,7 @@
 
   <div class="dropdown-content-item"><span class="material-symbols-rounded dropdown-icon">hd</span><span class="dropdown-content-text"><b>Watch In HD</b>—ditch the expensive streaming bills and never miss an episode; watch anywhere</span></div>
 
-  <button type="button" class="trial-button"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
+  <button type="button" class="trial-button btn-hover"><span class="trial-icon">navigate_next</span>Get Free 2-Day Trial</button>
 
   </div></div></div></div>
 
@@ -1484,10 +1487,10 @@
 
   <div class="contact-box">
   <span class="contact-chat-icon">sms</span><h5>Text</h5><p>Text FREE TRIAL to <a href="sms:4694700813&body=FREE%20TRIAL" class="phone-link">469-470-0813</a> to get started</p>
-  <button id="textNowButton" class="get-started"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button></div>
+  <button id="textNowButton" class="get-started btn-hover"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Text Now</button></div>
 
   <div class="contact-box">
-  <span class="contact-call-icon">send</span><h5>FB Messenger</h5><p>Message FREE TRIAL to get started on Facebook</span></p><button class="get-started" onclick="window.open('https://www.facebook.com/', '_blank')">
+  <span class="contact-call-icon">send</span><h5>FB Messenger</h5><p>Message FREE TRIAL to get started on Facebook</span></p><button class="get-started btn-hover" onclick="window.open('https://www.facebook.com/', '_blank')">
   <span class="material-symbols-rounded get-started-icon">navigate_next</span>Message Now</button></div></div>
 
   <form id="contact-form">
@@ -1498,7 +1501,7 @@
     <span id="name-error" class="input-error"></span>
     <span id="email-error" class="input-error"></span>
     <span id="phone-error" class="input-error"></span>
-  <button type="submit" id="contactButton"><span class="material-symbols-rounded get-started-icon">navigate_next</span>Contact Me</button>
+  <button type="submit" id="contactButton" class="contact-btn btn-hover"><span class="material-symbols-rounded get-started-icon btn-hover">navigate_next</span>Contact Me</button>
   </form>
   
 
@@ -1518,6 +1521,29 @@
   </footer>
 
 <!--- Script --->
+
+<script>
+  var buttons = document.querySelectorAll('.btn-hover');
+
+// Loop through each button and add event listeners
+buttons.forEach(function(button) {
+  // Add touchstart and click event listeners to each button
+  button.addEventListener('touchstart', function() {
+    // Toggle the 'hovered' class on touchstart
+    this.classList.add('hovered');
+  });
+
+  button.addEventListener('click', function() {
+    // Toggle the 'hovered' class on click
+    this.classList.add('hovered');
+  });
+
+  // Add touchend event listener to remove the 'hovered' class when touch ends
+  button.addEventListener('touchend', function() {
+    this.classList.remove('hovered');
+  });
+});
+</script>
 
   <script>
 
