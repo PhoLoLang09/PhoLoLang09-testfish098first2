@@ -275,7 +275,7 @@
   color: #FFF;
   }
 
-  @media (max-width: 849px) {
+  @media (max-width: 949px) {
   .counters {
   flex-direction: column;
   }
@@ -287,6 +287,16 @@
   .unique-pre-header {
   font-size: 19px;
   letter-spacing: 2px;
+  }
+  }
+
+  @media (max-width: 949px) {
+  .counters {
+  flex-direction: column;
+  }
+
+  .counters {
+  width: 50%;
   }
   }
 
@@ -1327,6 +1337,104 @@
     box-shadow: 0px 5px #be9906;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #earthlink-fiber-benefits {
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #f7f7f7 100%);
+  padding: 20px 0;
+  text-align: center;
+}
+
+#earthlink-fiber-benefits .container {
+  max-width: 1200px; /* Adjust as necessary */
+  margin: auto;
+  padding: 0 15px;
+}
+
+#earthlink-fiber-benefits .section-header {
+  font-size: 24px; /* Adjust as necessary */
+  margin-bottom: 20px;
+}
+
+#earthlink-fiber-benefits .benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+#earthlink-fiber-benefits .benefit {
+  flex: 1 1 calc(25% - 20px); /* 4 items per row on desktop */
+  margin-bottom: 20px; /* Spacing between rows */
+}
+
+#earthlink-fiber-benefits .benefit img {
+  max-width: 100px; /* Adjust as necessary */
+  margin-bottom: 10px;
+}
+
+#earthlink-fiber-benefits .benefit h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 766px) {
+  #earthlink-fiber-benefits .benefit {
+    flex-basis: calc(50% - 20px); /* 2 items per row on mobile */
+    margin-bottom: 20px; /* Spacing between rows */
+  }
+}
+
+@media (min-width: 767px) {
+  #earthlink-fiber-benefits .benefit {
+    flex-basis: calc(25% - 20px); /* 4 items per row on desktop */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -1458,6 +1566,74 @@
 <!--- Call To Action HTML --->
 
   <div class="custom-shape-divider-bottom-1708380672"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path></svg></div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section Header -->
+<section id="earthlink-fiber-benefits" style="background-color: white;">
+  <div class="container">
+    <h2 class="section-header">Get more with EarthLink Fiber Internet</h2> <!-- Section Header -->
+    <div class="benefits-grid">
+      <!-- Benefit 1 -->
+      <div class="benefit">
+        <img src="path-to-your-largest-network-icon.png" alt="Largest network">
+        <h3>Largest network</h3>
+        <p>With speeds up to 5 Gigs, we have an option for everyone</p>
+      </div>
+      <!-- Benefit 2 -->
+      <div class="benefit">
+        <img src="path-to-your-no-data-caps-icon.png" alt="No data caps">
+        <h3>No data caps</h3>
+        <p>Unlimited data and no speed throttling</p>
+      </div>
+      <!-- Benefit 3 -->
+      <div class="benefit">
+        <img src="path-to-your-price-guarantee-icon.png" alt="Price Guarantee">
+        <h3>Price Guarantee</h3>
+        <p>Lock in our best rates and rest easy</p>
+      </div>
+      <!-- Benefit 4 -->
+      <div class="benefit">
+        <img src="path-to-your-stay-secure-icon.png" alt="Stay Secure">
+        <h3>Stay Secure</h3>
+        <p>Keep personal data and devices safe with our security suite</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="trial-section-wrapper">
   <div class="trial-section">
@@ -1603,7 +1779,7 @@ buttons.forEach(function(button) {
   };
 
   function autoOpenDropdownOnMobile() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 949) {
   toggleDropdown("channels-dropdown");
   }
   }
