@@ -1309,7 +1309,7 @@
   text-align: center;
   }
 
-  .input-error:first-of-type {
+  .name-error {
   margin-top: 15px;
   }
 
@@ -1317,19 +1317,14 @@
   margin-bottom: 10px;
   }
 
-  @media (max-width: 600px) {
-  .input-error {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  @media (max-width: 600px) {  
+  .name-error {
+  margin-top: 0px;
   }
 
-  .input-error:first-of-type {
-  margin-top: 15px;
-  }
-
-  .input-error:last-of-type {
-  margin-bottom: 0px;
-  }
+  #contact-form button{
+    margin-top: 0px;
+  }  
   }
 
   .btn-hover.hovered{
@@ -1674,9 +1669,12 @@
   <h5>Inquire</h5><p>We'll reach out to you</p></div>
   <input type="text" name="name" placeholder="Preferred Name" id="name"><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" placeholder="Phone Number"/>
     <!-- Placeholders for the error messages -->
-    <span id="name-error" class="input-error"></span>
-    <span id="email-error" class="input-error"></span>
-    <span id="phone-error" class="input-error"></span>
+    <div>
+      <span id="name-error" class="input-error name-error"></span>
+      <span id="email-error" class="input-error email-error"></span>
+      <span id="phone-error" class="input-error phone-error"></span>
+    </div>
+    
   <button type="submit" id="contactButton" class="contact-btn btn-hover"><span class="material-symbols-rounded get-started-icon btn-hover">navigate_next</span>Contact Me</button>
   </form>
   
