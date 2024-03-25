@@ -340,7 +340,7 @@
 
 /* Counter Dropdown CSS */
 
-  .dropdown {
+  /* .dropdown {
   cursor: pointer;
   background-color: #FFF;
   padding: 10px 5px;
@@ -361,9 +361,24 @@
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
+  } */
+
+  .dropdown {
+  cursor: pointer;
+  background-color: #F7F7F7;
+  padding: 10px 5px;
+  text-align: center;
+  border-top: 0px solid #0D2541;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
   }
 
-  .dropdown-content::before {
+  /* .dropdown-content::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -372,9 +387,9 @@
   height: 10px;
   background-color: #fff;
   z-index: -1;
-  }
+  } */
 
-  .dropdown-content {
+  /* .dropdown-content {
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
@@ -404,9 +419,31 @@
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
+  } */
+
+  .dropdown-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  border-top: none;
+  background-color: #F7F7F7;
+  font-size: 14px;
+  font-weight: 600px;
+  top: -8px;
+  cursor: pointer;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;  
   }
 
-  .dropdown-content.show {
+  /* .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
@@ -416,11 +453,32 @@
   height: auto;
   visibility: visible;
   opacity: 1;
+  } */
+
+  .dropdown-content.show {
+  /* padding-top: 10px; */
+  margin-bottom: -17px;
+  max-height: 1000px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; 
+  transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease; 
   }
 
-  .show {
-  display: block;
-  }
+  /* .dropdown-content::after {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 1;
+  pointer-events: none;
+  } */
 
   .dropdown-content-item {
   display: flex;
@@ -428,7 +486,7 @@
   text-align: left;
   margin-bottom: -10px;
   padding: 15px 20px;
-  background-color: #FFF;
+  background-color: #F7F7F7;
   position: relative;
   cursor: pointer;
   }
@@ -445,7 +503,7 @@
   letter-spacing: 0.5px !important;
   }
 
-  .dropdown-content::after {
+  /* .dropdown-content::after {
   content: '';
   position: absolute;
   left: 0;
@@ -454,10 +512,22 @@
   height: 100px;
   z-index: 1;
   pointer-events: none;
+  } */
+
+  .counter, .dropdown, .dropdown-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
   }
 
+  /* .show {
+  display: block;
+  transition: all .5s ease-in-out;
+  } */
+
   .separator-line-container {
-  background-color: #FFF;
+  background-color: #F7F7F7;
   padding: 4px 0;
   }
 
@@ -479,7 +549,7 @@
   left: 0;
   right: 0;
   height: 20px;
-  background-color: #FFF;
+  background-color: #F7F7F7;
   }
 
   .trial-button {
@@ -527,13 +597,13 @@
   }
   }
 
-  @media not all and (min-resolution:.001dpcm) { 
+  /* @media not all and (min-resolution:.001dpcm) { 
   @supports (-webkit-appearance:none) {
   .dropdown-content {
   transition: height 0.3s;
   }
   }
-  }
+  } */
 
 /* Offer Call CSS */
 
@@ -1014,13 +1084,13 @@
   }
   }
 
-  .dropdown-content {
+  /* .dropdown-content {
   overflow: hidden;
   }
 
   .dropdown-content.show {
   overflow: visible;
-  }
+  } */
 
   @media (max-width: 600px) {
   #contact-form button {
