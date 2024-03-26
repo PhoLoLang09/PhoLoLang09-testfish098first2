@@ -45,7 +45,7 @@
   }
 
   .container {
-  width: 90%;
+  width: 80%;
   margin: auto;
   overflow: hidden;
   }
@@ -434,13 +434,12 @@
   display: block;
   max-height: 0;
   overflow: hidden;
+  border-radius: 0 0 15px 15px;
   transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;  
   }
 
   /* .dropdown-content.show {
@@ -456,12 +455,9 @@
   } */
 
   .dropdown-content.show {
-  /* padding-top: 10px; */
-  margin-bottom: -17px;
   max-height: 1000px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px; 
   transition: all 0.8s ease;
+  border-radius: 0 0 15px 15px;
   -ms-transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
@@ -542,15 +538,6 @@
   margin-bottom: 4px;
   }
 
-  .trial-button::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background-color: #F7F7F7;
-  }
 
   .trial-button {
   background-image: linear-gradient(to bottom, #FDD646, #FBC02D);
@@ -562,8 +549,6 @@
   color: #0D2541;
   border-radius: 0 0 15px 15px;
   padding: 10px 0;
-  font-size: 14px;
-  font-weight: 500;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
@@ -575,14 +560,14 @@
   z-index: 2;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
   font-size: 14px;
   font-family: inter;
   font-weight: 700;
   letter-spacing: 0.5px !important;
-  box-shadow: 0px 5px #be9906;
+  box-shadow: 0px 20px #be9906;
   text-transform: uppercase;
   margin-top: 25px;
+  margin-bottom: 5px;
   }
 
   .trial-button:hover {
@@ -1418,7 +1403,7 @@
 
   #earthlink-fiber-benefits {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #f7f7f7 100%);
-  padding: 50px 0 50px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -1437,12 +1422,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px;
+  gap: 20px;
 }
 
 #earthlink-fiber-benefits .benefit {
   flex: 1 1 calc(25% - 20px);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1457,26 +1442,19 @@
   border-radius: 50%;
   background-color: #fef3c8; /* Circle background color */
   display: inline-block;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   font-variation-settings: 'FILL' 2, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   border: 2px solid #feeba3;
 }
 
 #earthlink-fiber-benefits .benefit h3 {
-  font-size: 18px;
-  font-family: inter;
-  margin-top: 18px; /* Add space on top of the paragraph */
-  margin-bottom: 9px; 
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #earthlink-fiber-benefits .benefit p {
   text-align: center;
   padding: 0 10px;
-  font-size: 16px;
-  font-family: inter;
-  font-weight: 500;
-  margin-top: 5px; /* Add space on top of the paragraph */
-  margin-bottom: 5px; 
 }
 
 @media (max-width: 766px) {
@@ -1677,29 +1655,30 @@
 <!-- Section Header -->
 <section id="earthlink-fiber-benefits">
   <div class="container">
+    <h2 class="section-header">Get more with EarthLink Fiber Internet</h2>
     <div class="benefits-grid">
       <!-- Benefit 1 -->
       <div class="benefit">
         <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
-        <h3>DVR Supported</h3>
+        <h3>Largest network</h3>
         <p>With speeds up to 5 Gigs, we have an option for everyone</p>
       </div>
-            <!-- Benefit 2 -->
+      <!-- Benefit 2 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">contract_delete</span>
-        <h3>No Contracts</h3>
-        <p>Lock in our best rates and rest easy</p>
+        <span class="material-symbols-outlined earthlink-icon">important_devices</span>
+        <h3>No data caps</h3>
+        <p>Unlimited data and no speed throttling</p>
       </div>
       <!-- Benefit 3 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">important_devices</span>
-        <h3>Watch Simultaneously</h3>
-        <p>Unlimited data and no speed throttling</p>
+        <span class="material-symbols-outlined earthlink-icon">contract_delete</span>
+        <h3>Price Guarantee</h3>
+        <p>Lock in our best rates and rest easy</p>
       </div>
       <!-- Benefit 4 -->
       <div class="benefit">
         <span class="material-symbols-outlined earthlink-icon">chromecast_device</span>
-        <h3>Zero Pricy Equipment</h3>
+        <h3>Stay Secure</h3>
         <p>Keep personal data and devices safe with our security suite</p>
       </div>
     </div>
