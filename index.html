@@ -386,36 +386,41 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: 0px;
-  transition: all .5s ease-in-out;  
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;  
+  top: -5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;  
   width: 100%;
   background-color: #fff;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform-origin: top;
-  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s;
+  /* transform-origin: top;
   transform: scaleY(1);
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
+  visibility: hidden; */
   position: relative;
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
+  
+  transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   }
 
   .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
-  overflow: visible;
-  transition: height .3s ease-in-out;
-  transform: scaleY(1);
+  /* overflow: visible; */
   height: auto;
   visibility: visible;
   opacity: 1;
+  top: -5px;
+  transition: all 0.8s ease;
+  border-radius: 0 0 15px 15px;
+  -ms-transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease; 
   }
 
   .show {
@@ -530,7 +535,7 @@
   @media not all and (min-resolution:.001dpcm) { 
   @supports (-webkit-appearance:none) {
   .dropdown-content {
-  transition: height 0.3s;
+  transition: all 0.3s;
   }
   }
   }
@@ -1012,14 +1017,6 @@
   .iti {
   margin-top: 0px;
   }
-  }
-
-  .dropdown-content {
-  overflow: hidden;
-  }
-
-  .dropdown-content.show {
-  overflow: visible;
   }
 
   @media (max-width: 600px) {
