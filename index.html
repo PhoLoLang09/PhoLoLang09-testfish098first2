@@ -386,41 +386,36 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: -5px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;  
+  top: 0px;
+  transition: all .5s ease-in-out;  
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;  
   width: 100%;
   background-color: #fff;
-  /* transform-origin: top;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: top;
+  transition: transform 0.5s ease, max-height 0s, overflow 0s 0.5s;
   transform: scaleY(1);
-  visibility: hidden; */
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
   position: relative;
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
-  
-  transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   }
 
   .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
-  /* overflow: visible; */
+  overflow: visible;
+  transition: height .3s ease-in-out;
+  transform: scaleY(1);
   height: auto;
   visibility: visible;
   opacity: 1;
-  top: -5px;
-  transition: all 0.8s ease;
-  border-radius: 0 0 15px 15px;
-  -ms-transition: all 0.8s ease;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease; 
   }
 
   .show {
@@ -535,7 +530,7 @@
   @media not all and (min-resolution:.001dpcm) { 
   @supports (-webkit-appearance:none) {
   .dropdown-content {
-  transition: all 0.3s;
+  transition: height 0.3s;
   }
   }
   }
@@ -1019,6 +1014,14 @@
   }
   }
 
+  .dropdown-content {
+  overflow: hidden;
+  }
+
+  .dropdown-content.show {
+  overflow: visible;
+  }
+
   @media (max-width: 600px) {
   #contact-form button {
   width: 100%;
@@ -1306,7 +1309,7 @@
   text-align: center;
   }
 
-  .name-error {
+  .input-error:first-of-type {
   margin-top: 15px;
   }
 
@@ -1314,14 +1317,19 @@
   margin-bottom: 10px;
   }
 
-  @media (max-width: 600px) {  
-  .name-error {
-  margin-top: 0px;
+  @media (max-width: 600px) {
+  .input-error {
+  margin-top: 10px;
+  margin-bottom: 15px;
   }
 
-  #contact-form button{
-    margin-top: 0px;
-  }  
+  .input-error:first-of-type {
+  margin-top: 15px;
+  }
+
+  .input-error:last-of-type {
+  margin-bottom: 0px;
+  }
   }
 
   .btn-hover.hovered{
@@ -1666,12 +1674,9 @@
   <h5>Inquire</h5><p>We'll reach out to you</p></div>
   <input type="text" name="name" placeholder="Preferred Name" id="name"><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" placeholder="Phone Number"/>
     <!-- Placeholders for the error messages -->
-    <div>
-      <span id="name-error" class="input-error name-error"></span>
-      <span id="email-error" class="input-error email-error"></span>
-      <span id="phone-error" class="input-error phone-error"></span>
-    </div>
-    
+    <span id="name-error" class="input-error"></span>
+    <span id="email-error" class="input-error"></span>
+    <span id="phone-error" class="input-error"></span>
   <button type="submit" id="contactButton" class="contact-btn btn-hover"><span class="material-symbols-rounded get-started-icon btn-hover">navigate_next</span>Contact Me</button>
   </form>
   
