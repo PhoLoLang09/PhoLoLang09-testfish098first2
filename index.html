@@ -340,29 +340,6 @@
 
 /* Counter Dropdown CSS */
 
-  /* .dropdown {
-  cursor: pointer;
-  background-color: #FFF;
-  padding: 10px 5px;
-  text-align: center;
-  border-top: 0px solid #0D2541;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-  position: absolute;
-  z-index: 100;
-  font-weight: 500;
-  font-family: inter;
-  font-size: 16px;
-  letter-spacing: 0.5px !important;
-  box-shadow: 0px 4px #c6c6c6;
-  position: relative;
-  z-index: 1;
-  padding-left: 0px;
-  padding-right: 0px;
-  } */
-
   .dropdown {
   cursor: pointer;
   background-color: #FFF;
@@ -373,10 +350,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 0 10px 10px;
-  position: relative;
-  z-index: 1;
-  font-weight: 500;
-
   position: absolute;
   z-index: 100;
   font-weight: 500;
@@ -384,6 +357,8 @@
   font-size: 16px;
   letter-spacing: 0.5px !important;
   box-shadow: 0px 4px #c6c6c6;
+  position: relative;
+  z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
   }
@@ -399,7 +374,7 @@
   z-index: -1;
   }
 
-  /* .dropdown-content {
+  .dropdown-content {
   padding-left: 10px;
   padding-right: 10px;
   text-align: left;
@@ -429,40 +404,9 @@
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
-  } */
-
-  .dropdown-content {
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: left;
-  border-top: none;
-  background-color: #FFF;
-  font-size: 14px;
-  font-weight: 600px;
-  top: -8px;
-  cursor: pointer;
-  display: block;
-  max-height: 0;
-  overflow: hidden;
-  border-radius: 0 0 15px 15px;
-  transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-
-  position: absolute;  
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transform-origin: top;
-  position: relative;
-  z-index: 1;
-  padding-left: 0px;
-  padding-right: 0px;
   }
 
-  /* .dropdown-content.show {
+  .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
@@ -472,36 +416,10 @@
   height: auto;
   visibility: visible;
   opacity: 1;
-  } */
-
-  .dropdown-content.show {
-  max-height: 1000px;
-  transition: all 0.8s ease;
-  border-radius: 0 0 15px 15px;
-  -ms-transition: all 0.8s ease;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease; 
-
-  padding-top: 0px;
-  margin-bottom: 0px;
-  height: auto;
   }
 
   .show {
   display: block;
-  }
-
-  .dropdown-content::after {
-  content: '';
-  opacity: 1;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100px;
-  z-index: 1;
-  pointer-events: none;
   }
 
   .dropdown-content-item {
@@ -527,17 +445,16 @@
   letter-spacing: 0.5px !important;
   }
 
-  .counter, .dropdown, .dropdown-content {
-  position: relative;
+  .dropdown-content::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
   z-index: 1;
-  padding-left: 0px;
-  padding-right: 0px;
+  pointer-events: none;
   }
-
-  /* .show {
-  display: block;
-  transition: all .5s ease-in-out;
-  } */
 
   .separator-line-container {
   background-color: #FFF;
@@ -575,6 +492,8 @@
   color: #0D2541;
   border-radius: 0 0 15px 15px;
   padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
@@ -586,11 +505,12 @@
   z-index: 2;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
   font-size: 14px;
   font-family: inter;
   font-weight: 700;
   letter-spacing: 0.5px !important;
-  box-shadow: 0px 20px #be9906;
+  box-shadow: 0px 5px #be9906;
   text-transform: uppercase;
   margin-top: 25px;
   }
@@ -1094,13 +1014,13 @@
   }
   }
 
-  /* .dropdown-content {
+  .dropdown-content {
   overflow: hidden;
   }
 
   .dropdown-content.show {
   overflow: visible;
-  } */
+  }
 
   @media (max-width: 600px) {
   #contact-form button {
@@ -1433,13 +1353,13 @@
 }
 
 #earthlink-fiber-benefits .container {
-  max-width: 1200px;
+  max-width: 1200px; /* Adjust as necessary */
   margin: auto;
   padding: 0 15px;
 }
 
 #earthlink-fiber-benefits .section-header {
-  font-size: 24px;
+  font-size: 24px; /* Adjust as necessary */
   margin-bottom: 20px;
 }
 
@@ -1451,56 +1371,31 @@
 }
 
 #earthlink-fiber-benefits .benefit {
-  flex: 1 1 calc(25% - 20px);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1 1 calc(25% - 20px); /* 4 items per row on desktop */
+  margin-bottom: 20px; /* Spacing between rows */
 }
 
-#earthlink-fiber-benefits .benefit .material-symbols-outlined {
-  font-size: 38px; /* Icon size */
-  color: #0D2541; /* Icon color */
-  width: 100px; /* Circle size */
-  height: 100px;
-  line-height: 100px; /* Align icon vertically */
-  border-radius: 50%;
-  background-color: #fef3c8; /* Circle background color */
-  display: inline-block;
+#earthlink-fiber-benefits .benefit img {
+  max-width: 100px; /* Adjust as necessary */
   margin-bottom: 10px;
-  font-variation-settings: 'FILL' 2, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-  border: 2px solid #feeba3;
 }
 
 #earthlink-fiber-benefits .benefit h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-#earthlink-fiber-benefits .benefit p {
-  text-align: center;
-  padding: 0 10px;
+  margin-top: 0;
 }
 
 @media (max-width: 766px) {
   #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(50% - 20px);
-  }
-
-  #earthlink-fiber-benefits .benefit .material-symbols-outlined {
-    font-size: 36px; /* Smaller icon size for mobile */
-    width: 80px; /* Smaller circle size for mobile */
-    height: 80px;
-    line-height: 80px;
+    flex-basis: calc(50% - 20px); /* 2 items per row on mobile */
+    margin-bottom: 20px; /* Spacing between rows */
   }
 }
 
 @media (min-width: 767px) {
   #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(25% - 20px);
+    flex-basis: calc(25% - 20px); /* 4 items per row on desktop */
   }
 }
-
 
 
 
@@ -1619,7 +1514,7 @@
 
   <div class="counter">
   <div class="count-1">
-  <p>Movies</p><h2>8400+</h2></div>
+  <p>Movies</p><h2>20100+</h2></div>
 
   <div class="dropdown" onclick="toggleDropdown('movies-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1643,7 +1538,7 @@
 
   <div class="counter">
   <div class="count-1">
-  <p>Shows</p><h2>2700+</h2></div>
+  <p>Shows</p><h2>6500+</h2></div>
 
   <div class="dropdown" onclick="toggleDropdown('tvshows-dropdown')"><span class="material-symbols-rounded included-icon icon">expand_more</span>What you get</div>
 
@@ -1678,31 +1573,31 @@
 
 
 <!-- Section Header -->
-<section id="earthlink-fiber-benefits">
+<section id="earthlink-fiber-benefits" style="background-color: white;">
   <div class="container">
-    <h2 class="section-header">Get more with EarthLink Fiber Internet</h2>
+    <h2 class="section-header">Get more with EarthLink Fiber Internet</h2> <!-- Section Header -->
     <div class="benefits-grid">
       <!-- Benefit 1 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
+        <img src="path-to-your-largest-network-icon.png" alt="Largest network">
         <h3>Largest network</h3>
         <p>With speeds up to 5 Gigs, we have an option for everyone</p>
       </div>
       <!-- Benefit 2 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">important_devices</span>
+        <img src="path-to-your-no-data-caps-icon.png" alt="No data caps">
         <h3>No data caps</h3>
         <p>Unlimited data and no speed throttling</p>
       </div>
       <!-- Benefit 3 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">contract_delete</span>
+        <img src="path-to-your-price-guarantee-icon.png" alt="Price Guarantee">
         <h3>Price Guarantee</h3>
         <p>Lock in our best rates and rest easy</p>
       </div>
       <!-- Benefit 4 -->
       <div class="benefit">
-        <span class="material-symbols-outlined earthlink-icon">chromecast_device</span>
+        <img src="path-to-your-stay-secure-icon.png" alt="Stay Secure">
         <h3>Stay Secure</h3>
         <p>Keep personal data and devices safe with our security suite</p>
       </div>
