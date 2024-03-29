@@ -391,9 +391,9 @@
   border-bottom-right-radius: 15px;  
   width: 100%;
   background-color: #fff;
-  transform-origin: top; /*comment this line*/
-  transform: scaleY(1); /*comment this line*/
-  visibility: hidden; /*comment this line*/
+  /* transform-origin: top; */
+  /* transform: scaleY(1); */
+  /* visibility: hidden; */
   position: relative;
   z-index: 1;
   padding-left: 0px;
@@ -406,8 +406,8 @@
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
-  overflow: visible; /*comment this line*/
-  height: auto; /*comment this line*/
+  /* overflow: visible; /*comment this line*/
+  /* height: auto; /*comment this line*/
   visibility: visible;
   opacity: 1;
 
@@ -1338,18 +1338,19 @@
 
   #earthlink-fiber-benefits {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #f7f7f7 100%);
-  padding: 20px 0;
+  padding: 0px 0;
   text-align: center;
 }
 
 #earthlink-fiber-benefits .container {
-  max-width: 1200px; /* Adjust as necessary */
+  max-width: 1200px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 0px;
+  padding-top: 50px;
 }
 
 #earthlink-fiber-benefits .section-header {
-  font-size: 24px; /* Adjust as necessary */
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -1361,31 +1362,34 @@
 }
 
 #earthlink-fiber-benefits .benefit {
-  flex: 1 1 calc(25% - 20px); /* 4 items per row on desktop */
-  margin-bottom: 20px; /* Spacing between rows */
+  flex: 1 1 calc(25% - 20px);
+  margin-bottom: 20px;
+  text-align: center; /* Ensure text and icons are centered */
 }
 
-#earthlink-fiber-benefits .benefit img {
-  max-width: 100px; /* Adjust as necessary */
-  margin-bottom: 10px;
-}
-
-#earthlink-fiber-benefits .benefit h3 {
-  margin-top: 0;
+#earthlink-fiber-benefits .benefit .material-symbols-outlined {
+  font-size: 48px; /* Icon size */
+  color: #4A90E2; /* Icon color */
+  border: 2px solid #4A90E2; /* Border color */
+  border-radius: 50%; /* Circle shape */
+  padding: 20px; /* Space between icon and border */
+  background-color: #E8F0FE; /* Background color */
+  display: inline-block;
+  margin-bottom: 10px; /* Space below the icon */
 }
 
 @media (max-width: 766px) {
   #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(50% - 20px); /* 2 items per row on mobile */
-    margin-bottom: 20px; /* Spacing between rows */
+    flex-basis: calc(50% - 20px); /* Adjust for 2 items per row on mobile */
   }
 }
 
 @media (min-width: 767px) {
   #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(25% - 20px); /* 4 items per row on desktop */
+    flex-basis: calc(25% - 20px); /* Maintain 4 items per row on desktop */
   }
 }
+
 
 
 
@@ -1562,38 +1566,36 @@
 
 
 
-<!-- Section Header -->
-<section id="earthlink-fiber-benefits" style="background-color: white;">
-  <div class="container">
-    <h2 class="section-header">Get more with EarthLink Fiber Internet</h2> <!-- Section Header -->
-    <div class="benefits-grid">
-      <!-- Benefit 1 -->
-      <div class="benefit">
-        <img src="path-to-your-largest-network-icon.png" alt="Largest network">
-        <h3>Largest network</h3>
-        <p>With speeds up to 5 Gigs, we have an option for everyone</p>
-      </div>
-      <!-- Benefit 2 -->
-      <div class="benefit">
-        <img src="path-to-your-no-data-caps-icon.png" alt="No data caps">
-        <h3>No data caps</h3>
-        <p>Unlimited data and no speed throttling</p>
-      </div>
-      <!-- Benefit 3 -->
-      <div class="benefit">
-        <img src="path-to-your-price-guarantee-icon.png" alt="Price Guarantee">
-        <h3>Price Guarantee</h3>
-        <p>Lock in our best rates and rest easy</p>
-      </div>
-      <!-- Benefit 4 -->
-      <div class="benefit">
-        <img src="path-to-your-stay-secure-icon.png" alt="Stay Secure">
-        <h3>Stay Secure</h3>
-        <p>Keep personal data and devices safe with our security suite</p>
+  <section id="earthlink-fiber-benefits" style="background-color: white;">
+    <div class="container">
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit">
+          <span class="material-symbols-outlined earthlink-icon">network_check</span>
+          <h3>Largest network</h3>
+          <p>With speeds up to 5 Gigs, we have an option for everyone</p>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="benefit">
+          <span class="material-symbols-outlined earthlink-icon">data_usage</span>
+          <h3>No data caps</h3>
+          <p>Unlimited data and no speed throttling</p>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="benefit">
+          <span class="material-symbols-outlined earthlink-icon">attach_money</span>
+          <h3>Price Guarantee</h3>
+          <p>Lock in our best rates and rest easy</p>
+        </div>
+        <!-- Benefit 4 -->
+        <div class="benefit">
+          <span class="material-symbols-outlined earthlink-icon">security</span>
+          <h3>Stay Secure</h3>
+          <p>Keep personal data and devices safe with our security suite</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
