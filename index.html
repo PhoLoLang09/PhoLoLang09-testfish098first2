@@ -80,7 +80,7 @@
 
   header {
   text-align: center;
-  padding: 50px 0;
+  padding: 35px 0;
   position: relative;
   z-index: 2;
   }
@@ -386,33 +386,34 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: -5px;
+  /* top: -5px; */ /*uncomment this line (for dropdown animation)*/
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;  
   width: 100%;
   background-color: #fff;
-  /* transform-origin: top;
-  transform: scaleY(1);
-  visibility: hidden; */
+  transform-origin: top; /*comment this line*/
+  transform: scaleY(1); /*comment this line*/
+  visibility: hidden; /*comment this line*/
   position: relative;
   z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
   
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */ /*uncomment this line (for dropdown animation)*/
   }
 
   .dropdown-content.show {
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
-  /* overflow: visible; */
-  height: auto;
+  overflow: visible; /*comment this line*/
+  height: auto; /*comment this line*/
   visibility: visible;
   opacity: 1;
-  top: -5px;
-  transition: all 0.8s ease;
-  border-radius: 0 0 15px 15px;
+
+  /* top: -5px; */ /*uncomment this line (for dropdown animation)*/
+  /*transition: all 0.8s ease; */ /*uncomment this line (for dropdown animation)*/
+  border-radius: 0 0 15px 15px; 
   }
 
   .show {
@@ -469,14 +470,22 @@
   margin-bottom: 4px;
   }
 
-
+  .trial-button::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-color: #FFF;
+  }
 
   .trial-button {
   background-image: linear-gradient(to bottom, #FDD646, #FBC02D);
   border: none;
   border-top: none;
   border-left: none;
-  border-right: 5px;
+  border-right: none;
   border-bottom: none;
   color: #0D2541;
   border-radius: 0 0 15px 15px;
@@ -508,7 +517,21 @@
   background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
   }
 
+  @media (max-width: 210px) {
+  .trial-button {
+  font-size: 10px;
+  font-family: inter;
+  font-weight: 700;
+  }
+  }
 
+  @media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+  .dropdown-content {
+  transition: all 0.3s;
+  }
+  }
+  }
 
 /* Offer Call CSS */
 
@@ -1405,13 +1428,13 @@
 
   <div class="main-content navy-background">
 
-  <div class="main-content"><header><div class="container"><img src="EasyStream-Logo-Full-White.png" alt="Cable4Less Logo"/></div></header>
+  <div class="main-content"><header><div class="container"><img src="C4L-Logo.svg" alt="Cable4Less Logo"/></div></header>
 
 <!--- Hero Message HTML --->
 
   <div class="pre-header unique-pre-header">Cut the cord & Save Big</div>
 
-  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$14.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
+  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
 
   <div class="slider-box">
   <div class="your-class">
