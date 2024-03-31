@@ -1934,10 +1934,11 @@ function showError(input, condition, message, errorId) {
   const allDropdowns = document.querySelectorAll('.dropdown-content');
   const currentDropdownButton = dropdownContent.previousElementSibling;
   const allDropdownButtons = document.querySelectorAll('.dropdown');
-    
+  
   allDropdowns.forEach((content) => {
   if (content.id !== dropdownId && content.classList.contains('show')) {
   content.classList.remove('show');
+  content.classList.remove('dropdown-overflow');
   const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
   if (icon && icon.classList.contains('flipped')) {
   icon.classList.remove('flipped');
@@ -1950,7 +1951,7 @@ function showError(input, condition, message, errorId) {
   if(dropdownContent.classList.contains('show')){
     setTimeout(() => {
       dropdownContent.classList.add('dropdown-overflow');
-    }, 400);
+    }, 200);
   } else {
     dropdownContent.classList.remove('dropdown-overflow');
   }
@@ -1960,7 +1961,7 @@ function showError(input, condition, message, errorId) {
   if (icon) {
   icon.classList.toggle('flipped');
   }      
-  }
+  }  
   }
 
   function updateGradientHeight() {
