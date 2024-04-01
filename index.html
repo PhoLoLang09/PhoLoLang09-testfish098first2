@@ -343,13 +343,13 @@
   .dropdown {
   cursor: pointer;
   background-color: #FFF;
-  padding: 15px 5px;
+  padding: 10px 5px;
   text-align: center;
   border-top: 0px solid #0D2541;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 8px 8px;
   position: absolute;
   z-index: 100;
   font-weight: 500;
@@ -358,7 +358,7 @@
   letter-spacing: 0.5px !important;
   box-shadow: 0px 4px #c6c6c6;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   padding-left: 0px;
   padding-right: 0px;
   }
@@ -366,7 +366,6 @@
   .dropdown-content::before {
   content: '';
   position: absolute;
-  top: -10px;
   left: 0;
   right: 0;
   height: 10px;
@@ -395,7 +394,7 @@
   /* transform: scaleY(1); */
   /* visibility: hidden; */
   position: relative;
-  z-index: 1;
+  z-index: 15;
   padding-left: 0px;
   padding-right: 0px;
   
@@ -409,8 +408,8 @@
   height: auto; /*comment this line*/
   visibility: visible;
   opacity: 1;
-
-  top: -7px;  /*uncomment this line (for dropdown animation)*/
+  
+  top: -5px;  /*uncomment this line (for dropdown animation)*/
   transition: all 0.8s ease;  /*uncomment this line (for dropdown animation)*/
   border-radius: 0 0 15px 15px; 
   }
