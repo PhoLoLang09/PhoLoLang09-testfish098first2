@@ -35,11 +35,37 @@
 
 /* Main CSS */
 
+
+
+.custom-shape-divider-bottom-1708380672 {
+    background-color: #0D2541; /* This will set the background color to the dark blue you want */
+}
+
+
+.counters,
+.count-1,
+.dropdown-content {
+    background-color: #0D2541 !important; /* Apply navy color and ensure it has priority */
+}
+
+
+
+.navy-background .main-content {
+    background-color: #0D2541; /* Dark navy color */
+}
+
+
+
+
+
+
+
+
   body, html {
   margin: 0;
   padding: 0;
   font-family: inter;
-  background-color: #0D2541;
+  background-color: #fff;
   color: #0D2541;
   height: 100%;
   }
@@ -58,7 +84,7 @@
 
   .navy-background {
   position: relative;
-  background-color: #0D2541;
+  background-color: #fff;
   }
 
   .navy-background::before {
@@ -80,7 +106,7 @@
 
   header {
   text-align: center;
-  padding: 35px 0;
+  padding: 45px 0;
   position: relative;
   z-index: 2;
   }
@@ -99,7 +125,7 @@
   margin-bottom: 0px;
   padding-top: 20px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 2px !important;
   font-family: Inter;
   }
 
@@ -343,13 +369,13 @@
   .dropdown {
   cursor: pointer;
   background-color: #FFF;
-  padding: 10px 5px;
+  padding: 12px 5px;
   text-align: center;
   border-top: 0px solid #0D2541;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 10px 10px;
   position: absolute;
   z-index: 100;
   font-weight: 500;
@@ -358,7 +384,7 @@
   letter-spacing: 0.5px !important;
   box-shadow: 0px 4px #c6c6c6;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
   }
@@ -366,6 +392,7 @@
   .dropdown-content::before {
   content: '';
   position: absolute;
+  top: -10px;
   left: 0;
   right: 0;
   height: 10px;
@@ -385,7 +412,7 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  top: -8px; /*uncomment this line (for dropdown animation)*/
+  top: -5px; /*uncomment this line (for dropdown animation)*/
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;  
   width: 100%;
@@ -394,7 +421,7 @@
   /* transform: scaleY(1); */
   /* visibility: hidden; */
   position: relative;
-  z-index: 15;
+  z-index: 1;
   padding-left: 0px;
   padding-right: 0px;
   
@@ -405,17 +432,14 @@
   padding-top: 0px;
   margin-bottom: 0px;
   max-height: 1000px;
+  overflow: visible; */ /*comment this line*/
   height: auto; /*comment this line*/
   visibility: visible;
   opacity: 1;
-  
-  top: -8px;  /*uncomment this line (for dropdown animation)*/
+
+  top: -5px;  /*uncomment this line (for dropdown animation)*/
   transition: all 0.8s ease;  /*uncomment this line (for dropdown animation)*/
   border-radius: 0 0 15px 15px; 
-  }
-
-  .dropdown-overflow {
-    overflow: visible;
   }
 
   .show {
@@ -553,7 +577,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 0 10px;
   }
 
@@ -1261,7 +1285,7 @@
 
   .custom-shape-divider-bottom-1708380672 {
   position: relative;
-  bottom: -1px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -1337,16 +1361,14 @@
 
 
 
-
   #earthlink-fiber-benefits {
-  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #f7f7f7 100%);
+  background: #fff;
   padding: 0px 0;
   text-align: center;
 }
 
 #earthlink-fiber-benefits .container {
   max-width: 1200px;
-  margin: auto;
   padding: 0 0px;
   padding-top: 50px;
 }
@@ -1360,38 +1382,77 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px;
+  gap: 25px;
 }
 
 #earthlink-fiber-benefits .benefit {
   flex: 1 1 calc(25% - 20px);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center; /* Ensure text and icons are centered */
 }
 
 #earthlink-fiber-benefits .benefit .material-symbols-outlined {
-  font-size: 48px; /* Icon size */
-  color: #4A90E2; /* Icon color */
-  border: 2px solid #4A90E2; /* Border color */
+  font-size: 38px; /* Icon size */
+  color: #003057; /* Icon color */
   border-radius: 50%; /* Circle shape */
-  padding: 20px; /* Space between icon and border */
-  background-color: #E8F0FE; /* Background color */
+  padding: 18px; /* Space between icon and border */
+  background-color: #e9eef4;
+  border: 1px solid #d2d6dc; /* Border color */
   display: inline-block;
   margin-bottom: 10px; /* Space below the icon */
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
 }
 
-@media (max-width: 766px) {
+#earthlink-fiber-benefits .benefit h3 {
+  font-family: inter;
+  letter-spacing: 0.5px !important;
+  font-size: 18px;
+}
+
+#earthlink-fiber-benefits .benefit p {
+  font-size: 15px;
+}
+
+@media (max-width: 948px) {
   #earthlink-fiber-benefits .benefit {
     flex-basis: calc(50% - 20px); /* Adjust for 2 items per row on mobile */
   }
 }
 
-@media (min-width: 767px) {
+@media (max-width: 1000px) {
+  .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  }
+}
+
+@media (min-width: 779px) {
   #earthlink-fiber-benefits .benefit {
     flex-basis: calc(25% - 20px); /* Maintain 4 items per row on desktop */
   }
 }
 
+.custom-shape-divider-bottom-1712033787 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+margin-top: -25px;
+}
+
+.custom-shape-divider-bottom-1712033787 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1712033787 .shape-fill {
+    fill: #F7f7f7;
+}
 
 
 
@@ -1440,7 +1501,7 @@
 
   <div class="pre-header unique-pre-header">Cut the cord & Save Big</div>
 
-  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$14.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
+  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$13.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
 
   <div class="slider-box">
   <div class="your-class">
@@ -1568,32 +1629,32 @@
 
 
 
+
   <section id="earthlink-fiber-benefits" style="background-color: white;">
     <div class="container">
       <div class="benefits-grid">
         <!-- Benefit 1 -->
         <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">network_check</span>
-          <h3>Largest network</h3>
+          <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
+          <h3>DVR Supported</h3>
           <p>With speeds up to 5 Gigs, we have an option for everyone</p>
+        </div>
+        <div class="benefit">
+          <span class="material-symbols-outlined earthlink-icon">hd</span>
+          <h3>Watch in HD</h3>
+          <p>Keep personal data and devices safe with our security suite</p>
         </div>
         <!-- Benefit 2 -->
         <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">data_usage</span>
-          <h3>No data caps</h3>
+          <span class="material-symbols-outlined earthlink-icon">important_devices</span>
+          <h3>Multi-Device Streaming</h3>
           <p>Unlimited data and no speed throttling</p>
-        </div>
-        <!-- Benefit 3 -->
-        <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">attach_money</span>
-          <h3>Price Guarantee</h3>
-          <p>Lock in our best rates and rest easy</p>
         </div>
         <!-- Benefit 4 -->
         <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">security</span>
-          <h3>Stay Secure</h3>
-          <p>Keep personal data and devices safe with our security suite</p>
+          <span class="material-symbols-outlined earthlink-icon">language_spanish</span>
+          <h3>Watch Spanish Programs</h3>
+          <p>Lock in our best rates and rest easy</p>
         </div>
       </div>
     </div>
@@ -1622,6 +1683,13 @@
 
 
 
+
+
+  <div class="custom-shape-divider-bottom-1712033787">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+    </svg>
+</div>
 
 
   <div class="trial-section-wrapper">
@@ -1933,11 +2001,10 @@ function showError(input, condition, message, errorId) {
   const allDropdowns = document.querySelectorAll('.dropdown-content');
   const currentDropdownButton = dropdownContent.previousElementSibling;
   const allDropdownButtons = document.querySelectorAll('.dropdown');
-  
+    
   allDropdowns.forEach((content) => {
   if (content.id !== dropdownId && content.classList.contains('show')) {
   content.classList.remove('show');
-  content.classList.remove('dropdown-overflow');
   const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
   if (icon && icon.classList.contains('flipped')) {
   icon.classList.remove('flipped');
@@ -1946,21 +2013,12 @@ function showError(input, condition, message, errorId) {
   });
 
   dropdownContent.classList.toggle('show');
-
-  if(dropdownContent.classList.contains('show')){
-    setTimeout(() => {
-      dropdownContent.classList.add('dropdown-overflow');
-    }, 200);
-  } else {
-    dropdownContent.classList.remove('dropdown-overflow');
-  }
-
   if (currentDropdownButton) {
   const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
   if (icon) {
   icon.classList.toggle('flipped');
   }      
-  }  
+  }
   }
 
   function updateGradientHeight() {
