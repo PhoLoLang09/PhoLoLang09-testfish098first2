@@ -33,21 +33,38 @@
 
 <style>
 
+.custom-shape-divider-bottom-1708380672 {
+    background-color: #0D2541; /* This will set the background color to the dark blue you want */
+}
+
+
+.counters,
+.count-1,
+.dropdown-content {
+    background-color: #0D2541 !important; /* Apply navy color and ensure it has priority */
+}
+
+
+
+.navy-background .main-content {
+    background-color: #0D2541; /* Dark navy color */
+}
+
+
+
+
+
+
+
+
+
 /* Main CSS */
-
-
-
-
-
-
-
-
 
   body, html {
   margin: 0;
   padding: 0;
   font-family: inter;
-  background-color: #0D2541;
+  background-color: #fff;
   color: #0D2541;
   height: 100%;
   }
@@ -66,7 +83,7 @@
 
   .navy-background {
   position: relative;
-  background-color: #0D2541;
+  background-color: #fff;
   }
 
   .navy-background::before {
@@ -88,7 +105,7 @@
 
   header {
   text-align: center;
-  padding: 45px 0;
+  padding: 35px 0;
   position: relative;
   z-index: 2;
   }
@@ -107,7 +124,7 @@
   margin-bottom: 0px;
   padding-top: 20px;
   font-weight: 500;
-  letter-spacing: 2px !important;
+  letter-spacing: 2px;
   font-family: Inter;
   }
 
@@ -234,11 +251,9 @@
   opacity: 0.9;
   }
 
-
-
 /* Counters CSS */
 
-.counters {
+  .counters {
   display: flex;
   justify-content: space-around;
   margin: auto;
@@ -412,7 +427,7 @@
   }
 
   .dropdown-content.show {
-  padding-top: 10px;
+  padding-top: 12px;
   margin-bottom: 0px;
   max-height: 1000px;
   height: auto; /*comment this line*/
@@ -545,12 +560,6 @@
   }
   }
 
-
-
-
-
-
-
 /* Offer Call CSS */
 
   .trial-section-wrapper {
@@ -569,7 +578,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 0 10px;
   }
 
@@ -1353,6 +1362,7 @@
 
 
 
+
   #earthlink-fiber-benefits {
   background: #fff;
   padding: 0px 0;
@@ -1432,7 +1442,6 @@
     overflow: hidden;
     line-height: 0;
     padding-top: 50px;
-    background-color: #FFFFFF;
 }
 
 .custom-shape-divider-bottom-1712034639 svg {
@@ -1443,8 +1452,9 @@
 }
 
 .custom-shape-divider-bottom-1712034639 .shape-fill {
-    fill: #f7f7f7;
+    fill: #F7F7F7;
 }
+
 
 
 
@@ -1493,7 +1503,7 @@
 
   <div class="pre-header unique-pre-header">Cut the cord & Save Big</div>
 
-  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$13.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
+  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$14.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
 
   <div class="slider-box">
   <div class="your-class">
@@ -1621,7 +1631,6 @@
 
 
 
-
   <section id="earthlink-fiber-benefits" style="background-color: white;">
     <div class="container">
       <div class="benefits-grid">
@@ -1682,6 +1691,30 @@
         <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" class="shape-fill"></path>
     </svg>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <div class="trial-section-wrapper">
@@ -1993,10 +2026,11 @@ function showError(input, condition, message, errorId) {
   const allDropdowns = document.querySelectorAll('.dropdown-content');
   const currentDropdownButton = dropdownContent.previousElementSibling;
   const allDropdownButtons = document.querySelectorAll('.dropdown');
-    
+  
   allDropdowns.forEach((content) => {
   if (content.id !== dropdownId && content.classList.contains('show')) {
   content.classList.remove('show');
+  content.classList.remove('dropdown-overflow');
   const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
   if (icon && icon.classList.contains('flipped')) {
   icon.classList.remove('flipped');
@@ -2005,12 +2039,21 @@ function showError(input, condition, message, errorId) {
   });
 
   dropdownContent.classList.toggle('show');
+
+  if(dropdownContent.classList.contains('show')){
+    setTimeout(() => {
+      dropdownContent.classList.add('dropdown-overflow');
+    }, 200);
+  } else {
+    dropdownContent.classList.remove('dropdown-overflow');
+  }
+
   if (currentDropdownButton) {
   const icon = currentDropdownButton.querySelector(".material-symbols-rounded");
   if (icon) {
   icon.classList.toggle('flipped');
   }      
-  }
+  }  
   }
 
   function updateGradientHeight() {
