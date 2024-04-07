@@ -1361,6 +1361,11 @@
 
 
 
+
+
+
+
+
   #earthlink-fiber-benefits {
   background: #fff;
   padding: 0px 0;
@@ -1501,6 +1506,45 @@ body {
 
 
  
+
+
+
+
+
+.triangle {
+  position: relative;
+  background: #fff;
+  height: 1vh;
+}
+
+.triangle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 33px 33px 0 33px;
+  border-color: #fff transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1719,13 +1763,11 @@ body {
 
 
 
-<!-- Shape Divider Container -->
-<div class="shapedividers_com-6755"></div>
 
 
 
 
-
+<section class="triangle"></section>
 
 
 
