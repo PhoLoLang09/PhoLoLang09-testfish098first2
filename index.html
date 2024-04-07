@@ -661,6 +661,7 @@
   }
 
   .trial-image img {
+    max-height: 250px;
   height: auto;
   }
   }
@@ -681,6 +682,29 @@
 
   .trial-image img {
   height: 250px;
+  }
+  }
+
+  @media (max-width: 350px) {
+    .rotating-text{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  }
+
+  .large-header{
+  text-align: center;
+  transform-origin: top center;
+  font-size: 24px;
+  }
+
+  .trial-image {
+    margin: 0 30px;
+  }
+
+  .trial-image img {
+    max-height: 250px;
+  height: auto;
   }
   }
   
@@ -1440,6 +1464,44 @@
 
 
 
+/* Your Shape Divider CSS */
+.shapedividers_com-6755{
+  overflow: hidden;
+  position: relative;
+  height: 150px; /* Set a height for the shape divider */
+  background-color: #f7f7f7; /* This is just to see the contrast */
+}
+.shapedividers_com-6755::before{
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  z-index: 3;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom center;    
+  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.278 3.62" preserveAspectRatio="none"><path d="M35.278.092S8.238.267 0 3.62V.092z" opacity=".2" fill="%23ffffff"/><path d="M35.278.092S8.238.246 0 3.194V.092z" opacity=".2" fill="%23ffffff"/><path d="M35.278.092S8.238.223 0 2.738V.092zM35.278.092H0V0h35.278z" fill="%23ffffff"/></svg>'); 
+}
+
+/* Additional styles to ensure the divider is visible on any background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light gray background for contrast */
+}
+
+/* Content styles */
+.content {
+  padding: 20px;
+  background-color: #ffffff; /* White background for content area */
+}
+
+
+ 
+
 
 
 
@@ -1657,14 +1719,10 @@
 
 
 
+<!-- Shape Divider Container -->
+<div class="shapedividers_com-6755"></div>
 
 
-
-  <div class="custom-shape-divider-bottom-1712034639">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" class="shape-fill"></path>
-    </svg>
-</div>
 
 
 
