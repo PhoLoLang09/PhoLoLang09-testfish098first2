@@ -512,6 +512,7 @@
   box-shadow: 0px 5px #be9906;
   text-transform: uppercase;
   margin-top: 25px;
+  margin-bottom: 5px;
   }
 
   .trial-button:hover {
@@ -678,10 +679,6 @@
   text-align: center;
   transform-origin: top center;
   font-size: 30px;
-  }
-
-  .trial-image img {
-  height: 250px;
   }
   }
 
@@ -1361,11 +1358,6 @@
 
 
 
-
-
-
-
-
   #earthlink-fiber-benefits {
   background: #fff;
   padding: 0px 0;
@@ -1458,80 +1450,6 @@
 .custom-shape-divider-bottom-1712034639 .shape-fill {
     fill: #f7f7f7;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* Your Shape Divider CSS */
-.shapedividers_com-6755{
-  overflow: hidden;
-  position: relative;
-  height: 150px; /* Set a height for the shape divider */
-  background-color: #f7f7f7; /* This is just to see the contrast */
-}
-.shapedividers_com-6755::before{
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  top: -1px;
-  z-index: 3;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: bottom center;    
-  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.278 3.62" preserveAspectRatio="none"><path d="M35.278.092S8.238.267 0 3.62V.092z" opacity=".2" fill="%23ffffff"/><path d="M35.278.092S8.238.246 0 3.194V.092z" opacity=".2" fill="%23ffffff"/><path d="M35.278.092S8.238.223 0 2.738V.092zM35.278.092H0V0h35.278z" fill="%23ffffff"/></svg>'); 
-}
-
-/* Additional styles to ensure the divider is visible on any background */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0; /* Light gray background for contrast */
-}
-
-/* Content styles */
-.content {
-  padding: 20px;
-  background-color: #ffffff; /* White background for content area */
-}
-
-
- 
-
-
-
-
-
-.triangle {
-  position: relative;
-  background: #fff;
-  height: 1vh;
-}
-
-.triangle::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 33px 33px 0 33px;
-  border-color: #fff transparent transparent transparent;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-}
-
-
-
 
 
 
@@ -1697,9 +1615,7 @@ body {
 
 <!--- Call To Action HTML --->
 
-
-
-
+  <div class="custom-shape-divider-bottom-1708380672"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path></svg></div>
 
 
 
@@ -1765,8 +1681,14 @@ body {
 
 
 
+  <div class="custom-shape-divider-bottom-1712034639">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" class="shape-fill"></path>
+    </svg>
+</div>
 
-<section class="triangle"></section>
+
+
 
 
 
@@ -2102,8 +2024,8 @@ function showError(input, condition, message, errorId) {
   
   allDropdowns.forEach((content) => {
   if (content.id !== dropdownId && content.classList.contains('show')) {
-  content.classList.remove('show');
-  content.classList.remove('dropdown-overflow');
+  // content.classList.remove('show');
+  //content.classList.remove('dropdown-overflow');
   const icon = content.previousElementSibling.querySelector(".material-symbols-rounded");
   if (icon && icon.classList.contains('flipped')) {
   icon.classList.remove('flipped');
