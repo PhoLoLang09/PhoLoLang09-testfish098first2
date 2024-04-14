@@ -565,6 +565,99 @@
   }
   }
 
+/* More information CSS */
+
+#earthlink-fiber-benefits {
+  background: #fff;
+  padding: 0px 0;
+  text-align: center;
+  }
+
+  #earthlink-fiber-benefits .container {
+  max-width: 1200px;
+  padding: 0 0px;
+  padding-top: 50px;
+  }
+
+  #earthlink-fiber-benefits .section-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  }
+
+  #earthlink-fiber-benefits .benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  }
+
+  #earthlink-fiber-benefits .benefit {
+  flex: 1 1 calc(25% - 20px);
+  margin-bottom: 15px;
+  text-align: center;
+  }
+
+  #earthlink-fiber-benefits .benefit .material-symbols-outlined {
+  font-size: 38px;
+  color: #21528C;
+  border-radius: 50%;
+  padding: 18px;
+  background-color: #e9eef4;
+  border: 1px solid rgba(33, 82, 140, 0.2);
+  display: inline-block;
+  margin-bottom: 10px;
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  }
+
+  #earthlink-fiber-benefits .benefit h3 {
+  font-family: inter;
+  letter-spacing: 0.5px !important;
+  font-size: 18px;
+  }
+
+  #earthlink-fiber-benefits .benefit p {
+  font-size: 15px;
+  }
+
+  @media (max-width: 948px) {  
+  #earthlink-fiber-benefits .benefit {
+  flex-basis: calc(50% - 20px);
+  }
+  }
+
+  @media (max-width: 1000px) {
+  .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  }
+  }
+
+  @media (min-width: 779px) {
+  #earthlink-fiber-benefits .benefit {
+  flex-basis: calc(25% - 20px);
+  }
+  }
+
+  .triangle {
+  position: relative;
+  background: #fff;
+  height: 1vh;
+  }
+
+  .triangle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 33px 33px 0 33px;
+  border-color: #fff transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  }
+
 /* Offer Call CSS */
 
   .trial-section-wrapper {
@@ -1076,6 +1169,49 @@
   }
   }
 
+/* Error Form CSS */
+
+  .input-error {
+  display: none;
+  font-size: 12px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.8px solid #D8000C;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inter;
+  font-weight: 500;
+  letter-spacing: 0.5px !important;
+  text-align: center;
+  }
+
+  .name-error {
+  margin-top: 15px;
+  }
+
+  .input-error:last-of-type {
+  margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {  
+  .name-error {
+  margin-top: 0px;
+  }
+
+  #contact-form button{
+  margin-top: 0px;
+  }  
+  }
+
+  .btn-hover.hovered{
+  background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
+  box-shadow: 0px 5px #be9906;
+  }
+
 /* Footer CSS */
 
   footer {
@@ -1331,151 +1467,6 @@
   fill: #FFF;
   }
 
-/* Error Form CSS */
-
-  .input-error {
-  display: none;
-  font-size: 12px;
-  color: #D8000C;
-  background-color: #FFD2D2;
-  padding: 5px;
-  border-radius: 5px;
-  border: 0.8px solid #D8000C;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  box-sizing: border-box;
-  width: 100%;
-  font-family: inter;
-  font-weight: 500;
-  letter-spacing: 0.5px !important;
-  text-align: center;
-  }
-
-  .name-error {
-  margin-top: 15px;
-  }
-
-  .input-error:last-of-type {
-  margin-bottom: 10px;
-  }
-
-  @media (max-width: 600px) {  
-  .name-error {
-  margin-top: 0px;
-  }
-
-  #contact-form button{
-    margin-top: 0px;
-  }  
-  }
-
-  .btn-hover.hovered{
-    background-image: linear-gradient(to bottom, #FBC02D, #FDD646);
-    box-shadow: 0px 5px #be9906;
-  }
-
-
-
-
-
-  #earthlink-fiber-benefits {
-  background: #fff;
-  padding: 0px 0;
-  text-align: center;
-}
-
-#earthlink-fiber-benefits .container {
-  max-width: 1200px;
-  padding: 0 0px;
-  padding-top: 50px;
-}
-
-#earthlink-fiber-benefits .section-header {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-#earthlink-fiber-benefits .benefits-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 25px;
-}
-
-#earthlink-fiber-benefits .benefit {
-  flex: 1 1 calc(25% - 20px);
-  margin-bottom: 15px;
-  text-align: center; /* Ensure text and icons are centered */
-}
-
-#earthlink-fiber-benefits .benefit .material-symbols-outlined {
-  font-size: 38px; /* Icon size */
-  color: #003057; /* Icon color */
-  border-radius: 50%; /* Circle shape */
-  padding: 18px; /* Space between icon and border */
-  background-color: #e9eef4;
-  border: 1px solid #d2d6dc; /* Border color */
-  display: inline-block;
-  margin-bottom: 10px; /* Space below the icon */
-  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
-}
-
-#earthlink-fiber-benefits .benefit h3 {
-  font-family: inter;
-  letter-spacing: 0.5px !important;
-  font-size: 18px;
-}
-
-#earthlink-fiber-benefits .benefit p {
-  font-size: 15px;
-}
-
-@media (max-width: 948px) {
-  #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(50% - 20px); /* Adjust for 2 items per row on mobile */
-  }
-}
-
-@media (max-width: 1000px) {
-  .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  }
-}
-
-@media (min-width: 779px) {
-  #earthlink-fiber-benefits .benefit {
-    flex-basis: calc(25% - 20px); /* Maintain 4 items per row on desktop */
-  }
-}
-
-
-.triangle {
-  position: relative;
-  background: #fff;
-  height: 1vh;
-}
-
-.triangle::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 33px 33px 0 33px;
-  border-color: #fff transparent transparent transparent;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-}
-
-
-
-
-
-
-
 </style>
 </head>
 <body>
@@ -1490,7 +1481,7 @@
 
   <div class="pre-header unique-pre-header">Cut the cord & Save Big</div>
 
-  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$14.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
+  <div><h1 class="headline">Just <span class="price-container"><span class="price-amount">$15.99</span><span class="per-month">/mo</span></span> for 1000s of Channels, Movies, & Shows</h1>
 
   <div class="slider-box">
   <div class="your-class">
@@ -1604,100 +1595,49 @@
 
   </div></div></div></div>
 
-<!--- Call To Action HTML --->
+<!--- More Information HTML --->
 
+  <section id="earthlink-fiber-benefits" style="background-color: white;"><div class="container"><div class="benefits-grid">
+          
+<!--- 1 --->
 
+  <div class="benefit">
+  <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
+  <h3>DVR Supported</h3>
+  <p>With speeds up to 5 Gigs, we have an option for everyone</p>
+  </div>
 
+<!--- 2 --->
 
+  <div class="benefit">
+  <span class="material-symbols-outlined earthlink-icon">hd</span>
+  <h3>Watch in HD</h3>
+  <p>Keep personal data and devices safe with our security suite</p>
+  </div>
 
+<!--- 3 --->
 
+  <div class="benefit">
+  <span class="material-symbols-outlined earthlink-icon">important_devices</span>
+  <h3>Multi-Device Streaming</h3>
+  <p>Unlimited data and no speed throttling</p>
+  </div>
 
+<!--- 4 --->
 
+  <div class="benefit">
+  <span class="material-symbols-outlined earthlink-icon">language_spanish</span>
+  <h3>Watch Spanish Programs</h3>
+  <p>Lock in our best rates and rest easy</p>
+  </div>
 
-
-
-  <section id="earthlink-fiber-benefits" style="background-color: white;">
-    <div class="container">
-      <div class="benefits-grid">
-        <!-- Benefit 1 -->
-        <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
-          <h3>DVR Supported</h3>
-          <p>With speeds up to 5 Gigs, we have an option for everyone</p>
-        </div>
-        <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">hd</span>
-          <h3>Watch in HD</h3>
-          <p>Keep personal data and devices safe with our security suite</p>
-        </div>
-        <!-- Benefit 2 -->
-        <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">important_devices</span>
-          <h3>Multi-Device Streaming</h3>
-          <p>Unlimited data and no speed throttling</p>
-        </div>
-        <!-- Benefit 4 -->
-        <div class="benefit">
-          <span class="material-symbols-outlined earthlink-icon">language_spanish</span>
-          <h3>Watch Spanish Programs</h3>
-          <p>Lock in our best rates and rest easy</p>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <section class="triangle"></section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--- Trial Section HTML --->
 
   <div class="trial-section-wrapper">
   <div class="trial-section">
@@ -1717,7 +1657,7 @@
 
   <div class="trial-image"><img src="C4L-TVIMG.png" alt="Free 2 Day Trial"></div></div></div>
 
-<!--- Contact Form --->
+<!--- Contact Form HTML --->
 
   <div class="dark-box-wrapper-2"><div class="dark-box-wrapper">
 
@@ -1737,16 +1677,16 @@
   <div class="icon-text-wrapper">  
   <h5>Inquire</h5><p>We'll reach out to you</p></div>
   <input type="text" name="name" placeholder="Preferred Name" id="name"><input type="email" name="email" placeholder="Email Address" id="email"><input id="phone" name="phone" type="tel" placeholder="Phone Number"/>
-    <!-- Placeholders for the error messages -->
-    <div>
-      <span id="name-error" class="input-error name-error"></span>
-      <span id="email-error" class="input-error email-error"></span>
-      <span id="phone-error" class="input-error phone-error"></span>
-    </div>
+
+  <div>
+  <span id="name-error" class="input-error name-error"></span>
+  <span id="email-error" class="input-error email-error"></span>
+  <span id="phone-error" class="input-error phone-error"></span>
+  </div>
     
   <button type="submit" id="contactButton" class="contact-btn btn-hover"><span class="material-symbols-rounded get-started-icon btn-hover">navigate_next</span>Contact Me</button>
+
   </form>
-  
 
   <div id="submission-success"><span class="material-symbols-rounded icon icon-rounded-fill">check_circle</span><p class="new-line">Inquiry Sent</p><p>Our team will be in touch shortly to arrange your complimentary trial</p></div>
 
@@ -1765,35 +1705,30 @@
 
 <!--- Script --->
 
-<script>
+  <script>
   var buttons = document.querySelectorAll('.btn-hover');
 
-// Loop through each button and add event listeners
-buttons.forEach(function(button) {
-  // Add touchstart and click event listeners to each button
+  buttons.forEach(function(button) {
   button.addEventListener('touchstart', function() {
-    // Toggle the 'hovered' class on touchstart
-    this.classList.add('hovered');
+  this.classList.add('hovered');
   });
 
   button.addEventListener('click', function() {
-    // Toggle the 'hovered' class on click
-    this.classList.add('hovered');
+  this.classList.add('hovered');
   });
 
-  // Add touchend event listener to remove the 'hovered' class when touch ends
   button.addEventListener('touchend', function() {
-    this.classList.remove('hovered');
+  this.classList.remove('hovered');
   });
-});
-</script>
+  });
+
+  </script>
 
   <script>
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
   });
-
 
   function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
@@ -1850,86 +1785,71 @@ buttons.forEach(function(button) {
   }
   });
 
-function showError(input, condition, message, errorId) {
+  function showError(input, condition, message, errorId) {
   let errorSpan = document.getElementById(errorId);
   if (condition) {
-    if (!errorSpan) {
-      // Error container was moved above the submit button in the HTML
-      // Now, creating an error message also includes an icon
-      errorSpan = document.createElement('div');
-      errorSpan.id = errorId;
-      errorSpan.className = 'input-error';
-      errorSpan.innerHTML = '<span class="material-symbols-rounded error-icon">error</span>' + message;
-      const formErrorsContainer = document.getElementById('form-errors');
-      formErrorsContainer.appendChild(errorSpan);
-    }
-    errorSpan.style.display = 'flex';
-    input.classList.add('input-invalid');
-  } else if (errorSpan) {
-    errorSpan.style.display = 'none';
-    input.classList.remove('input-invalid');
+  if (!errorSpan) {
+  errorSpan = document.createElement('div');
+  errorSpan.id = errorId;
+  errorSpan.className = 'input-error';
+  errorSpan.innerHTML = '<span class="material-symbols-rounded error-icon">error</span>' + message;
+  const formErrorsContainer = document.getElementById('form-errors');
+  formErrorsContainer.appendChild(errorSpan);
   }
-}
-
-
-
-
-
-
-
-
-
-
+  errorSpan.style.display = 'flex';
+  input.classList.add('input-invalid');
+  } else if (errorSpan) {
+  errorSpan.style.display = 'none';
+  input.classList.remove('input-invalid');
+  }
+  }
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
-  this.dataset.submitted = 'true'; // Mark the form as attempted to submit
+  this.dataset.submitted = 'true';
   
   var nameValid = validateName();
-  var contactValid = validateContact(true); // Enforce validation including phone length check
+  var contactValid = validateContact(true);
 
   if (nameValid && contactValid) {
-      console.log('Form is valid and ready to be submitted');
-      // Your form submission logic here (e.g., AJAX call)
-      this.style.display = 'none';
-      document.getElementById('submission-success').style.display = 'block';
+  console.log('Form is valid and ready to be submitted');
+  this.style.display = 'none';
+  document.getElementById('submission-success').style.display = 'block';
   }
-});
-
-document.querySelectorAll('#contact-form input').forEach(input => {
-  input.addEventListener('input', function() {
-      if (this.id === 'phone') {
-          // Phone formatting logic
-          var numbers = this.value.replace(/\D/g, '').substring(0,10); // Allow a maximum of 10 digits
-          var formattedNumber = '';
-          
-          if (numbers.length >= 4 && numbers.length < 7) {
-              formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3);
-          } else if (numbers.length >= 7) {
-              formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3,6) + '-' + numbers.substring(6,10);
-          } else {
-              formattedNumber = numbers;
-          }
-          this.value = formattedNumber;
-
-          // Contact validation logic without enforcing phone length check
-          validateContact(false);
-      } else if (this.id === 'email') {
-          validateContact(false);
-      } else if (this.id === 'name') {
-          validateName();
-      }
   });
-});
 
-function validateName() {
+  document.querySelectorAll('#contact-form input').forEach(input => {
+  input.addEventListener('input', function() {
+  if (this.id === 'phone') {
+  var numbers = this.value.replace(/\D/g, '').substring(0,10);
+  var formattedNumber = '';
+          
+  if (numbers.length >= 4 && numbers.length < 7) {
+  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3);
+  } else if (numbers.length >= 7) {
+  formattedNumber = '(' + numbers.substring(0,3) + ') ' + numbers.substring(3,6) + '-' + numbers.substring(6,10);
+  } else {
+  formattedNumber = numbers;
+  }
+  this.value = formattedNumber;
+
+  validateContact(false);
+  } else if (this.id === 'email') {
+  validateContact(false);
+  } else if (this.id === 'name') {
+  validateName();
+  }
+  });
+  });
+
+  function validateName() {
   const nameInput = document.getElementById('name');
   const error = !nameInput.value.trim();
   showError(nameInput, error, 'Missing Preferred Name', 'name-error');
   return !error;
-}
+  }
 
-function validateContact(enforcePhoneLength) {
+  function validateContact(enforcePhoneLength) {
   const formSubmitted = document.getElementById('contact-form').dataset.submitted === 'true';
   const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
@@ -1941,44 +1861,25 @@ function validateContact(enforcePhoneLength) {
   showError(phoneInput, phoneError, 'Incomplete Phone Number or leave it empty', 'phone-error');
   
   return !(emailError || phoneError);
-}
+  }
 
-function showError(input, condition, message, errorId) {
+  function showError(input, condition, message, errorId) {
   let errorSpan = document.getElementById(errorId);
   if (condition) {
-      if (!errorSpan) {
-          errorSpan = document.createElement('span');
-          errorSpan.id = errorId;
-          errorSpan.className = 'input-error';
-          input.parentNode.insertBefore(errorSpan, input.nextSibling);
-      }
-      errorSpan.textContent = message;
-      input.classList.add('input-invalid');
-      errorSpan.style.display = 'block';
-  } else if (errorSpan) {
-      errorSpan.style.display = 'none';
-      input.classList.remove('input-invalid');
+  if (!errorSpan) {
+  errorSpan = document.createElement('span');
+  errorSpan.id = errorId;
+  errorSpan.className = 'input-error';
+  input.parentNode.insertBefore(errorSpan, input.nextSibling);
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  errorSpan.textContent = message;
+  input.classList.add('input-invalid');
+  errorSpan.style.display = 'block';
+  } else if (errorSpan) {
+  errorSpan.style.display = 'none';
+  input.classList.remove('input-invalid');
+  }
+  }
 
   function toggleDropdown(dropdownId) {
   const dropdownContent = document.getElementById(dropdownId);
@@ -2000,11 +1901,11 @@ function showError(input, condition, message, errorId) {
   dropdownContent.classList.toggle('show');
 
   if(dropdownContent.classList.contains('show')){
-    setTimeout(() => {
-      dropdownContent.classList.add('dropdown-overflow');
-    }, 200);
+  setTimeout(() => {
+  dropdownContent.classList.add('dropdown-overflow');
+  }, 200);
   } else {
-    dropdownContent.classList.remove('dropdown-overflow');
+  dropdownContent.classList.remove('dropdown-overflow');
   }
 
   if (currentDropdownButton) {
