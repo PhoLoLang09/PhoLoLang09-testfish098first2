@@ -570,6 +570,42 @@
 
 /* More information CSS */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   #earthlink-fiber-benefits {
   background: #fff;
   padding: 0px 0;
@@ -645,6 +681,70 @@
   flex-basis: calc(25% - 20px);
   }
   }
+
+@media (max-width: 390px) {  
+  #earthlink-fiber-benefits .benefit {
+    display: flex;
+    flex-direction: row; /* align items horizontally */
+    align-items: flex-start; /* align items to the top */
+  }
+
+  #earthlink-fiber-benefits .benefit .material-symbols-outlined {
+    margin-right: 15px;
+    font-size: 24px; /* Adjust the size if needed */
+  }
+
+  #earthlink-fiber-benefits .benefit h3,
+  #earthlink-fiber-benefits .benefit p {
+    text-align: left;
+    display: block; /* stack title and paragraph */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  #earthlink-fiber-benefits .benefit {
+    flex-basis: 100%; /* take full width of its container */
+    padding: 10px 0; /* adjust padding as needed */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .triangle {
   position: relative;
@@ -1640,42 +1740,91 @@
 <!--- More Information HTML --->
 
   <section id="earthlink-fiber-benefits" style="background-color: white;"><div class="container"><div class="benefits-grid">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
           
 <!--- 1 --->
 
   <div class="benefit">
   <span class="material-symbols-outlined earthlink-icon">fiber_dvr</span>
-  <h3>DVR Supported</h3>
+  <div>
+    <h3>DVR Supported</h3>
   <p>With speeds up to 5 Gigs, we have an option for everyone</p>
+  </div>
+  
   </div>
 
 <!--- 2 --->
 
   <div class="benefit">
   <span class="material-symbols-outlined earthlink-icon">hd</span>
-  <h3>Watch in HD</h3>
+  <div>
+    <h3>Watch in HD</h3>
   <p>Keep personal data and devices safe with our security suite</p>
+  </div>
+  
   </div>
 
 <!--- 3 --->
 
   <div class="benefit">
   <span class="material-symbols-outlined earthlink-icon">important_devices</span>
-  <h3>Multi-Device Streaming</h3>
+  <div>
+    <h3>Multi-Device Streaming</h3>
   <p>Unlimited data and no speed throttling</p>
+  </div>
+  
   </div>
 
 <!--- 4 --->
 
   <div class="benefit">
   <span class="material-symbols-outlined earthlink-icon">language_spanish</span>
-  <h3>Watch Spanish Programs</h3>
+  <div>
+    <h3>Watch Spanish Programs</h3>
   <p>Lock in our best rates and rest easy</p>
+  </div>
+  
   </div>
 
   </div>
   </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <section class="triangle"></section>
 
